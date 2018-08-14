@@ -216,7 +216,15 @@ class ViewController: UIViewController {
             if key.characters.count > 0 {
                 finalQuery = Queries.rawSqlQuery + " (dkCha in (select id from tblChitietvanban where forsearch like 'phụ lục%') or dkCha in (select id from tblchitietvanban where cha in (select id from tblChitietvanban where forsearch like 'phụ lục%')) or dkCha in (select id from tblchitietvanban where cha in (select id from tblchitietvanban where cha in (select id from tblChitietvanban where forsearch like 'phụ lục%')))) and (forsearch like '% \(key) %' or forsearch like '% \(key)%' or forsearch like '% \(key)_ %')"
                 let relatedChild = Queries.searchDieukhoanByQuery(query: finalQuery, vanbanid: ["\(settings.getQC41ID())"])
-                sortedRelatedPlat.append(contentsOf: sortIt.sortByBestMatch(listDieukhoan: relatedChild, keyword: key))
+                var sortedRelatedChild = [Dieukhoan]();
+                let keyPatern = "(\\b\(key)\\b)|(\\b\(key)\\p{L})"
+                
+                for rChild in relatedChild {
+                    if search.regexSearch(pattern: keyPatern, searchIn: "\(rChild.getTieude()) \(rChild.getNoidung())" ).count > 0 {
+                        sortedRelatedChild.append(rChild)
+                    }
+                }
+                sortedRelatedPlat.append(contentsOf: sortIt.sortByBestMatch(listDieukhoan: sortedRelatedChild, keyword: key))
             }
         }
         
@@ -253,9 +261,9 @@ class ViewController: UIViewController {
     }
     
     func getRelatedDieukhoan(noidung:String) -> [Dieukhoan] {
-        var nd = "Không chấp hành hiệu lệnh, chỉ dẫn của biển báo hiệu, vạch kẻ đường, trừ các hành vi vi phạm quy định tại Điểm a, Điểm g, Điểm h, Điểm i, Điểm k, Điểm l Khoản 2; Điểm a, Điểm d, Điểm đ, Điểm e, Điểm k Khoản 3; Điểm a, Điểm b, Điểm c, Điểm d, Điểm đ, Điểm h, Điểm i Khoản 4; Điểm a Khoản 5; Điểm b, Điểm c, Điểm đ Khoản 6; Điểm a, Điểm c Khoản 7; Điểm a, Điểm đ Khoản 8 Điều này; Điểm h, Điểm i, Điểm k, Điểm l Khoản 2; Khoản 1 Điều 7 và Điều 8".lowercased()
+        //        var nd = "Không chấp hành hiệu lệnh, chỉ dẫn của biển báo hiệu, vạch kẻ đường, trừ các hành vi vi phạm quy định tại Điểm a, Điểm g, Điểm h, Điểm i, Điểm k, Điểm l Khoản 2; Điểm a, Điểm d, Điểm đ, Điểm e, Điểm k Khoản 3; Điểm a, Điểm b, Điểm c, Điểm d, Điểm đ, Điểm h, Điểm i Khoản 4; Điểm a Khoản 5; Điểm b, Điểm c, Điểm đ Khoản 6; Điểm a, Điểm c Khoản 7; Điểm a, Điểm đ Khoản 8 Điều này; Điểm h, Điểm i, Điểm k, Điểm l Khoản 2; Khoản 1 Điều 7 và Điều 8".lowercased()
         
-        //        var nd = noidung.lowercased()
+        var nd = noidung.lowercased()
         var keywords = [String]()
         var relatedDieukhoan = [Dieukhoan]()
         
