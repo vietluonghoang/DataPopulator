@@ -17,7 +17,7 @@ class Utils {
         print("====== docDir: \(dpPath.path)")
         let file = FileManager.default
         if(!file.fileExists(atPath: dpPath.path)) {
-            let dpPathApp = Bundle.main.path(forResource: name, ofType: "txt")
+            let dpPathApp = Bundle.main.path(forResource: name, ofType: "txt", inDirectory: "data")
             print("===== resPath: \(String(describing: dpPathApp))")
             do {
                 try file.copyItem(atPath: dpPathApp!, toPath: dpPath.path)

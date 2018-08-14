@@ -19,8 +19,8 @@ class DataConnection: NSObject {
             print("docDir: \(dpPath.path)")
             let file = FileManager.default
             if(!file.fileExists(atPath: dpPath.path)) {
-                let dpPathApp = Bundle.main.path(forResource: "Hieuluat", ofType: "sqlite")
-                print("resPath: \(dpPathApp)")
+                let dpPathApp = Bundle.main.path(forResource: "Hieuluat", ofType: "sqlite", inDirectory: "data" )
+                print("resPath: \(String(describing: dpPathApp))")
                 do {
                     try file.copyItem(atPath: dpPathApp!, toPath: dpPath.path)
                     print("copyItemAtPath success")
