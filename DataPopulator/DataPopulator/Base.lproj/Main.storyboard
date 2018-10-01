@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2104" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DataInitializer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DataPopulator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -108,6 +108,14 @@
                                     <action selector="actQuickInit:" destination="BYZ-38-t0r" eventType="touchDown" id="0iK-fp-luL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jif-LI-Lx2">
+                                <rect key="frame" x="16" y="370" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Init Plate References"/>
+                                <connections>
+                                    <action selector="actInitPlateReferences:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UwO-q2-zNL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -119,6 +127,7 @@
                         <outlet property="btnInitMucphat" destination="7XF-4p-BNj" id="0Zk-dE-MLA"/>
                         <outlet property="btnInitPhuongtien" destination="BDq-ZH-B1L" id="uxl-SI-Cam"/>
                         <outlet property="btnInitRawData" destination="0zK-Nf-TCx" id="Hme-1w-nVq"/>
+                        <outlet property="btnInitReferences" destination="Jif-LI-Lx2" id="7IS-GQ-Q0p"/>
                         <outlet property="btnInitReleatedDieukhoan" destination="emF-me-ROs" id="R0T-WF-DKA"/>
                         <outlet property="btnInitTables" destination="IxN-p4-UNP" id="hlH-H8-BDu"/>
                         <outlet property="btnQuickInit" destination="uCV-Up-GfZ" id="gaI-Mu-Z7n"/>

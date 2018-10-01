@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     @IBOutlet var btnQuickInit: UIButton!
     @IBOutlet var btnInitTables: UIButton!
     @IBOutlet var btnInitReleatedDieukhoan: UIButton!
+    @IBOutlet var btnInitReferences: UIButton!
     
     
     
@@ -69,19 +70,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func actInitLinhvuc(_ sender: Any) {
-        initReferenceData(tableName: "linhvuc")
+        initReferenceData(tableName: "ND462016linhvuc")
     }
     
     @IBAction func actInitPhuongtien(_ sender: Any) {
-        initReferenceData(tableName: "phuongtien")
+        initReferenceData(tableName: "ND462016phuongtien")
     }
     
     @IBAction func actInitMucphat(_ sender: Any) {
-        initReferenceData(tableName: "mucphat")
+        initReferenceData(tableName: "ND462016mucphat")
     }
     
     @IBAction func actInitKeywords(_ sender: Any) {
-        initReferenceData(tableName: "keywords")
+        initReferenceData(tableName: "ND462016keywords")
+    }
+    
+    @IBAction func actInitPlateReferences(_ sender: Any) {
     }
     
     @IBAction func actQuickInit(_ sender: Any) {
@@ -92,10 +96,11 @@ class ViewController: UIViewController {
         initRelatedDieukhoan()
         initDataForBienphapkhacphuchauqua()
         initDataForHinhphatbosung()
-        initReferenceData(tableName: "linhvuc")
-        initReferenceData(tableName: "phuongtien")
-        initReferenceData(tableName: "mucphat")
-        initReferenceData(tableName: "keywords")
+        initReferenceData(tableName: "ND462016linhvuc")
+        initReferenceData(tableName: "ND462016phuongtien")
+        initReferenceData(tableName: "ND462016mucphat")
+        initReferenceData(tableName: "ND462016keywords")
+        initPlateReferences()
         print("Succesfully Quick Initializing")
         print("=====================================")
     }
@@ -113,7 +118,7 @@ class ViewController: UIViewController {
     func initDataForBienphapkhacphuchauqua() {
         print("Bienphapkhacphuc=====================================")
         // insert raw data for bien phap khac phuc
-        Queries.executeStatements(query: Utils.readFromFile(name: "bienphapkhacphuc"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016bienphapkhacphuc"))
         
         // populate data
         insertDataForBosungKhacphuc(type: "bpkp")
@@ -126,7 +131,7 @@ class ViewController: UIViewController {
     func initDataForHinhphatbosung() {
         print("\n\n\nHinhphatbosung=====================================")
         // insert raw data for hinh phat bo sung
-        Queries.executeStatements(query: Utils.readFromFile(name: "hinhphatbosung"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016hinhphatbosung"))
         
         // populate data
         insertDataForBosungKhacphuc(type: "hpbs")
@@ -176,7 +181,7 @@ class ViewController: UIViewController {
     
     func initRawData() {
         print("================= Init Raw Data ====================")
-        let fileNames = ["QC41-2016","ND46-2016","TT01-2016","LGTDB-2008","LXLVPHC-2012"]
+        let fileNames = ["QC412016","ND462016","TT012016","LGTDB2008","LXLVPHC2012"]
         for fname in fileNames {
             print("Init Raw Data for ...... \(fname)")
             //init raw data
@@ -197,6 +202,17 @@ class ViewController: UIViewController {
         print("=====================================")
     }
     
+    func initPlateReferences() {
+        let fileName = "QC412016Bienbao"
+        print("=====================================")
+        print("Initializing \(fileName)......")
+        //create new tables and insert data
+        Queries.executeStatements(query: Utils.readFromFile(name: fileName))
+        
+        print("Succesfully initializing \(fileName)")
+        print("=====================================")
+    }
+    
     func updateDetails(dieukhoan: Dieukhoan) {
         relatedChildren = [Dieukhoan]()
         self.dieukhoan = dieukhoan
@@ -211,9 +227,9 @@ class ViewController: UIViewController {
         let sortIt = SortUtil()
         
         for k in relatedPlateKeywords {
-            var key = k.lowercased()
+            let key = k.lowercased()
             var finalQuery = ""
-            if key.characters.count > 0 {
+            if key.count > 0 {
                 finalQuery = Queries.rawSqlQuery + " (dkCha in (select id from tblChitietvanban where forsearch like 'phụ lục%') or dkCha in (select id from tblchitietvanban where cha in (select id from tblChitietvanban where forsearch like 'phụ lục%')) or dkCha in (select id from tblchitietvanban where cha in (select id from tblchitietvanban where cha in (select id from tblChitietvanban where forsearch like 'phụ lục%')))) and (forsearch like '% \(key) %' or forsearch like '% \(key)%' or forsearch like '% \(key)_ %')"
                 let relatedChild = Queries.searchDieukhoanByQuery(query: finalQuery, vanbanid: ["\(settings.getQC41ID())"])
                 var sortedRelatedChild = [Dieukhoan]();
@@ -272,7 +288,7 @@ class ViewController: UIViewController {
         var pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*((\\s*(các\\s)*(phụ lục)(\\s+((\\d\\.*)+|(\\p{L}{1,4})|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*\\s*(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)))"
         let vanbanPattern = "(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)))"
         
-        var fullMatches = search.regexSearch(pattern: pattern, searchIn: nd)
+        let fullMatches = search.regexSearch(pattern: pattern, searchIn: nd)
         
         for var fmatch in fullMatches {
             for vbMatch in search.regexSearch(pattern: vanbanPattern, searchIn: fmatch) {
@@ -414,7 +430,7 @@ class ViewController: UIViewController {
             if search.regexSearch(pattern: "(((\\d\\.*)+|(\\p{L}{1}))+,\\s*((\\d\\.*)+|(\\p{L}{1}))+)+", searchIn: convertedPhuluc).count > 0 {
                 convertedPhuluc = convertedPhuluc.replacingOccurrences(of: "phụ lục", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
                 for eachPl in convertedPhuluc.components(separatedBy: ","){
-                    if(!search.isStringExisted(str: eachPl.trimmingCharacters(in: .whitespacesAndNewlines), strArr: phuluc) && eachPl.characters.count > 0){
+                    if(!search.isStringExisted(str: eachPl.trimmingCharacters(in: .whitespacesAndNewlines), strArr: phuluc) && eachPl.count > 0){
                         phuluc.append("phụ lục "+eachPl.trimmingCharacters(in: .whitespacesAndNewlines))
                     }
                 }
@@ -448,7 +464,7 @@ class ViewController: UIViewController {
                 if search.regexSearch(pattern: "(\\d+,\\s*\\d+)+", searchIn: convertedDieu).count > 0 {
                     convertedDieu = convertedDieu.replacingOccurrences(of: "điều", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
                     for var eachDm in convertedDieu.components(separatedBy: ","){
-                        if(!search.isStringExisted(str: eachDm.trimmingCharacters(in: .whitespacesAndNewlines), strArr: dieu) && eachDm.characters.count > 0){
+                        if(!search.isStringExisted(str: eachDm.trimmingCharacters(in: .whitespacesAndNewlines), strArr: dieu) && eachDm.count > 0){
                             dieu.append("điều "+eachDm.trimmingCharacters(in: .whitespacesAndNewlines))
                         }
                     }
@@ -483,7 +499,7 @@ class ViewController: UIViewController {
                             mk = mk.replacingOccurrences(of: "các", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
                             mk = mk.replacingOccurrences(of: "khoản", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
                             for eachKm in mk.components(separatedBy: ","){
-                                if(!search.isStringExisted(str: eachKm.trimmingCharacters(in: .whitespacesAndNewlines), strArr: khoan) && eachKm.characters.count > 0){
+                                if(!search.isStringExisted(str: eachKm.trimmingCharacters(in: .whitespacesAndNewlines), strArr: khoan) && eachKm.count > 0){
                                     khoan.append(eachKm.trimmingCharacters(in: .whitespacesAndNewlines))
                                 }
                             }
@@ -518,7 +534,7 @@ class ViewController: UIViewController {
                                 md = md.replacingOccurrences(of: "điểm", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
                                 if search.regexSearch(pattern: "(((\\p{L}{1})|(\\d\\.*)+)(,\\s+)((\\p{L}{1})|(\\d\\.*)+))+", searchIn: md).count > 0 {
                                     for eachD in md.components(separatedBy: ","){
-                                        if(!search.isStringExisted(str: eachD.trimmingCharacters(in: .whitespacesAndNewlines), strArr: diem) && eachD.characters.count > 0){
+                                        if(!search.isStringExisted(str: eachD.trimmingCharacters(in: .whitespacesAndNewlines), strArr: diem) && eachD.count > 0){
                                             diem.append(eachD.trimmingCharacters(in: .whitespacesAndNewlines))
                                         }
                                     }
@@ -541,7 +557,7 @@ class ViewController: UIViewController {
                     finalQuery += "dkid in (\(query)) or "
                 }
                 
-                if finalQuery.characters.count < 1 {
+                if finalQuery.count < 1 {
                     //in case no 'khoan' and 'diem' available, the query should be initialized (' or ' is added because it will be removed when initializing final query
                     finalQuery = "dkid in (\(dieuQuery)) or "
                     
