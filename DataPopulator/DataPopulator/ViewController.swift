@@ -160,8 +160,8 @@ class ViewController: UIViewController {
     
     func initRelatedDieukhoan() {
         print("=============== Related Dieukhoan ======================")
-        for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 1384", vanbanid: ["2"]) {
-            //        for dk in Queries.selectAllDieukhoan() {
+        //        for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 1384", vanbanid: ["2"]) {
+        for dk in Queries.selectAllDieukhoan() {
             specificVanbanId = []
             specificVanbanId.append( String(describing:dk.getVanban().getId()))
             print("--------- dkId: \(dk.getId())")
@@ -261,7 +261,7 @@ class ViewController: UIViewController {
     }
     
     func getRelatedDieukhoan(noidung:String) -> [Dieukhoan] {
-        //        var nd = "Không chấp hành hiệu lệnh, chỉ dẫn của biển báo hiệu, vạch kẻ đường, trừ các hành vi vi phạm quy định tại Điểm a, Điểm g, Điểm h, Điểm i, Điểm k, Điểm l Khoản 2; Điểm a, Điểm d, Điểm đ, Điểm e, Điểm k Khoản 3; Điểm a, Điểm b, Điểm c, Điểm d, Điểm đ, Điểm h, Điểm i Khoản 4; Điểm a Khoản 5; Điểm b, Điểm c, Điểm đ Khoản 6; Điểm a, Điểm c Khoản 7; Điểm a, Điểm đ Khoản 8 Điều này; Điểm h, Điểm i, Điểm k, Điểm l Khoản 2; Khoản 1 Điều 7 và Điều 8".lowercased()
+//                var nd = "Xe quy định tại các điểm a, b, c và d khoản 1 Điều này khi đi làm nhiệm vụ phải có tín hiệu còi, cờ, đèn theo quy định; không bị hạn chế tốc độ; được phép đi vào đường ngược chiều, các đường khác có thể đi được, kể cả khi có tín hiệu đèn đỏ và chỉ phải tuân theo chỉ dẫn của người điều khiển giao thông.".lowercased()
         
         var nd = noidung.lowercased()
         var keywords = [String]()
@@ -402,7 +402,7 @@ class ViewController: UIViewController {
     
     func parseRelatedDieukhoan(keyword: String) -> [Dieukhoan] {
         let key = keyword.lowercased()
-        //        let key = "Điểm a, Điểm g, Điểm h, Điểm i, Điểm k, Điểm l Khoản 2; Điểm a, Điểm d, Điểm đ, Điểm e, Điểm k Khoản 3; Điểm a, Điểm b, Điểm c, Điểm d, Điểm đ, Điểm h, Điểm i Khoản 4; Điểm a Khoản 5; Điểm b, Điểm c, Điểm đ Khoản 6; Điểm a, Điểm c Khoản 7; Điểm a, Điểm đ Khoản 8 Điều này".lowercased()
+//                let key = "Xe quy định tại các điểm a, b, c và d khoản 1 Điều này khi đi làm nhiệm vụ phải có tín hiệu còi, cờ, đèn theo quy định; không bị hạn chế tốc độ; được phép đi vào đường ngược chiều, các đường khác có thể đi được, kể cả khi có tín hiệu đèn đỏ và chỉ phải tuân theo chỉ dẫn của người điều khiển giao thông.".lowercased()
         var relatedDieukhoan = [Dieukhoan]()
         var finalQuery = ""
         
@@ -480,6 +480,7 @@ class ViewController: UIViewController {
                     for matchKhoan in search.regexSearch(pattern: pattern, searchIn: convertedKhoan){
                         var mk = matchKhoan
                         if search.regexSearch(pattern: "(\\d+,\\s*\\d+)+", searchIn: mk).count > 0 {
+                            mk = mk.replacingOccurrences(of: "các", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
                             mk = mk.replacingOccurrences(of: "khoản", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
                             for eachKm in mk.components(separatedBy: ","){
                                 if(!search.isStringExisted(str: eachKm.trimmingCharacters(in: .whitespacesAndNewlines), strArr: khoan) && eachKm.characters.count > 0){
@@ -513,6 +514,7 @@ class ViewController: UIViewController {
                             //                        pattern = "điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+"
                             for matchDiem in search.regexSearch(pattern: pattern, searchIn: convertedDiem) {
                                 var md = matchDiem
+                                md = md.replacingOccurrences(of: "các", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
                                 md = md.replacingOccurrences(of: "điểm", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
                                 if search.regexSearch(pattern: "(((\\p{L}{1})|(\\d\\.*)+)(,\\s+)((\\p{L}{1})|(\\d\\.*)+))+", searchIn: md).count > 0 {
                                     for eachD in md.components(separatedBy: ","){
