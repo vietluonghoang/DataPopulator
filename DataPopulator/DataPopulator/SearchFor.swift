@@ -20,7 +20,7 @@ class SearchFor {
             
             for m in matches.map({nsString.substring(with: $0.range)}){
                 if !matchesFound.contains(m) {
-                    matchesFound.append(m)
+                    matchesFound.append(m.trimmingCharacters(in: .whitespacesAndNewlines))
                 }
             }
             return matchesFound

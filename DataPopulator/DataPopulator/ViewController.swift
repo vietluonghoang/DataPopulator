@@ -165,8 +165,8 @@ class ViewController: UIViewController {
     
     func initRelatedDieukhoan() {
         print("=============== Related Dieukhoan ======================")
-        //        for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 1384", vanbanid: ["2"]) {
-        for dk in Queries.selectAllDieukhoan() {
+        for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 1458", vanbanid: ["2"]) {
+            //        for dk in Queries.selectAllDieukhoan() {
             specificVanbanId = []
             specificVanbanId.append( String(describing:dk.getVanban().getId()))
             print("--------- dkId: \(dk.getId())")
@@ -277,14 +277,11 @@ class ViewController: UIViewController {
     }
     
     func getRelatedDieukhoan(noidung:String) -> [Dieukhoan] {
-//                var nd = "Xe quy định tại các điểm a, b, c và d khoản 1 Điều này khi đi làm nhiệm vụ phải có tín hiệu còi, cờ, đèn theo quy định; không bị hạn chế tốc độ; được phép đi vào đường ngược chiều, các đường khác có thể đi được, kể cả khi có tín hiệu đèn đỏ và chỉ phải tuân theo chỉ dẫn của người điều khiển giao thông.".lowercased()
+        //                var nd = "Xe quy định tại các điểm a, b, c và d khoản 1 Điều này khi đi làm nhiệm vụ phải có tín hiệu còi, cờ, đèn theo quy định; không bị hạn chế tốc độ; được phép đi vào đường ngược chiều, các đường khác có thể đi được, kể cả khi có tín hiệu đèn đỏ và chỉ phải tuân theo chỉ dẫn của người điều khiển giao thông.".lowercased()
         
         var nd = noidung.lowercased()
         var keywords = [String]()
         var relatedDieukhoan = [Dieukhoan]()
-        
-        //        var pattern = "((điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+)*(khoản\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+)*((điều\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+)+(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)))"
-        //        var pattern = "(\\s*điểm\\s+((\\p{L}{1})|(\\d\\.*))+((\\s*,)|(\\s+và))*)*(\\s*khoản\\s+((\\p{L}{1})|(\\d\\.*))+((\\s*,)|(\\s*;)|(\\s+và))*)*(\\s*điều\\s+(\\d\\.*)+((\\s*,)|(\\s*;)|(\\s+và))*)*(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)))"
         var pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*((\\s*(các\\s)*(phụ lục)(\\s+((\\d\\.*)+|(\\p{L}{1,4})|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*\\s*(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)))"
         let vanbanPattern = "(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)))"
         
@@ -327,7 +324,7 @@ class ViewController: UIViewController {
             
             //            pattern = "((điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+)*(khoản\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+)*((điều\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+)+"
             
-            pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b)+)+)"
+            pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)"
             
             let longMatches = search.regexSearch(pattern: pattern, searchIn: fmatch)
             
@@ -337,17 +334,17 @@ class ViewController: UIViewController {
                 }
             }
             
-            for key in keywords {
-                let dk = parseRelatedDieukhoan(keyword: key)
-                if dk.count > 0{
-                    for dkh in dk {
-                        relatedDieukhoan.append(dkh)
-                    }
-                }
-            }
+            //            for key in keywords {
+            //                let dk = parseRelatedDieukhoan(keyword: key)
+            //                if dk.count > 0{
+            //                    for dkh in dk {
+            //                        relatedDieukhoan.append(dkh)
+            //                    }
+            //                }
+            //            }
         }
         
-        keywords = [String]()
+        //        keywords = [String]()
         
         specificVanbanId = [String(describing: dieukhoan!.getVanban().getId())]
         
@@ -364,33 +361,37 @@ class ViewController: UIViewController {
         
         //        pattern = "((điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+)*(khoản\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+)+((điều\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+)+"
         
-        pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b)+)+)"
+        pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)"
         
         let longMatches = search.regexSearch(pattern: pattern, searchIn: nd)
         
         for var lmatch in longMatches{
             nd = nd.replacingOccurrences(of: lmatch, with: "")
             if lmatch.contains("điều này") {
-                lmatch = lmatch.replacingOccurrences(of: "điều này", with: search.getDieunay(currentDieukhoan: dieukhoan!, vanbanId: specificVanbanId).getSo()).trimmingCharacters(in: .whitespacesAndNewlines)
+                if lmatch.replacingOccurrences(of: "điều này", with: "").count > 0 {
+                    lmatch = lmatch.replacingOccurrences(of: "điều này", with: search.getDieunay(currentDieukhoan: dieukhoan!, vanbanId: specificVanbanId).getSo()).trimmingCharacters(in: .whitespacesAndNewlines)
+                }else {
+                    lmatch = "" // if there are no khoan indicated, this is not a valid reference.
+                }
             }
-            if(!search.isStringExisted(str: lmatch.trimmingCharacters(in: .whitespacesAndNewlines), strArr: keywords)){
+            if(lmatch.count > 0 && !search.isStringExisted(str: lmatch.trimmingCharacters(in: .whitespacesAndNewlines), strArr: keywords)){
                 keywords.append(lmatch.trimmingCharacters(in: .whitespacesAndNewlines))
             }
         }
-        
-        //        pattern = "(điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+)*(khoản\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+"
-        //        pattern = "(\\s*điểm\\s+((\\p{L}{1})|(\\d\\.*))+((\\s*,)|(\\s+và))*)*(\\s*khoản\\s+(((này)|\\p{L}{1})|(\\d\\.*))+)+"
         
         pattern = "((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)"
         
         let shortMatches = search.regexSearch(pattern: pattern, searchIn: nd)
         
         for var smatch in shortMatches{
-            var keywords = [String]()
             nd = nd.replacingOccurrences(of: smatch, with: "")
             
             if smatch.contains("điều này") {
-                smatch = smatch.replacingOccurrences(of: "điều này", with: search.getDieunay(currentDieukhoan: dieukhoan!, vanbanId: specificVanbanId).getSo()).trimmingCharacters(in: .whitespacesAndNewlines)
+                if smatch.replacingOccurrences(of: "điều này", with: "").count > 0 {
+                    smatch = smatch.replacingOccurrences(of: "điều này", with: search.getDieunay(currentDieukhoan: dieukhoan!, vanbanId: specificVanbanId).getSo()).trimmingCharacters(in: .whitespacesAndNewlines)
+                }else {
+                    smatch = "" // if there are no khoan indicated, this is not a valid reference.
+                }
             }else{
                 smatch = smatch + " " + search.getDieunay(currentDieukhoan: dieukhoan!, vanbanId: specificVanbanId).getSo().trimmingCharacters(in: .whitespacesAndNewlines)
             }
@@ -399,7 +400,7 @@ class ViewController: UIViewController {
                 smatch = smatch.replacingOccurrences(of: "khoản này", with: search.getKhoannay(currentDieukhoan: dieukhoan!, vanbanId: specificVanbanId).getSo()).trimmingCharacters(in: .whitespacesAndNewlines)
             }
             
-            if(!search.isStringExisted(str: smatch.trimmingCharacters(in: .whitespacesAndNewlines), strArr: keywords)){
+            if(smatch.count > 0 && !search.isStringExisted(str: smatch.trimmingCharacters(in: .whitespacesAndNewlines), strArr: keywords)){
                 keywords.append(smatch.trimmingCharacters(in: .whitespacesAndNewlines))
             }
         }
@@ -418,7 +419,7 @@ class ViewController: UIViewController {
     
     func parseRelatedDieukhoan(keyword: String) -> [Dieukhoan] {
         let key = keyword.lowercased()
-//                let key = "Xe quy định tại các điểm a, b, c và d khoản 1 Điều này khi đi làm nhiệm vụ phải có tín hiệu còi, cờ, đèn theo quy định; không bị hạn chế tốc độ; được phép đi vào đường ngược chiều, các đường khác có thể đi được, kể cả khi có tín hiệu đèn đỏ và chỉ phải tuân theo chỉ dẫn của người điều khiển giao thông.".lowercased()
+        //                let key = "Xe quy định tại các điểm a, b, c và d khoản 1 Điều này khi đi làm nhiệm vụ phải có tín hiệu còi, cờ, đèn theo quy định; không bị hạn chế tốc độ; được phép đi vào đường ngược chiều, các đường khác có thể đi được, kể cả khi có tín hiệu đèn đỏ và chỉ phải tuân theo chỉ dẫn của người điều khiển giao thông.".lowercased()
         var relatedDieukhoan = [Dieukhoan]()
         var finalQuery = ""
         
@@ -451,118 +452,125 @@ class ViewController: UIViewController {
             finalQuery = "(\(tempQuery.substring(to: tempQuery.index(tempQuery.endIndex, offsetBy: -4)))) and vanbanid = \(specificVanbanId[0])"
         }else{
             
-            var pattern = "điều\\s+(((này)|(\\d\\.*)+))"
+            var pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*và))*)+)+)"
             
-            let dieuMatches = search.regexSearch(pattern: pattern, searchIn: key)
+            let dieukhoanForm = search.regexSearch(pattern: pattern, searchIn: key)
             
-            for dm in dieuMatches{
-                var convertedDieu = dm.replacingOccurrences(of: " và", with: ",")
-                convertedDieu = convertedDieu.replacingOccurrences(of: ";", with: ",")
-                var dieu = [String]()
-                var dieuQuery = ""
-                var tempQuery = ""
-                if search.regexSearch(pattern: "(\\d+,\\s*\\d+)+", searchIn: convertedDieu).count > 0 {
-                    convertedDieu = convertedDieu.replacingOccurrences(of: "điều", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
-                    for var eachDm in convertedDieu.components(separatedBy: ","){
-                        if(!search.isStringExisted(str: eachDm.trimmingCharacters(in: .whitespacesAndNewlines), strArr: dieu) && eachDm.count > 0){
-                            dieu.append("điều "+eachDm.trimmingCharacters(in: .whitespacesAndNewlines))
+            for dkForm in dieukhoanForm {
+                pattern = "(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*và))*)+)+"
+                let dieuMatches = search.regexSearch(pattern: pattern, searchIn: dkForm)
+                for var dm in dieuMatches{
+                    dm = dm.replacingOccurrences(of: "các", with: "")
+                    dm = dm.replacingOccurrences(of: " và", with: ",")
+                    dm = dm.replacingOccurrences(of: ";", with: ",")
+                    var dieu = [String]()
+                    var dieuQuery = ""
+                    var tempQuery = ""
+                    if search.regexSearch(pattern: "(\\d+,\\s*\\d+)+", searchIn: dm).count > 0 {
+                        dm = dm.replacingOccurrences(of: "điều", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+                        for var eachDm in dm.components(separatedBy: ","){
+                            eachDm = "điều " + eachDm.trimmingCharacters(in: .whitespacesAndNewlines)
+                            if(!search.isStringExisted(str: eachDm, strArr: dieu) && eachDm.count > 0){
+                                dieu.append(eachDm)
+                            }
+                        }
+                    }else{
+                        dm = dm.replacingOccurrences(of: ",", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+                        if(!search.isStringExisted(str: dm, strArr: dieu)){
+                            dieu.append(dm)
                         }
                     }
-                }else{
-                    if(!search.isStringExisted(str: convertedDieu.trimmingCharacters(in: .whitespacesAndNewlines), strArr: dieu)){
-                        convertedDieu = convertedDieu.replacingOccurrences(of: ",", with: "")
-                        dieu.append(convertedDieu.trimmingCharacters(in: .whitespacesAndNewlines))
+                    
+                    for d  in dieu {
+                        tempQuery += "forsearch like \"\(d) %\" or forsearch like \"\(d). %\" or "
                     }
-                }
-                
-                for d  in dieu {
-                    tempQuery += "forsearch like \"\(d) %\" or forsearch like \"\(d). %\" or "
-                }
-                
-                dieuQuery = "select distinct id from tblChitietvanban where (\(tempQuery.substring(to: tempQuery.index(tempQuery.endIndex, offsetBy: -4)))) and vanbanid = \(specificVanbanId[0])"
-                
-                //TO DO: need to split only 1 "khoan" at a time
-                //            pattern = "(điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+)*(khoản\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+"
-                //pattern = "(\\s*điểm\\s+((\\p{L}{1})|(\\d\\.*))+((\\s*,)|(\\s+và))*)*(\\s*khoản\\s+(((này)|\\p{L}{1})|(\\d\\.*))+)+"
-                pattern = "((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*và))*)+)+)"
-                let khoanMatches = search.regexSearch(pattern: pattern, searchIn: key)
-                
-                for km in khoanMatches{
-                    var query = ""
-                    var khoan = [String]()
-                    var convertedKhoan = km.replacingOccurrences(of: " và", with: ",")
-                    convertedKhoan = convertedKhoan.replacingOccurrences(of: ";", with: ",")
-                    pattern = "khoản\\s+((\\d+\\.*(,|;)*\\s*)+)"
-                    for matchKhoan in search.regexSearch(pattern: pattern, searchIn: convertedKhoan){
-                        var mk = matchKhoan
-                        if search.regexSearch(pattern: "(\\d+,\\s*\\d+)+", searchIn: mk).count > 0 {
-                            mk = mk.replacingOccurrences(of: "các", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
-                            mk = mk.replacingOccurrences(of: "khoản", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
-                            for eachKm in mk.components(separatedBy: ","){
-                                if(!search.isStringExisted(str: eachKm.trimmingCharacters(in: .whitespacesAndNewlines), strArr: khoan) && eachKm.count > 0){
-                                    khoan.append(eachKm.trimmingCharacters(in: .whitespacesAndNewlines))
-                                }
-                            }
-                        }else{
-                            if(!search.isStringExisted(str: matchKhoan.trimmingCharacters(in: .whitespacesAndNewlines), strArr: khoan)){
-                                mk = mk.replacingOccurrences(of: ",", with: "")
-                                khoan.append(mk.replacingOccurrences(of: "khoản", with: "").trimmingCharacters(in: .whitespacesAndNewlines))
-                            }
-                        }
-                        
-                        tempQuery = ""
-                        for d in khoan {
-                            tempQuery += "forsearch like \"\(d) %\" or forsearch like \"\(d). %\" or "
-                        }
-                        if khoan.count > 0 {
-                            query = "select distinct id from tblChitietvanban where (\(tempQuery.substring(to: tempQuery.index(tempQuery.endIndex, offsetBy: -4)))) and cha in (\(dieuQuery))"
-                        }
-                        
-                        //pattern = "điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+"
-                        pattern = "(\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)"
-                        
-                        let diemMatches = search.regexSearch(pattern: pattern, searchIn: convertedKhoan)
-                        
-                        var diem = [String]()
-                        for d in diemMatches{
-                            var convertedDiem = d.replacingOccurrences(of: " và", with: ",")
-                            convertedDiem = convertedDiem.replacingOccurrences(of: ";", with: ",")
-                            //                        pattern = "điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+"
-                            for matchDiem in search.regexSearch(pattern: pattern, searchIn: convertedDiem) {
-                                var md = matchDiem
-                                md = md.replacingOccurrences(of: "các", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
-                                md = md.replacingOccurrences(of: "điểm", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
-                                if search.regexSearch(pattern: "(((\\p{L}{1})|(\\d\\.*)+)(,\\s+)((\\p{L}{1})|(\\d\\.*)+))+", searchIn: md).count > 0 {
-                                    for eachD in md.components(separatedBy: ","){
-                                        if(!search.isStringExisted(str: eachD.trimmingCharacters(in: .whitespacesAndNewlines), strArr: diem) && eachD.count > 0){
-                                            diem.append(eachD.trimmingCharacters(in: .whitespacesAndNewlines))
-                                        }
-                                    }
-                                }else{
-                                    if(!search.isStringExisted(str: md.trimmingCharacters(in: .whitespacesAndNewlines), strArr: diem)){
-                                        md = md.replacingOccurrences(of: ",", with: "")
-                                        diem.append(md.replacingOccurrences(of: "điểm", with: "").trimmingCharacters(in: .whitespacesAndNewlines))
+                    
+                    dieuQuery = "select distinct id from tblChitietvanban where (\(tempQuery.substring(to: tempQuery.index(tempQuery.endIndex, offsetBy: -4)))) and vanbanid = \(specificVanbanId[0])"
+                    
+                    pattern = "(\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*và))*)+)"
+                    let khoanMatches = search.regexSearch(pattern: pattern, searchIn: dkForm)
+                    
+                    for var km in khoanMatches{
+                        var query = ""
+                        var khoan = [String]()
+                        km = km.replacingOccurrences(of: "các", with: "")
+                        km = km.replacingOccurrences(of: " và", with: ",")
+                        km = km.replacingOccurrences(of: ";", with: ",")
+                        pattern = "khoản\\s+((\\d+\\.*(,|;)*\\s*)+)"
+                        let matchK = search.regexSearch(pattern: pattern, searchIn: km)
+                        for var matchKhoan in matchK{
+                            matchKhoan = matchKhoan.trimmingCharacters(in: .whitespacesAndNewlines)
+                            if search.regexSearch(pattern: "(\\d+,\\s*\\d+)+", searchIn: matchKhoan).count > 0 {
+                                matchKhoan = matchKhoan.replacingOccurrences(of: "khoản", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+                                for var eachKm in matchKhoan.components(separatedBy: ","){
+                                    eachKm = eachKm.trimmingCharacters(in: .whitespacesAndNewlines)
+                                    if(!search.isStringExisted(str: eachKm, strArr: khoan) && eachKm.count > 0){
+                                        khoan.append(eachKm)
                                     }
                                 }
+                            }else{
+                                matchKhoan = matchKhoan.replacingOccurrences(of: ",", with: "")
+                                matchKhoan = matchKhoan.replacingOccurrences(of: "khoản", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+                                if(!search.isStringExisted(str: matchKhoan, strArr: khoan)){
+                                    khoan.append(matchKhoan)
+                                }
                             }
+                            
                             tempQuery = ""
-                            for d in diem {
+                            for d in khoan {
                                 tempQuery += "forsearch like \"\(d) %\" or forsearch like \"\(d). %\" or "
                             }
+                            if khoan.count > 0 {
+                                query = "select distinct id from tblChitietvanban where (\(tempQuery.substring(to: tempQuery.index(tempQuery.endIndex, offsetBy: -4)))) and cha in (\(dieuQuery))"
+                            }
+                            
+                            //pattern = "điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+"
+                            pattern = "(\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)"
+                            
+                            let diemMatches = search.regexSearch(pattern: pattern, searchIn: km)
+                            
+                            var diem = [String]()
+                            for var d in diemMatches{
+                                d = d.replacingOccurrences(of: "các", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+                                d = d.replacingOccurrences(of: " và", with: ",")
+                                d = d.replacingOccurrences(of: ";", with: ",")
+                                pattern = "điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*(\\s+và)*\\s*)+"
+                                let matchD = search.regexSearch(pattern: pattern, searchIn: d)
+                                for var matchDiem in matchD {
+                                    matchDiem = matchDiem.replacingOccurrences(of: "điểm", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+                                    if search.regexSearch(pattern: "(((\\p{L}{1})|(\\d\\.*)+)(,\\s+)((\\p{L}{1})|(\\d\\.*)+))+", searchIn: matchDiem).count > 0 {
+                                        for var eachD in matchDiem.components(separatedBy: ","){
+                                            eachD = eachD.trimmingCharacters(in: .whitespacesAndNewlines)
+                                            if(!search.isStringExisted(str: eachD, strArr: diem) && eachD.count > 0){
+                                                diem.append(eachD)
+                                            }
+                                        }
+                                    }else{
+                                        matchDiem = matchDiem.replacingOccurrences(of: ",", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+                                        if(!search.isStringExisted(str: matchDiem, strArr: diem)){
+                                            diem.append(matchDiem)
+                                        }
+                                    }
+                                }
+                                tempQuery = ""
+                                for d in diem {
+                                    tempQuery += "forsearch like \"\(d) %\" or forsearch like \"\(d). %\" or "
+                                }
+                            }
+                            if diem.count > 0{
+                                query = "select distinct id from tblChitietvanban where (\(tempQuery.substring(to: tempQuery.index(tempQuery.endIndex, offsetBy: -4)))) and cha in (\(query))"
+                            }
                         }
-                        if diem.count > 0{
-                            query = "select distinct id from tblChitietvanban where (\(tempQuery.substring(to: tempQuery.index(tempQuery.endIndex, offsetBy: -4)))) and cha in (\(query))"
-                        }
+                        finalQuery += "dkid in (\(query)) or "
                     }
-                    finalQuery += "dkid in (\(query)) or "
-                }
-                
-                if finalQuery.count < 1 {
-                    //in case no 'khoan' and 'diem' available, the query should be initialized (' or ' is added because it will be removed when initializing final query
-                    finalQuery = "dkid in (\(dieuQuery)) or "
                     
-                    //TODO:still in making decision of showing children dieukhoan or not
-                    //finalQuery = "dkid in (\(dieuQuery)) or dkCha in \(dieuQuery) or "
+                    if finalQuery.count < 1 {
+                        //in case no 'khoan' and 'diem' available, the query should be initialized (' or ' is added because it will be removed when initializing final query
+                        finalQuery = "dkid in (\(dieuQuery)) or "
+                        
+                        //TODO:still in making decision of showing children dieukhoan or not
+                        //finalQuery = "dkid in (\(dieuQuery)) or dkCha in \(dieuQuery) or "
+                    }
                 }
             }
         }
@@ -588,9 +596,6 @@ class ViewController: UIViewController {
     
     func getRelatedPlatKeywords(content:String) -> [String] {
         let input = content.lowercased()
-        // (\p{L}{1,2}((\.|,)\p{L}{1,2})*)*([0-9]*)(\.|,)+[0-9]+.{0,1}
-        //((([a-zA-Z]{1,2})(\.|,)+)+(\d)+(\.\d)*([a-zA-Z])*)|((vạch)(\ssố)*\s(\d)+(\.\d)*(\.)*)
-        //(\\b(([a-zA-Z]{1,2})(\\.|,)+)+(\\d)+(\\.\\d)*([a-zA-Z])*\\b)|(\\b(vạch)(\\ssố)*\\s(\\d)+(\\.\\d)*(\\.)*\\b)
         let pattern = "((([a-zA-Z]{1,2})(\\.|,)+)+(\\d)+(\\.\\d)*([a-zA-Z])*)|((vạch)(\\ssố)*\\s(\\d)+(\\.\\d)*(\\.)*)"
         return search.regexSearch(pattern: pattern, searchIn: input)
     }
