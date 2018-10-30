@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     @IBOutlet var btnInitTables: UIButton!
     @IBOutlet var btnInitReleatedDieukhoan: UIButton!
     @IBOutlet var btnInitReferences: UIButton!
+    @IBOutlet var btnInitVachReferences: UIButton!
     
     
     
@@ -86,6 +87,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func actInitPlateReferences(_ sender: Any) {
+        initPlateReferences()
+    }
+    
+    @IBAction func actInitVachReferences(_ sender: Any) {
+        initVachReferences()
     }
     
     @IBAction func actQuickInit(_ sender: Any) {
@@ -101,6 +107,7 @@ class ViewController: UIViewController {
         initReferenceData(tableName: "ND462016mucphat")
         initReferenceData(tableName: "ND462016keywords")
         initPlateReferences()
+        initVachReferences()
         print("Succesfully Quick Initializing")
         print("=====================================")
     }
@@ -165,8 +172,8 @@ class ViewController: UIViewController {
     
     func initRelatedDieukhoan() {
         print("=============== Related Dieukhoan ======================")
-        for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 1458", vanbanid: ["2"]) {
-            //        for dk in Queries.selectAllDieukhoan() {
+        //        for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 789", vanbanid: ["1","2","3","4","5"]) {
+        for dk in Queries.selectAllDieukhoan() {
             specificVanbanId = []
             specificVanbanId.append( String(describing:dk.getVanban().getId()))
             print("--------- dkId: \(dk.getId())")
@@ -204,6 +211,17 @@ class ViewController: UIViewController {
     
     func initPlateReferences() {
         let fileName = "QC412016Bienbao"
+        print("=====================================")
+        print("Initializing \(fileName)......")
+        //create new tables and insert data
+        Queries.executeStatements(query: Utils.readFromFile(name: fileName))
+        
+        print("Succesfully initializing \(fileName)")
+        print("=====================================")
+    }
+    
+    func initVachReferences() {
+        let fileName = "QC412016Vachke"
         print("=====================================")
         print("Initializing \(fileName)......")
         //create new tables and insert data

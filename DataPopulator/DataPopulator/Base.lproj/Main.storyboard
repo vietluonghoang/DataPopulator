@@ -116,6 +116,14 @@
                                     <action selector="actInitPlateReferences:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UwO-q2-zNL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbM-mF-gOT">
+                                <rect key="frame" x="16" y="408" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="init Vach References"/>
+                                <connections>
+                                    <action selector="actInitVachReferences:" destination="BYZ-38-t0r" eventType="touchDown" id="GPe-SX-OI3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -130,6 +138,7 @@
                         <outlet property="btnInitReferences" destination="Jif-LI-Lx2" id="7IS-GQ-Q0p"/>
                         <outlet property="btnInitReleatedDieukhoan" destination="emF-me-ROs" id="R0T-WF-DKA"/>
                         <outlet property="btnInitTables" destination="IxN-p4-UNP" id="hlH-H8-BDu"/>
+                        <outlet property="btnInitVachReferences" destination="hbM-mF-gOT" id="sPQ-GW-GXM"/>
                         <outlet property="btnQuickInit" destination="uCV-Up-GfZ" id="gaI-Mu-Z7n"/>
                         <outlet property="lblResult" destination="rHa-KM-QCB" id="iEt-vE-nPf"/>
                     </connections>
