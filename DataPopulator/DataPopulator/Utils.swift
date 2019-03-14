@@ -16,15 +16,16 @@ class Utils {
         let dpPath = docsDir.appendingPathComponent("\(name).txt")
         print("====== docDir: \(dpPath.path)")
         let file = FileManager.default
-        if(!file.fileExists(atPath: dpPath.path)) {
-            let dpPathApp = Bundle.main.path(forResource: name, ofType: "txt", inDirectory: "data")
-            print("===== resPath: \(String(describing: dpPathApp))")
-            do {
-                try file.copyItem(atPath: dpPathApp!, toPath: dpPath.path)
-                print("copyItemAtPath success")
-            } catch {
-                print("copyItemAtPath fail")
+        let dpPathApp = Bundle.main.path(forResource: name, ofType: "txt", inDirectory: "data")
+        print("===== resPath: \(String(describing: dpPathApp))")
+        do {
+            if(file.fileExists(atPath: dpPath.path)) {
+                try file.removeItem(at: dpPath)
             }
+            try file.copyItem(atPath: dpPathApp!, toPath: dpPath.path)
+            print("copyItemAtPath success")
+        } catch {
+            print("copyItemAtPath fail")
         }
         do {
             fileContent = try String(contentsOf: dpPath)

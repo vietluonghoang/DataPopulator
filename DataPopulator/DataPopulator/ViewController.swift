@@ -12,7 +12,7 @@ import FMDB
 class ViewController: UIViewController {
     var specificVanbanId = [String]()
     var dieukhoan: Dieukhoan? = nil
-    var children = [Dieukhoan]()
+    //var children = [Dieukhoan]()
     var relatedChildren = [Dieukhoan]()
     var settings = GeneralSettings()
     var parentDieukhoan: Dieukhoan? = nil
@@ -172,7 +172,7 @@ class ViewController: UIViewController {
     
     func initRelatedDieukhoan() {
         print("=============== Related Dieukhoan ======================")
-        //        for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 789", vanbanid: ["1","2","3","4","5"]) {
+        //        for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 2632", vanbanid: ["1","2","3","4","5"]) {
         for dk in Queries.selectAllDieukhoan() {
             specificVanbanId = []
             specificVanbanId.append( String(describing:dk.getVanban().getId()))
@@ -437,7 +437,7 @@ class ViewController: UIViewController {
     
     func parseRelatedDieukhoan(keyword: String) -> [Dieukhoan] {
         let key = keyword.lowercased()
-        //                let key = "Xe quy định tại các điểm a, b, c và d khoản 1 Điều này khi đi làm nhiệm vụ phải có tín hiệu còi, cờ, đèn theo quy định; không bị hạn chế tốc độ; được phép đi vào đường ngược chiều, các đường khác có thể đi được, kể cả khi có tín hiệu đèn đỏ và chỉ phải tuân theo chỉ dẫn của người điều khiển giao thông.".lowercased()
+        //                        let key = "điều 9, điều 10, điều 11, điều 12;".lowercased()
         var relatedDieukhoan = [Dieukhoan]()
         var finalQuery = ""
         
@@ -493,9 +493,12 @@ class ViewController: UIViewController {
                             }
                         }
                     }else{
-                        dm = dm.replacingOccurrences(of: ",", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
-                        if(!search.isStringExisted(str: dm, strArr: dieu)){
-                            dieu.append(dm)
+                        //                        dm = dm.replacingOccurrences(of: ",", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+                        let dmList = dm.split(separator: ",")
+                        for dl in dmList {
+                            if(!search.isStringExisted(str: dl.trimmingCharacters(in: .whitespacesAndNewlines), strArr: dieu)){
+                                dieu.append(String(dl.trimmingCharacters(in: .whitespacesAndNewlines)))
+                            }
                         }
                     }
                     
