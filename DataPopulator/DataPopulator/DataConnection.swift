@@ -16,11 +16,11 @@ class DataConnection: NSObject {
         if database == nil {
             let docsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
             let dpPath = docsDir.appendingPathComponent("Hieuluat.sqlite")
-            print("docDir: \(dpPath.path)")
+            print("sourcecDir: \(dpPath.path)")
             let file = FileManager.default
             if(!file.fileExists(atPath: dpPath.path)) {
                 let dpPathApp = Bundle.main.path(forResource: "Hieuluat", ofType: "sqlite", inDirectory: "data" )
-                print("resPath: \(String(describing: dpPathApp))")
+                print("targetPath: \(dpPathApp ?? "")")
                 do {
                     try file.copyItem(atPath: dpPathApp!, toPath: dpPath.path)
                     print("copyItemAtPath success")

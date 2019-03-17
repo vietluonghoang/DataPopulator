@@ -14,10 +14,10 @@ class Utils {
         
         let docsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let dpPath = docsDir.appendingPathComponent("\(name).txt")
-        print("====== docDir: \(dpPath.path)")
+        print("====== sourceDir: \(dpPath.path)")
         let file = FileManager.default
         let dpPathApp = Bundle.main.path(forResource: name, ofType: "txt", inDirectory: "data")
-        print("===== resPath: \(String(describing: dpPathApp))")
+        print("===== targetPath: \(dpPathApp ?? "")")
         do {
             if(file.fileExists(atPath: dpPath.path)) {
                 try file.removeItem(at: dpPath)
@@ -40,11 +40,11 @@ class Utils {
         
         let docsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let dpPath = docsDir.appendingPathComponent("\(name).txt")
-        print("docDir: \(dpPath.path)")
+        print("sourceDir: \(dpPath.path)")
         let file = FileManager.default
         if(!file.fileExists(atPath: dpPath.path)) {
             let dpPathApp = Bundle.main.path(forResource: name, ofType: "txt")
-            print("resPath: "+String(describing: dpPathApp))
+            print("targetPath: \(dpPathApp ?? "")")
             do {
                 try file.copyItem(atPath: dpPathApp!, toPath: dpPath.path)
                 print("copyItemAtPath success")

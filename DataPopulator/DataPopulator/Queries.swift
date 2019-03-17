@@ -170,7 +170,7 @@ class Queries: NSObject {
         
         let sql = "insert into \(targetTable) ('dieukhoanId', 'dieukhoanQuydinhId', 'noidung') values (\(dieukhoanId),\(dieukhoanQuydinhId),'\(noidung)')"
         let reslut = DataConnection.database!.executeUpdate(sql, withArgumentsIn: appendKeyword)
-        print("Done: \(reslut)")
+        print("Inserted: \(dieukhoanId) - \(dieukhoanQuydinhId)?... \(reslut)")
         if !reslut {
             print("update failed: \(DataConnection.database!.lastErrorMessage())")
         }
@@ -255,29 +255,29 @@ class Queries: NSObject {
         let appendKeyword = [String]()
         let sql = "insert into tblRelatedDieukhoan ('dieukhoanId', 'relatedDieukhoanId') values (\(dieukhoanId),\(relatedDieukhoanId))"
         let reslut = DataConnection.database!.executeUpdate(sql, withArgumentsIn: appendKeyword)
-        print("Done: \(reslut)")
+        print("Inserted: \(dieukhoanId) - \(relatedDieukhoanId)?... \(reslut)")
         if !reslut {
             print("update failed: \(DataConnection.database!.lastErrorMessage())")
         }
         
         // since redundant checking of existing key pair would lead to redundant related dieukhoan when viewing, we should accept redundancy of data in database
         
-//        var sql = "select count(dieukhoanId) as count from tblRelatedDieukhoan where (dieukhoanId = \(dieukhoanId) and relatedDieukhoanId = \(relatedDieukhoanId)) or (dieukhoanId = \(relatedDieukhoanId) and relatedDieukhoanId = \(dieukhoanId))"
-//        let resultSet: FMResultSet! = DataConnection.database!.executeQuery(sql, withArgumentsIn: [])!
-//        if resultSet != nil {
-//            var count: Int64 = 0
-//            while resultSet.next() {
-//                count = Int64(resultSet.string(forColumn: "count")!)!
-//            }
-//            if count < 1 && dieukhoanId != relatedDieukhoanId {
-//                sql = "insert into tblRelatedDieukhoan ('dieukhoanId', 'relatedDieukhoanId') values (\(dieukhoanId),\(relatedDieukhoanId))"
-//                let reslut = DataConnection.database!.executeUpdate(sql, withArgumentsIn: appendKeyword)
-//                print("Done: \(reslut)")
-//                if !reslut {
-//                    print("update failed: \(DataConnection.database!.lastErrorMessage())")
-//                }
-//            }
-//        }
+        //        var sql = "select count(dieukhoanId) as count from tblRelatedDieukhoan where (dieukhoanId = \(dieukhoanId) and relatedDieukhoanId = \(relatedDieukhoanId)) or (dieukhoanId = \(relatedDieukhoanId) and relatedDieukhoanId = \(dieukhoanId))"
+        //        let resultSet: FMResultSet! = DataConnection.database!.executeQuery(sql, withArgumentsIn: [])!
+        //        if resultSet != nil {
+        //            var count: Int64 = 0
+        //            while resultSet.next() {
+        //                count = Int64(resultSet.string(forColumn: "count")!)!
+        //            }
+        //            if count < 1 && dieukhoanId != relatedDieukhoanId {
+        //                sql = "insert into tblRelatedDieukhoan ('dieukhoanId', 'relatedDieukhoanId') values (\(dieukhoanId),\(relatedDieukhoanId))"
+        //                let reslut = DataConnection.database!.executeUpdate(sql, withArgumentsIn: appendKeyword)
+        //                print("Done: \(reslut)")
+        //                if !reslut {
+        //                    print("update failed: \(DataConnection.database!.lastErrorMessage())")
+        //                }
+        //            }
+        //        }
         
         DataConnection.database!.close()
     }
@@ -653,13 +653,13 @@ class Queries: NSObject {
     }
     
     class func setRecordsCap(query: String) -> String {
-//        let cap = GeneralSettings().getRecordCapByRam(ram: getPhysicalMemorySize())
-//        
-//        //if cap equals 0, it means no cap
-//        if cap == 0 {
-            return query
-//        }
-//        return  "\(query) limit \(cap)"
+        //        let cap = GeneralSettings().getRecordCapByRam(ram: getPhysicalMemorySize())
+        //
+        //        //if cap equals 0, it means no cap
+        //        if cap == 0 {
+        return query
+        //        }
+        //        return  "\(query) limit \(cap)"
     }
     
     class func convertKeywordsForDifferentAccentType(keyword: String) -> [String] {

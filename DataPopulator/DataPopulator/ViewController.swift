@@ -172,16 +172,16 @@ class ViewController: UIViewController {
     
     func initRelatedDieukhoan() {
         print("=============== Related Dieukhoan ======================")
-        //        for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 2632", vanbanid: ["1","2","3","4","5"]) {
+        //                for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 1379", vanbanid: ["1","2","3","4","5"]) {
         for dk in Queries.selectAllDieukhoan() {
             specificVanbanId = []
             specificVanbanId.append( String(describing:dk.getVanban().getId()))
-            print("--------- dkId: \(dk.getId())")
+            //            print("--------- dkId: \(dk.getId())")
             updateDetails(dieukhoan: dk)
             for rel in relatedChildren{
                 Queries.insertRelatedDieukhoan(dieukhoanId: dk.getId(), relatedDieukhoanId: rel.getId())
             }
-            print("--------- Done")
+            print("\(dk.getId()) --------- Done")
         }
         print("=============== Related Dieukhoan ====================== Done")
     }
@@ -326,7 +326,7 @@ class ViewController: UIViewController {
                     specificVanbanId = [settings.getQC41ID()]
                 }
             }
-            
+            //remove matches found
             nd = nd.replacingOccurrences(of: fmatch, with: "")
             
             pattern = "(\\s*(các\\s)*(phụ lục)(\\s+((\\d\\.*)+|(\\p{L}{1})|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)"
@@ -351,18 +351,18 @@ class ViewController: UIViewController {
                     keywords.append(match.trimmingCharacters(in: .whitespacesAndNewlines))
                 }
             }
-            
-            //            for key in keywords {
-            //                let dk = parseRelatedDieukhoan(keyword: key)
-            //                if dk.count > 0{
-            //                    for dkh in dk {
-            //                        relatedDieukhoan.append(dkh)
-            //                    }
-            //                }
-            //            }
+            //add all full-matched dieukhoan
+            for key in keywords {
+                let dk = parseRelatedDieukhoan(keyword: key)
+                if dk.count > 0{
+                    for dkh in dk {
+                        relatedDieukhoan.append(dkh)
+                    }
+                }
+            }
         }
         
-        //        keywords = [String]()
+        keywords = [String]()
         
         specificVanbanId = [String(describing: dieukhoan!.getVanban().getId())]
         
