@@ -54,9 +54,12 @@ class Utils {
         }
         do {
             try fileContent.write(to: dpPath, atomically: false, encoding: .utf8)
+            print("\n==============\nSuccessfully write to file: \(dpPath)\n------------\n")
             print(fileContent)   // "some text\n"
+            print("\n==============\n")
         } catch {
-            print("error writing to file:", dpPath, error)
+            print("\n==============\nerror writing to file:", dpPath, error)
+            print("\n==============\n")
         }
     }
 }

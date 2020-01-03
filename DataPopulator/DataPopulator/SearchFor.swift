@@ -25,7 +25,7 @@ class SearchFor {
             }
             return matchesFound
         } catch {
-            print("Error with RegEx")
+            print("------ Error with RegEx: \n\(pattern) \n=> \(searchIn)")
             return [""]
         }
     }

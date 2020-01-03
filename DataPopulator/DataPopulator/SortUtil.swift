@@ -20,7 +20,7 @@ class SortUtil {
     
     
     func sortByRelevent(listDieukhoan: [Dieukhoan], keyword:String) -> [Dieukhoan]{
-        if listDieukhoan.isEmpty || keyword.characters.count < 1 || listDieukhoan.count > countLimit {
+        if listDieukhoan.isEmpty || keyword.count < 1 || listDieukhoan.count > countLimit {
             return listDieukhoan
         }
         
@@ -61,11 +61,11 @@ class SortUtil {
     }
     
     func sortByEarlyMatch(listDieukhoan: [Dieukhoan], keyword:String) -> [Dieukhoan] {
-        if listDieukhoan.isEmpty || keyword.characters.count < 1 || listDieukhoan.count > countLimit {
+        if listDieukhoan.isEmpty || keyword.count < 1 || listDieukhoan.count > countLimit {
             return listDieukhoan
         }
         
-        var splittedKeyword = keyword.lowercased().components(separatedBy: " ")
+        let splittedKeyword = keyword.lowercased().components(separatedBy: " ")
         let splittedKeywordCount = splittedKeyword.count
         
         for dk in listDieukhoan {

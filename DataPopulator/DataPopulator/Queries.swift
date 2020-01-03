@@ -85,7 +85,8 @@ class Queries: NSObject {
     class func executeStatements(query: String){
         DataConnection.database!.open()
         //        let sql = "DELETE FROM Person WHERE id = ?"
-        DataConnection.database!.executeStatements(query)
+        var result = DataConnection.database!.executeStatements(query)
+        print("--- \(result)\n\t\t\(query)")
         DataConnection.database!.close()
     }
     
@@ -325,7 +326,7 @@ class Queries: NSObject {
         var searchKeyword = ""
         searchKeyword = keyword.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        if(searchKeyword.characters.count == 0){
+        if(searchKeyword.count == 0){
             searchArgurment = "is null"
         }else{
             searchArgurment = "= ?"
@@ -425,7 +426,7 @@ class Queries: NSObject {
         }
         
         DataConnection.database!.close()
-        if result.characters.count >= 2 {
+        if result.count >= 2 {
             result = result.substring(to: result.index(result.endIndex, offsetBy: -2))
         }
         return result
@@ -631,7 +632,7 @@ class Queries: NSObject {
         
         DataConnection.database!.close()
         
-        if result.characters.count >= 2 {
+        if result.count >= 2 {
             result = result.substring(to: result.index(result.endIndex, offsetBy: -2))
         }
         
@@ -672,10 +673,10 @@ class Queries: NSObject {
         for sStr in splittedStr {
             var matchChars = [Int16]()
             var matchAccents = [Int16]()
-            for char in sStr.characters {
+            for char in sStr {
                 var count = 0
                 for vnC in vnChars {
-                    if char == vnC.characters.first {
+                    if char == vnC.first {
                         matchChars.append(Int16(count/6))
                         matchAccents.append(Int16(count%6))
                     }
@@ -716,7 +717,7 @@ class Queries: NSObject {
         if vanbanid.count > 0 {
             specificVanban = " and ("
             for id in vanbanid {
-                if id.characters.count > 0 {
+                if id.count > 0 {
                     specificVanban = specificVanban + "\(vanbanIdColumnName) = "+id.trimmingCharacters(in: .whitespacesAndNewlines) + " or "
                 }
             }
