@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334604A3249794E900EE4073 /* RawDataInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334604A2249794E900EE4073 /* RawDataInitializer.swift */; };
+		3369E4B724A24BC60071B5FE /* DatabaseInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369E4B624A24BC60071B5FE /* DatabaseInitializer.swift */; };
 		3395C73520E747610042E227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395C73420E747610042E227 /* AppDelegate.swift */; };
 		3395C73720E747610042E227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395C73620E747610042E227 /* ViewController.swift */; };
 		3395C73A20E747610042E227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3395C73820E747610042E227 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		334604A2249794E900EE4073 /* RawDataInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDataInitializer.swift; sourceTree = "<group>"; };
+		3369E4B624A24BC60071B5FE /* DatabaseInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInitializer.swift; sourceTree = "<group>"; };
 		3395C73120E747610042E227 /* DataPopulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataPopulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3395C73420E747610042E227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3395C73620E747610042E227 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				3395C74B20E74A210042E227 /* Queries.swift */,
 				3395C74C20E74A210042E227 /* SearchFor.swift */,
 				3395C74D20E74A210042E227 /* SortUtil.swift */,
+				334604A2249794E900EE4073 /* RawDataInitializer.swift */,
+				3369E4B624A24BC60071B5FE /* DatabaseInitializer.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -290,9 +296,11 @@
 				3395C73520E747610042E227 /* AppDelegate.swift in Sources */,
 				3395C76020E74A7A0042E227 /* GeneralSettings.swift in Sources */,
 				3395C75C20E74A7A0042E227 /* BosungKhacphuc.swift in Sources */,
+				334604A3249794E900EE4073 /* RawDataInitializer.swift in Sources */,
 				3395C75220E74A210042E227 /* SortUtil.swift in Sources */,
 				3395C76120E74A7A0042E227 /* Loaivanban.swift in Sources */,
 				3395C74E20E74A210042E227 /* Utils.swift in Sources */,
+				3369E4B724A24BC60071B5FE /* DatabaseInitializer.swift in Sources */,
 				3395C75120E74A210042E227 /* SearchFor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
