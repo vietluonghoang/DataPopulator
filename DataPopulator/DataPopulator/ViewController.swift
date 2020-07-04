@@ -240,28 +240,31 @@ class ViewController: UIViewController {
     }
     
     func transformData() {
-        print("\n================= Transforming Raw Data ====================\n")
-        let nd1002019 = Vanban(
-                        id: 6
-                        , ten: ""
-                        , loai: Loaivanban(id: 2, ten: "")
-                        , so: "100"
-                        , nam: "2019"
-                        , ma: "100/2019/NĐ-CP"
-                        , coquanbanhanh: Coquanbanhanh(id: 2, ten: "")
-                        , noidung: ""
-                    )
-        let fileNames = ["ND1002019_raw_parser"]
-        let vanbans = [nd1002019]
+//        print("\n================= Transforming Raw Data ====================\n")
+//        let nd1002019 = Vanban(
+//                        id: 6
+//                        , ten: ""
+//                        , loai: Loaivanban(id: 2, ten: "")
+//                        , so: "100"
+//                        , nam: "2019"
+//                        , ma: "100/2019/NĐ-CP"
+//                        , coquanbanhanh: Coquanbanhanh(id: 2, ten: "")
+//                        , noidung: ""
+//                    )
+//        let fileNames = ["ND1002019_raw_parser"]
+//        let vanbans = [nd1002019]
+//
+//        for i in 0...fileNames.count {
+//            print("Transforming Raw Data for ...... \(fname)")
+//            //transform raw data
+////            transformRawDataToSqlQuery(rawData: Utils.readFromFile(name: fname))
+//            RawDataInitializer(fileName: fileNames[i], vanban: vanbans[i]).transformData()
+//            print("Succesfully transforming raw data for: \(fname)")
+//        }
+//        print("\n================= Transforming Raw Data ====================\n================= Done ==================== ")
         
-        for i in 0...fileNames.count {
-            print("Transforming Raw Data for ...... \(fname)")
-            //transform raw data
-//            transformRawDataToSqlQuery(rawData: Utils.readFromFile(name: fname))
-            RawDataInitializer(fileName: fileNames[i], vanban: vanbans[i]).transformData()
-            print("Succesfully transforming raw data for: \(fname)")
-        }
-        print("\n================= Transforming Raw Data ====================\n================= Done ==================== ")
+        DatabaseInitializer().initDatabase()
+        
     }
 //
 //    func transformRawDataToSqlQuery(rawData: String) {

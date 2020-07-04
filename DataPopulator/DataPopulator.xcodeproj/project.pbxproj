@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		334604A3249794E900EE4073 /* RawDataInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334604A2249794E900EE4073 /* RawDataInitializer.swift */; };
+		334629BF24B122DF00388640 /* Linhvuc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334629BE24B122DF00388640 /* Linhvuc.swift */; };
+		334629C124B1242C00388640 /* Mucphat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334629C024B1242C00388640 /* Mucphat.swift */; };
 		3369E4B724A24BC60071B5FE /* DatabaseInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3369E4B624A24BC60071B5FE /* DatabaseInitializer.swift */; };
 		3395C73520E747610042E227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395C73420E747610042E227 /* AppDelegate.swift */; };
 		3395C73720E747610042E227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3395C73620E747610042E227 /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		334604A2249794E900EE4073 /* RawDataInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDataInitializer.swift; sourceTree = "<group>"; };
+		334629BE24B122DF00388640 /* Linhvuc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linhvuc.swift; sourceTree = "<group>"; };
+		334629C024B1242C00388640 /* Mucphat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mucphat.swift; sourceTree = "<group>"; };
 		3369E4B624A24BC60071B5FE /* DatabaseInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseInitializer.swift; sourceTree = "<group>"; };
 		3395C73120E747610042E227 /* DataPopulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataPopulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3395C73420E747610042E227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				3395C75920E74A7A0042E227 /* Loaivanban.swift */,
 				3395C75A20E74A7A0042E227 /* OutdatedCode.swift */,
 				3395C75B20E74A7A0042E227 /* Vanban.swift */,
+				334629BE24B122DF00388640 /* Linhvuc.swift */,
+				334629C024B1242C00388640 /* Mucphat.swift */,
 			);
 			name = Entities;
 			sourceTree = "<group>";
@@ -164,7 +170,6 @@
 				3395C72E20E747610042E227 /* Frameworks */,
 				3395C72F20E747610042E227 /* Resources */,
 				A5BAAD1367AC2E1BE9507954 /* [CP] Embed Pods Frameworks */,
-				AC8071FFEC215BFE5DDB36DF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,7 +256,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DataPopulator/Pods-DataPopulator-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DataPopulator/Pods-DataPopulator-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -260,22 +265,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DataPopulator/Pods-DataPopulator-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AC8071FFEC215BFE5DDB36DF /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DataPopulator/Pods-DataPopulator-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DataPopulator/Pods-DataPopulator-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -288,8 +278,10 @@
 				3395C75020E74A210042E227 /* Queries.swift in Sources */,
 				3395C75E20E74A7A0042E227 /* Coquanbanhanh.swift in Sources */,
 				3395C76320E74A7A0042E227 /* Vanban.swift in Sources */,
+				334629C124B1242C00388640 /* Mucphat.swift in Sources */,
 				3395C75F20E74A7A0042E227 /* Dieukhoan.swift in Sources */,
 				3395C75D20E74A7A0042E227 /* ConfigAttribute.swift in Sources */,
+				334629BF24B122DF00388640 /* Linhvuc.swift in Sources */,
 				3395C73720E747610042E227 /* ViewController.swift in Sources */,
 				3395C74F20E74A210042E227 /* DataConnection.swift in Sources */,
 				3395C76220E74A7A0042E227 /* OutdatedCode.swift in Sources */,
@@ -376,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -429,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

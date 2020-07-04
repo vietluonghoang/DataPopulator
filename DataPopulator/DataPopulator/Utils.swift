@@ -43,7 +43,7 @@ class Utils {
         print("sourceDir: \(dpPath.path)")
         let file = FileManager.default
         if(!file.fileExists(atPath: dpPath.path)) {
-            let dpPathApp = Bundle.main.path(forResource: name, ofType: "txt")
+            let dpPathApp = Bundle.main.path(forResource: name, ofType: "txt", inDirectory: "data")
             print("targetPath: \(dpPathApp ?? "")")
             do {
                 try file.copyItem(atPath: dpPathApp!, toPath: dpPath.path)

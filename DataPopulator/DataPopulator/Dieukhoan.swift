@@ -105,6 +105,19 @@ class Dieukhoan: NSObject {
         return minhhoa
     }
     
+    func getMinhhoaInString() -> String {
+        var minhhoaStr = ""
+        for mh in minhhoa {
+            if mh.count > 0 {
+                minhhoaStr += "\(mh);"
+            }
+        }
+        if minhhoaStr.count > 0 {
+            minhhoaStr.removeLast()
+        }
+        return minhhoaStr
+    }
+    
     func setMinhhoa(minhhoa:[String]) {
         self.minhhoa=minhhoa
     }

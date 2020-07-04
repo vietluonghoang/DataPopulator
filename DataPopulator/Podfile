@@ -7,6 +7,5 @@ target 'DataPopulator' do
 
   # Pods for DataPopulator
 pod 'FMDB'
-pod 'Google-Mobile-Ads-SDK'
 
 end
