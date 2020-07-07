@@ -8,6 +8,7 @@
 
 import Foundation
 class DatabaseInitializer {
+    private let userVersion = 9
     private let quochoi = Coquanbanhanh(
             id: 1
             , ten: "Quốc Hội")
@@ -155,6 +156,11 @@ class DatabaseInitializer {
         initLoaivanban()
         initVanban()
         
+        print("=====================================")
+        print("Set user version to: \(userVersion)......")
+        Queries.executeStatements(query: "pragma user_version = \(userVersion)")
+        print("Creating new tables......")
+        print("-----Creating tblCoquanbanhanh")
         //Create tblCoquanbanhanh table
         Queries.executeStatements(query: "CREATE TABLE \"tblCoquanbanhanh\" (\"id\" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, \"ten\" TEXT COLLATE NOCASE)")
         //insert data into tblCoquanbanhanh table
@@ -164,6 +170,7 @@ class DatabaseInitializer {
         }
         
         //Create tblLoaiVanban table
+        print("-----Creating tblLoaiVanban")
         Queries.executeStatements(query: "CREATE TABLE \"tblLoaiVanban\" (\"id\" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, \"ten\" TEXT COLLATE NOCASE)")
         //insert data into tblLoaiVanban table
         for lvb in loaivanban {
@@ -172,6 +179,7 @@ class DatabaseInitializer {
         }
         
         //Create tblVanban table
+        print("-----Creating tblVanban")
         Queries.executeStatements(query: "CREATE TABLE \"tblVanban\" (\"id\" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, \"ten\" TEXT COLLATE NOCASE, \"loai\" INTEGER COLLATE NOCASE REFERENCES \"tblLoaiVanban\" (\"id\"), \"so\" TEXT COLLATE NOCASE, \"nam\" TEXT COLLATE NOCASE, \"ma\" TEXT COLLATE NOCASE, \"coquanbanhanh\" INTEGER COLLATE NOCASE REFERENCES \"tblCoquanbanhanh\" (\"id\"), \"noidung\" TEXT COLLATE NOCASE)")
         //insert data into tblVanban table
         for vb in vanbans {
@@ -180,64 +188,84 @@ class DatabaseInitializer {
         }
         
         //create tblChitietvanban table
+        print("-----Creating tblChitietvanban")
         Queries.executeStatements(query: "CREATE TABLE \"tblChitietvanban\" (\"id\" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, \"So\" TEXT COLLATE NOCASE, \"tieude\" TEXT COLLATE NOCASE, \"noidung\" TEXT COLLATE NOCASE, \"minhhoa\" TEXT COLLATE NOCASE, \"cha\" INTEGER COLLATE NOCASE, \"vanbanid\" INTEGER COLLATE NOCASE REFERENCES \"tblVanban\" (\"id\"), \"forSearch\" TEXT COLLATE NOCASE);")
         
         //create tblRelatedDieukhoan table
+        print("-----Creating tblRelatedDieukhoan")
         Queries.executeStatements(query: "CREATE TABLE tblRelatedDieukhoan (dieukhoanId integer, relatedDieukhoanId integer);")
         
         //create tblPhuongtien table
+        print("-----Creating tblPhuongtien")
         Queries.executeStatements(query: "CREATE TABLE \"tblPhuongtien\" (\"dieukhoanID\" INTEGER UNIQUE,\"oto\" BOOLEAN,\"otoTai\" BOOLEAN,\"maykeo\" BOOLEAN,\"xechuyendung\" BOOLEAN,\"tau\" BOOLEAN,\"moto\" BOOLEAN,\"xeganmay\" BOOLEAN,\"xemaydien\" BOOLEAN,\"xedapmay\" BOOLEAN,\"xedap\" BOOLEAN,\"xedapdien\" BOOLEAN,\"xethoso\" BOOLEAN,\"sucvat\" BOOLEAN,\"xichlo\" BOOLEAN,\"dibo\" BOOLEAN);")
         
         //create tblMucphat table
+        print("-----Creating tblMucphat")
         Queries.executeStatements(query: "CREATE TABLE \"tblMucphat\" (\"dieukhoanID\" INTEGER UNIQUE,\"canhanTu\" TEXT,\"canhanDen\" TEXT,\"tochucTu\" TEXT,\"tochucDen\" TEXT);")
         
-        //create tblMucphat table
+        //create tblLinhvuc table
+        print("-----Creating tblLinhvuc")
         Queries.executeStatements(query: "CREATE TABLE \"tblLinhvuc\" (\"dieukhoanID\" INTEGER UNIQUE,\"duongbo\" BOOLEAN,\"duongsat\" BOOLEAN);")
         
         //create tblKeywords table
+        print("-----Creating tblKeywords")
         Queries.executeStatements(query: "CREATE TABLE \"tblKeywords\" (\"dieukhoanID\" INTEGER UNIQUE,\"canhan\" BOOLEAN,\"tochuc\" BOOLEAN,\"doanhnghiep\" BOOLEAN,\"trungtam\" BOOLEAN,\"daotao\" BOOLEAN,\"nguoidieukhien\" BOOLEAN,\"nguoingoitrenxe\" BOOLEAN,\"nguoiduoctro\" BOOLEAN,\"giaovien\" BOOLEAN,\"ga\" BOOLEAN,\"chuphuongtien\" BOOLEAN,\"nhanvien\" BOOLEAN,\"dangkiemvien\" BOOLEAN,\"laitau\" BOOLEAN,\"truongdon\" BOOLEAN,\"truongtau\" BOOLEAN,\"dieukhienmaydon\" BOOLEAN,\"trucban\" BOOLEAN,\"duaxe\" BOOLEAN,\"kinhdoanh\" BOOLEAN,\"vanchuyen\" BOOLEAN,\"vantai\" BOOLEAN,\"hanhkhach\" BOOLEAN,\"hanghoa\" BOOLEAN,\"ketcau\" BOOLEAN,\"hatang\" BOOLEAN,\"luukho\" BOOLEAN,\"laprap\" BOOLEAN,\"xepdo\" BOOLEAN,\"quanly\" BOOLEAN,\"thuphi\" BOOLEAN,\"dangkiem\" BOOLEAN,\"sathach\" BOOLEAN,\"dichvu\" BOOLEAN,\"hotro\" BOOLEAN,\"ghepnoi\" BOOLEAN,\"gacchan\" BOOLEAN,\"khamxe\" BOOLEAN,\"thuham\" BOOLEAN,\"phucvu\" BOOLEAN,\"baoquan\" BOOLEAN,\"sanxuat\" BOOLEAN,\"hoancai\" BOOLEAN,\"phuchoi\" BOOLEAN,\"khaithac\" BOOLEAN,\"baotri\" BOOLEAN);")
         
         //create tblHinhphatbosung table
+        print("-----Creating tblHinhphatbosung")
         Queries.executeStatements(query: "CREATE TABLE tblHinhphatbosung (dieukhoanId integer, dieukhoanQuydinhId integer, noidung text);")
         
         //create tblBienphapkhacphuc table
+        print("-----Creating tblBienphapkhacphuc")
         Queries.executeStatements(query: "CREATE TABLE tblBienphapkhacphuc (dieukhoanId integer, dieukhoanQuydinhId integer, noidung text);")
         
         //create Alphanumerics table
+        print("-----Creating Alphanumerics")
         Queries.executeStatements(query: "CREATE TABLE 'Alphanumerics' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE);")
         
         //create Arrows table
+        print("-----Creating Arrows")
         Queries.executeStatements(query: "CREATE TABLE 'Arrows' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE);")
         
         //create Creatures table
+        print("-----Creating Creatures")
         Queries.executeStatements(query: "CREATE TABLE 'Creatures' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE);")
         
         //create Figures table
+        print("-----Creating Figures")
         Queries.executeStatements(query: "CREATE TABLE 'Figures' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE);")
         
         //create Signs table
+        print("-----Creating Signs")
         Queries.executeStatements(query: "CREATE TABLE 'Signs' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE);")
         
         //create Structures table
+        print("-----Creating Structures")
         Queries.executeStatements(query: "CREATE TABLE 'Structures' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE);")
         
         //create Vehicles table
+        print("-----Creating Vehicles")
         Queries.executeStatements(query: "CREATE TABLE 'Vehicles' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE);")
         
         //create tblShapeGroups table
+        print("-----Creating tblShapeGroups")
         Queries.executeStatements(query: "CREATE TABLE 'tblShapeGroups' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE);")
         
         //create tblPlateShapes table
+        print("-----Creating tblPlateShapes")
         Queries.executeStatements(query: "CREATE TABLE 'tblPlateShapes' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE, 'type' INTEGER);")
         
         //create tblPlateReferences table
+        print("-----Creating tblPlateReferences")
         Queries.executeStatements(query: "CREATE TABLE 'tblPlateReferences' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'plateId' INTEGER, 'type' TEXT COLLATE NOCASE, 'name' TEXT COLLATE NOCASE,'refId' INTEGER);")
         
+        print("Succesfully created tables")
+        print("=====================================")
         //init raw data
-        initQC412019()
+        initInitialData()
     }
     
-    private func initQC412019() {
+    private func initInitialData() {
         print("\n================= Inserting Raw Data To Database ====================\n")
         //insert QC412016 data, vanbanid is 1
         Queries.executeStatements(query: Utils.readFromFile(name: "QC412016_queries"))
