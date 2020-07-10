@@ -33,9 +33,9 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="261" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBz-AX-xr9">
                                                 <rect key="frame" x="0.0" y="5" width="320" height="30"/>
-                                                <state key="normal" title="TransformData"/>
+                                                <state key="normal" title="Init Base Database"/>
                                                 <connections>
-                                                    <action selector="actTransformDataBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rym-BI-seP"/>
+                                                    <action selector="actInitBaseData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rym-BI-seP"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="254" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-p4-UNP">
@@ -61,9 +61,9 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="261" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6E-Fa-YXu">
                                                 <rect key="frame" x="0.0" y="133" width="320" height="30"/>
-                                                <state key="normal" title="------"/>
+                                                <state key="normal" title="Insert More Vanban Data"/>
                                                 <connections>
-                                                    <action selector="actInitBienphapkhacphuc:" destination="BYZ-38-t0r" eventType="touchDown" id="hif-Xx-jYy"/>
+                                                    <action selector="actInsertMoreVanban:" destination="BYZ-38-t0r" eventType="touchDown" id="hif-Xx-jYy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="260" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8q-L5-rTB">

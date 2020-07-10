@@ -30,6 +30,7 @@ class DieukhoanParser {
     func initRelatedDieukhoan() {
         print("=============== Related Dieukhoan ======================")
         //                for dk in Queries.searchDieukhoanByQuery(query: "\(Queries.rawSqlQuery) dkId = 1379", vanbanid: ["1","2","3","4","5"]) {
+        Queries.executeStatements(query: "delete from tblRelatedDieukhoan")
         for dk in Queries.selectAllDieukhoan() {
             specificVanbanId = []
             specificVanbanId.append( String(describing:dk.getVanban().getId()))

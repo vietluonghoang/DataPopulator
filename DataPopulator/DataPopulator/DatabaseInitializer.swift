@@ -136,6 +136,18 @@ class DatabaseInitializer {
                 , noidung: "Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 54/2019/TT-BGTVT ngày 31 tháng 12 năm 2019. Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT thay thế QCVN 41:2016/BGTVT."
         )
         vanbans.append(qc412019)
+        
+        let tt652020 = Vanban(
+            id: 8
+            , ten: "QUY ĐỊNH NHIỆM VỤ, QUYỀN HẠN, HÌNH THỨC, NỘI DUNG VÀ QUY TRÌNH TUẦN TRA, KIỂM SOÁT, XỬ LÝ VI PHẠM HÀNH CHÍNH VỀ GIAO THÔNG ĐƯỜNG BỘ CỦA CẢNH SÁT GIAO THÔNG"
+            , loai: thongtu
+            , so: "65"
+            , nam: "2020"
+            , ma: "65/2020/TT-BCA"
+            , coquanbanhanh: bocongan
+            , noidung: "Căn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định về chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nCăn cứ Nghị định số 100/2019/NĐ-CP ngày 30 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông,\nBộ trưởng Bộ Công an ban hành Thông tư quy định nhiệm vụ, quyền hạn, hình thức, nội dung và quy trình tuần tra, kiểm soát, xử lý vi phạm hành chính về giao thông đường bộ của Cảnh sát giao thông."
+        )
+        vanbans.append(tt652020)
     }
     
     func getAllVanban() -> [Vanban] {
@@ -259,6 +271,34 @@ class DatabaseInitializer {
         print("-----Creating tblPlateReferences")
         Queries.executeStatements(query: "CREATE TABLE 'tblPlateReferences' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'plateId' INTEGER, 'type' TEXT COLLATE NOCASE, 'name' TEXT COLLATE NOCASE,'refId' INTEGER);")
         
+        //create tblAppConfigs table
+        print("-----Creating tblAppConfigs")
+        Queries.executeStatements(query: "CREATE TABLE \"tblAppConfigs\" (\"configKey\" TEXT, \"configValue\" TEXT);")
+        
+        //create phantich table
+        print("-----Creating phantich")
+        Queries.executeStatements(query: "CREATE TABLE \"phantich\" (\"id_key\" TEXT, \"author\" TEXT, \"title\" TEXT, \"source\" TEXT, \"source_inapp\" TEXT, \"revision\" INTEGER, \"shortdescription\" TEXT);")
+
+        //create phantich_details table
+        print("-----Creating phantich_details")
+        Queries.executeStatements(query: "CREATE TABLE \"phantich_details\" (\"id_key\" TEXT, \"contentOrder\" TEXT, \"content\" TEXT, \"minhhoa\" TEXT, \"minhhoaType\" TEXT, \"forsearch\" TEXT);")
+
+        //create positions table
+        print("-----Creating positions")
+        Queries.executeStatements(query: "CREATE TABLE 'positions' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE, 'displayName' TEXT COLLATE NOCASE);")
+
+        //create tblVachReferences table
+        print("-----Creating tblVachReferences")
+        Queries.executeStatements(query: "CREATE TABLE 'tblVachReferences' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'plateId' INTEGER, 'type' TEXT COLLATE NOCASE, 'name' TEXT COLLATE NOCASE,'refId' INTEGER);")
+
+        //create tblVachGroups table
+        print("-----Creating tblVachGroups")
+        Queries.executeStatements(query: "CREATE TABLE 'tblVachGroups' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE, 'displayName' TEXT COLLATE NOCASE);")
+
+        //create tblVachShapes table
+        print("-----Creating tblVachShapes")
+        Queries.executeStatements(query: "CREATE TABLE 'tblVachShapes' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE, 'type' INTEGER);")
+        
         print("Succesfully created tables")
         print("=====================================")
         //init raw data
@@ -273,26 +313,34 @@ class DatabaseInitializer {
         Queries.executeStatements(query: Utils.readFromFile(name: "ND462016_queries"))
         
         let tt012016 = RawDataInitializer(fileName: "TT012016", vanban: getVanbanById(id: 3))
-        tt012016.insertDataByQuery(queries: tt012016.transformRawDataToSqlQuery())
+        insertDataByQuery(queries: tt012016.transformRawDataToSqlQuery())
         
         let lgtdb2008 = RawDataInitializer(fileName: "LGTDB2008", vanban: getVanbanById(id: 4))
-        lgtdb2008.insertDataByQuery(queries: lgtdb2008.transformRawDataToSqlQuery())
+        insertDataByQuery(queries: lgtdb2008.transformRawDataToSqlQuery())
         
         let lxlvphc2012 = RawDataInitializer(fileName: "LXLVPHC2012", vanban: getVanbanById(id: 5))
-        lxlvphc2012.insertDataByQuery(queries: lxlvphc2012.transformRawDataToSqlQuery())
+        insertDataByQuery(queries: lxlvphc2012.transformRawDataToSqlQuery())
         
         let nd1002019 = RawDataInitializer(fileName: "ND1002019", vanban: getVanbanById(id: 6))
-        nd1002019.insertDataByQuery(queries: nd1002019.transformRawDataToSqlQuery())
+        insertDataByQuery(queries: nd1002019.transformRawDataToSqlQuery())
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019linhvuc"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019phuongtien"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019mucphat"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019keywords"))
+        DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "ND1002019hinhphatbosung", bienphapkhacphucFilename: "ND1002019bienphapkhacphuc")
         
         //insert QC412019
         let qc412019 = RawDataInitializer(fileName: "QC412019", vanban: getVanbanById(id: 7))
         qc412019.transformRawDataToCsv()
         qc412019.updateDieukhoanWithMinhhoa()
-        qc412019.insertDataByQuery(queries: qc412019.transformRawDataToSqlQuery())
+        insertDataByQuery(queries: qc412019.transformRawDataToSqlQuery())
         let qc412019PL = RawDataInitializer(fileName: "QC412019-PL", vanban: getVanbanById(id: 7))
         qc412019PL.transformRawDataToCsv()
         qc412019PL.updateDieukhoanWithMinhhoa()
-        qc412019PL.insertDataByQuery(queries: qc412019PL.transformRawDataToSqlQuery())
+        insertDataByQuery(queries: qc412019PL.transformRawDataToSqlQuery())
+        
+        //insert TT652020
+        Queries.executeStatements(query: RawDataInitializer(fileName: "TT652020", vanban: getVanbanById(id: 8)).transformRawDataToSqlQuery())
         
         print("\n================= Finished Inserting Raw Data To Database ====================\n")
         
@@ -313,5 +361,9 @@ class DatabaseInitializer {
 //        RawDataInitializer(fileName: "QC412019-PLP", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
 //        RawDataInitializer(fileName: "test", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
         
+    }
+    
+    private func insertDataByQuery(queries: String) {
+        Queries.executeStatements(query: queries)
     }
 }

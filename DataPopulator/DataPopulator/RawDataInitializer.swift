@@ -22,7 +22,7 @@ class RawDataInitializer {
         transformData()
     }
     
-    func transformData() {
+    private func transformData() {
         print("\n================= Transforming Raw Data ====================\n")
         print("Transforming Raw Data for ...... \(fileName)")
         //transform raw data
@@ -33,13 +33,8 @@ class RawDataInitializer {
         transformRawData()
     }
     
-    func insertDataByQuery(queries: String) {
-        Queries.executeStatements(query: queries)
-    }
-    
     func transformRawDataToSqlQuery() -> String{
         var currentDieukhoan = Dieukhoan(id: 0, cha: 0, vanban: vanban)
-//        let allDieukhoans = transformRawData()
         var finalQuery = ""
         
         
@@ -66,7 +61,6 @@ class RawDataInitializer {
     
     func transformRawDataToCsv() {
         var currentDieukhoan = Dieukhoan(id: 0, cha: 0, vanban: vanban)
-//        let allDieukhoans = transformRawData()
         var finalContent = "\"dkId\",\"so\",\"tieude\",\"noidung\",\"chaId\""
         
         
@@ -79,7 +73,7 @@ class RawDataInitializer {
         Utils.writeToFile(name: "rawDataInCSV", fileContent: finalContent)
     }
     
-    func transformRawData() {
+    private func transformRawData() {
         let rawDataLines = rawData.split(separator: "\n")
         let parentDieukhoan = Dieukhoan(id: 0, cha: 0, vanban: vanban)
         var currentDieukhoan = Dieukhoan(id: 0, cha: 0, vanban: vanban)
@@ -153,7 +147,7 @@ class RawDataInitializer {
         }
     }
     
-    func generateDieukhoanRelationship(dieukhoanTree:[Dieukhoan]) -> String {
+    private func generateDieukhoanRelationship(dieukhoanTree:[Dieukhoan]) -> String {
         var query = ""
         if dieukhoanTree.count > 0 {
             var treeCount = dieukhoanTree.count
@@ -174,7 +168,7 @@ class RawDataInitializer {
         return query
     }
     
-    //This function is only used when a data dieukhoan have minhhoa. Minhhoa file must be prepared after the data file is set. The name of the minhhoa file must have the prefix as the same as the data file the surfix as "_minhhoa". Note that the id and minhhoa must be separated by "]["
+    //This function is only used when a data dieukhoan have minhhoa. Minhhoa file must be prepared after the data file is set. The name of the minhhoa file must have the prefix as the same as the data file the surfix as "_minhhoa". Note that the id and minhhoa must be separated by "|"
     func updateDieukhoanWithMinhhoa() {
         let minhhoaFileName = "\(fileName)_minhhoa"
         print("\n================= Transforming Raw Data ====================\n")
