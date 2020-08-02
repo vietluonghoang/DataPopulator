@@ -235,7 +235,7 @@
 236|QC41-PLC_Bien_W.236.png
 237|QC41-PLC_Bien_W.237.png
 238|QC41-PLC_Bien_W.238.png
-239|QC41-PLC_Bien_W.239a.png;QC41-PLC_Bien_W.239ab.png
+239|QC41-PLC_Bien_W.239a.png;QC41-PLC_Bien_W.239b.png
 240|
 241|
 242|
@@ -476,7 +476,7 @@
 477|
 478|QC41-PLG_Vach_2.1.png
 479|QC41-PLG_Vach_2.2.png
-480|QC41-PLG_Hinh_G.12.png
+480|QC41-PLG_Hinh_G.12.png;QC41-PLG_Hinh_G.13.png
 481|QC41-PLG_Vach_2.4.png
 482|
 483|QC41-PLG_Hinh_G.13a.png;QC41-PLG_Hinh_G.13b.png

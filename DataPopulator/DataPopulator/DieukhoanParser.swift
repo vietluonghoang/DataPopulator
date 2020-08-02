@@ -434,7 +434,7 @@ class DieukhoanParser {
         // remove raw data
         Queries.executeDeleteQuery(query: "delete from tblHinhphatbosung where dieukhoanId is null")
         // remove redundant data
-        Queries.executeDeleteQuery(query: "delete from tblhinhphatbosung where exists (select * from tblBienphapkhacphuc AS kp where  tblhinhphatbosung.dieukhoanid = kp.dieukhoanId and tblhinhphatbosung.dieukhoanquydinhid = kp.dieukhoanquydinhid)")
+        Queries.executeDeleteQuery(query: "delete from tblhinhphatbosung where exists (select * from tblBienphapkhacphuc AS kp where tblhinhphatbosung.dieukhoanid = kp.dieukhoanId and tblhinhphatbosung.dieukhoanquydinhid = kp.dieukhoanquydinhid)")
         print("\n\n\nHinhphatbosung===================================== Done")
     }
     

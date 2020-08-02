@@ -84,7 +84,7 @@ class RawDataInitializer {
         for line in rawDataLines {
             let strLine = line.trimmingCharacters(in: .whitespacesAndNewlines) //line is Substring while trimingCharacters returns String
             
-            let prefix = search.regexSearch(pattern: "^((phần\\s[0-9]{1,3})|(phần\\sthứ\\s\\w+)|(phụ lục\\s[A-Za-z]{1,3})|(chương\\s([A-Za-z]|[0-9]){1,3})|(mục\\s\\d{1,3})|(điều \\d{1,3})|([A-Za-z]\\.\\d{1,3}\\b)|([A-Za-z]\\d{1,3}\\.\\d{1,3}\\.\\b)|([A-Za-z]\\.\\d{1,3}[A-Za-z]\\b)|((\\d{1,3}\\.)+)|(\\w{1,2}(\\)|\\.)\\s))", searchIn: strLine)
+            let prefix = search.regexSearch(pattern: "^((phần\\s[0-9]{1,3})|(phần\\sthứ\\s\\w+)|(phụ lục\\s[A-Za-z]{1,3})|(chương\\s([A-Za-z]|[0-9]){1,5})|(mục\\s\\d{1,3})|(điều \\d{1,3})|([A-Za-z]\\.\\d{1,3}\\b)|([A-Za-z]\\d{1,3}\\.\\d{1,3}\\.\\b)|([A-Za-z]\\.\\d{1,3}[A-Za-z]\\b)|((\\d{1,3}\\.)+)|(\\w{1,2}(\\)|\\.)\\s))", searchIn: strLine)
             if prefix.count > 0 && prefix[0].count > 0 {
                 id += 1
                 var splittedStr = strLine.dropFirst(prefix[0].count).trimmingCharacters(in: .whitespacesAndNewlines)

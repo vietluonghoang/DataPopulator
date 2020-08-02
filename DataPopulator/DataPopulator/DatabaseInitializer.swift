@@ -40,7 +40,7 @@ class DatabaseInitializer {
     private var loaivanban = [Loaivanban]()
     
     private func dropAllTables(){
-        let query = "drop table if exists 'tblPlateReferences';drop table if exists 'tblPlateShapes';drop table if exists 'tblShapeGroups';drop table if exists 'Vehicles';drop table if exists 'Structures';drop table if exists 'Signs';drop table if exists 'Figures';drop table if exists 'Creatures';drop table if exists 'Arrows';drop table if exists 'Alphanumerics';drop table if exists \"tblBienphapkhacphuc\";drop table if exists \"tblHinhphatbosung\";drop table if exists \"tblKeywords\";drop table if exists \"tblLinhvuc\";drop table if exists \"tblMucphat\";drop table if exists \"tblPhuongtien\";drop table if exists \"tblRelatedDieukhoan\";drop table if exists \"tblChitietvanban\";drop table if exists \"tblVanban\";drop table if exists \"tblLoaiVanban\";drop table if exists \"tblCoquanbanhanh\";"
+        let query = "drop table if exists 'tblShapeGroups';drop table if exists 'tblPlateShapes';drop table if exists 'Alphanumerics';drop table if exists 'Vehicles';drop table if exists 'Arrows';drop table if exists 'Creatures';drop table if exists 'Figures';drop table if exists 'Signs';drop table if exists 'Structures';drop table if exists 'tblPlateReferences';drop table if exists 'tblBienphapkhacphuc';drop table if exists 'tblHinhphatbosung';drop table if exists 'tblKeywords';drop table if exists 'tblLinhvuc';drop table if exists 'tblMucphat';drop table if exists 'tblPhuongtien';drop table if exists 'tblRelatedDieukhoan';drop table if exists 'tblChitietvanban';drop table if exists 'tblVanban';drop table if exists 'tblLoaiVanban';drop table if exists 'tblCoquanbanhanh';drop table if exists 'phantich';drop table if exists 'phantich_details';drop table if exists 'positions';drop table if exists 'tblAppConfigs';drop table if exists 'tblVachShapes';drop table if exists 'tblVachReferences';drop table if exists 'tblVachGroups';"
         Queries.executeStatements(query: query)
     }
     
@@ -68,6 +68,9 @@ class DatabaseInitializer {
                 , ma: "QCVN 41:2016/BGTVT"
                 , coquanbanhanh: bogiaothongvantai
                 , noidung: "QCVN 41:2016/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 06/2016/TT-BGTVT ngày 08 tháng 4 năm 2016."
+                , hieuluc: "11/1/2016"
+                , vanbanThaytheId: 0
+                , tenRutgon: "Quy chuẩn 41/2016 về báo hiệu đường bộ"
         )
         vanbans.append(qc412016)
         let nd462016 = Vanban(
@@ -79,6 +82,9 @@ class DatabaseInitializer {
                 , ma: "46/2016/NĐ-CP"
                 , coquanbanhanh: chinhphu
                 , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 14 tháng 6 năm 2005;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt."
+                , hieuluc: "8/1/2016"
+                , vanbanThaytheId: 0
+                , tenRutgon: "Nghị định 46/2016: xử phạt giao thông"
         )
         vanbans.append(nd462016)
         let tt012016 = Vanban(
@@ -90,6 +96,9 @@ class DatabaseInitializer {
                 , ma: "01/2016/TT-BCA"
                 , coquanbanhanh: bocongan
                 , noidung: "Căn cứ Luật Công an nhân dân năm 2014;\nCăn cứ Luật Giao thông đường bộ năm 2008;\nCăn cứ Luật Xử lý vi phạm hành chính năm 2012;\nCăn cứ Nghị định số 106/2014/NĐ-CP ngày 17 tháng 11 năm 2014 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định nhiệm vụ, quyền hạn, hình thức, nội dung tuần tra, kiểm soát giao thông đường bộ của Cảnh sát giao thông."
+                , hieuluc: "2/15/2016"
+                , vanbanThaytheId: 0
+                , tenRutgon: "Thông tư 01/2016: Quyền hạn, quy trình tuần tra kiểm soát"
         )
         vanbans.append(tt012016)
         let luatgtdb2008 = Vanban(
@@ -101,6 +110,9 @@ class DatabaseInitializer {
                 , ma: "23/2008/QH12"
                 , coquanbanhanh: quochoi
                 , noidung: "Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 1992 đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 51/2001/QH10;\n\nQuốc hội ban hành Luật giao thông đường bộ."
+                , hieuluc: "7/1/2009"
+                , vanbanThaytheId: 0
+                , tenRutgon: "Luật giao thông đường bộ 2008"
         )
         vanbans.append(luatgtdb2008)
         let luatxlvphc2012 = Vanban(
@@ -112,6 +124,9 @@ class DatabaseInitializer {
                 , ma: "15/2012/QH13"
                 , coquanbanhanh: quochoi
                 , noidung: "Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 1992 đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 51/2001/QH10;\n\nQuốc hội ban hành Luật xử lý vi phạm hành chính."
+                , hieuluc: "7/1/2013"
+                , vanbanThaytheId: 0
+                , tenRutgon: "Luật xử lý vi phạm hành chính 2012"
         )
         vanbans.append(luatxlvphc2012)
         let nd1002019 = Vanban(
@@ -123,6 +138,9 @@ class DatabaseInitializer {
                 , ma: "100/2019/NĐ-CP"
                 , coquanbanhanh: chinhphu
                 , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 16 tháng 6 năm 2017;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt."
+                , hieuluc: "1/1/2020"
+                , vanbanThaytheId: 2
+                , tenRutgon: "Nghị định 100/2019: xử phạt giao thông"
         )
         vanbans.append(nd1002019)
         let qc412019 = Vanban(
@@ -134,6 +152,9 @@ class DatabaseInitializer {
                 , ma: "QCVN 41:2019/BGTVT"
                 , coquanbanhanh: bogiaothongvantai
                 , noidung: "Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 54/2019/TT-BGTVT ngày 31 tháng 12 năm 2019. Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT thay thế QCVN 41:2016/BGTVT."
+                , hieuluc: "7/1/2020"
+                , vanbanThaytheId: 1
+                , tenRutgon: "Quy chuẩn 41/2019 về báo hiệu đường bộ"
         )
         vanbans.append(qc412019)
         
@@ -146,8 +167,25 @@ class DatabaseInitializer {
             , ma: "65/2020/TT-BCA"
             , coquanbanhanh: bocongan
             , noidung: "Căn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định về chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nCăn cứ Nghị định số 100/2019/NĐ-CP ngày 30 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông,\nBộ trưởng Bộ Công an ban hành Thông tư quy định nhiệm vụ, quyền hạn, hình thức, nội dung và quy trình tuần tra, kiểm soát, xử lý vi phạm hành chính về giao thông đường bộ của Cảnh sát giao thông."
+            , hieuluc: "8/5/2020"
+            , vanbanThaytheId: 3
+            , tenRutgon: "Thông tư 65/2020: Quyền hạn, quy trình tuần tra kiểm soát"
         )
         vanbans.append(tt652020)
+        let tt632020 = Vanban(
+            id: 9
+            , ten: "QUY ĐỊNH QUY TRÌNH ĐIỀU TRA, GIẢI QUYẾT TAI NẠN GIAO THÔNG ĐƯỜNG BỘ CỦA LỰC LƯỢNG CẢNH SÁT GIAO THÔNG"
+            , loai: thongtu
+            , so: "63"
+            , nam: "2020"
+            , ma: "63/2020/TT-BCA"
+            , coquanbanhanh: bocongan
+            , noidung: "Căn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Bộ luật Hình sự ngày 27 tháng 11 năm 2015 (Luật sửa đổi, bổ sung một số điều của Bộ luật Hình sự ngày 20 tháng 6 năm 2017);\nCăn cứ Bộ luật Tố tụng hình sự ngày 27 tháng 11 năm 2015;\nCăn cứ Luật Tổ chức cơ quan điều tra hình sự ngày 26 tháng 11 năm 2015;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018;\nCăn cứ Luật trưng mua, trưng dụng tài sản ngày 03 tháng 6 năm 2008;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định quy trình điều tra, giải quyết tai nạn giao thông đường bộ của lực lượng Cảnh sát giao thông."
+            , hieuluc: "1/1/2021"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Thông tư 63: Quy trình giải quyết tai nạn"
+        )
+        vanbans.append(tt632020)
     }
     
     func getAllVanban() -> [Vanban] {
@@ -192,12 +230,13 @@ class DatabaseInitializer {
         
         //Create tblVanban table
         print("-----Creating tblVanban")
-        Queries.executeStatements(query: "CREATE TABLE \"tblVanban\" (\"id\" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, \"ten\" TEXT COLLATE NOCASE, \"loai\" INTEGER COLLATE NOCASE REFERENCES \"tblLoaiVanban\" (\"id\"), \"so\" TEXT COLLATE NOCASE, \"nam\" TEXT COLLATE NOCASE, \"ma\" TEXT COLLATE NOCASE, \"coquanbanhanh\" INTEGER COLLATE NOCASE REFERENCES \"tblCoquanbanhanh\" (\"id\"), \"noidung\" TEXT COLLATE NOCASE)")
+        Queries.executeStatements(query: "CREATE TABLE \"tblVanban\" (\"id\" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, \"ten\" TEXT COLLATE NOCASE, \"loai\" INTEGER COLLATE NOCASE REFERENCES \"tblLoaiVanban\" (\"id\"), \"so\" TEXT COLLATE NOCASE, \"nam\" TEXT COLLATE NOCASE, \"ma\" TEXT COLLATE NOCASE, \"coquanbanhanh\" INTEGER COLLATE NOCASE REFERENCES \"tblCoquanbanhanh\" (\"id\"), \"noidung\" TEXT COLLATE NOCASE,\"hieuluc\" Text COLLATE NOCASE,\"vanbanThaytheId\" Integer,\"tenRutgon\" Text COLLATE NOCASE)")
         //insert data into tblVanban table
         for vb in vanbans {
-            let query = "INSERT INTO \"tblVanban\" ( \"coquanbanhanh\", \"id\", \"loai\", \"ma\", \"nam\", \"noidung\", \"so\", \"ten\") VALUES ( \"\(vb.getCoquanbanhanh().getId())\", \"\(vb.getId())\", \"\(vb.getLoai().getId())\", \"\(vb.getMa())\", \"\(vb.getNam())\", \"\(vb.getNoidung())\", \"\(vb.getSo())\", \"\(vb.getTen())\" );"
+            let query = "INSERT INTO 'tblVanban' ( 'coquanbanhanh', 'hieuluc', 'id', 'loai', 'ma', 'nam', 'noidung', 'so', 'ten', 'tenRutgon', 'vanbanThaytheId') VALUES ( '\(vb.getCoquanbanhanh().getId())', '\(vb.getHieuluc())', '\(vb.getId())', '\(vb.getLoai().getId())', '\(vb.getMa())', '\(vb.getNam())', '\(vb.getNoidung())', '\(vb.getSo())', '\(vb.getTen())', '\(vb.getTenRutgon())', '\(vb.getVanbanThaytheId())' );"
             Queries.executeStatements(query: query)
         }
+        
         
         //create tblChitietvanban table
         print("-----Creating tblChitietvanban")
@@ -311,6 +350,11 @@ class DatabaseInitializer {
         Queries.executeStatements(query: Utils.readFromFile(name: "QC412016_queries"))
         //insert ND462016 data, vanbanid is 2
         Queries.executeStatements(query: Utils.readFromFile(name: "ND462016_queries"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016linhvuc"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016phuongtien"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016mucphat"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016keywords"))
+        DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "ND462016hinhphatbosung", bienphapkhacphucFilename: "ND462016bienphapkhacphuc")
         
         let tt012016 = RawDataInitializer(fileName: "TT012016", vanban: getVanbanById(id: 3))
         insertDataByQuery(queries: tt012016.transformRawDataToSqlQuery())
@@ -341,6 +385,9 @@ class DatabaseInitializer {
         
         //insert TT652020
         Queries.executeStatements(query: RawDataInitializer(fileName: "TT652020", vanban: getVanbanById(id: 8)).transformRawDataToSqlQuery())
+        
+        //insert TT632020
+        Queries.executeStatements(query: RawDataInitializer(fileName: "TT632020", vanban: getVanbanById(id: 8)).transformRawDataToSqlQuery())
         
         print("\n================= Finished Inserting Raw Data To Database ====================\n")
         
