@@ -8,7 +8,7 @@
 
 import Foundation
 class DatabaseInitializer {
-    private let userVersion = 9
+    private let userVersion = 10
     private let quochoi = Coquanbanhanh(
             id: 1
             , ten: "Quốc Hội")
@@ -70,7 +70,7 @@ class DatabaseInitializer {
                 , noidung: "QCVN 41:2016/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 06/2016/TT-BGTVT ngày 08 tháng 4 năm 2016."
                 , hieuluc: "11/1/2016"
                 , vanbanThaytheId: 0
-                , tenRutgon: "Quy chuẩn 41/2016 về báo hiệu đường bộ"
+                , tenRutgon: "Quy chuẩn 41/2016"
         )
         vanbans.append(qc412016)
         let nd462016 = Vanban(
@@ -84,7 +84,7 @@ class DatabaseInitializer {
                 , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 14 tháng 6 năm 2005;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt."
                 , hieuluc: "8/1/2016"
                 , vanbanThaytheId: 0
-                , tenRutgon: "Nghị định 46/2016: xử phạt giao thông"
+                , tenRutgon: "Nghị định 46/2016"
         )
         vanbans.append(nd462016)
         let tt012016 = Vanban(
@@ -98,7 +98,7 @@ class DatabaseInitializer {
                 , noidung: "Căn cứ Luật Công an nhân dân năm 2014;\nCăn cứ Luật Giao thông đường bộ năm 2008;\nCăn cứ Luật Xử lý vi phạm hành chính năm 2012;\nCăn cứ Nghị định số 106/2014/NĐ-CP ngày 17 tháng 11 năm 2014 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định nhiệm vụ, quyền hạn, hình thức, nội dung tuần tra, kiểm soát giao thông đường bộ của Cảnh sát giao thông."
                 , hieuluc: "2/15/2016"
                 , vanbanThaytheId: 0
-                , tenRutgon: "Thông tư 01/2016: Quyền hạn, quy trình tuần tra kiểm soát"
+                , tenRutgon: "Thông tư 01/2016"
         )
         vanbans.append(tt012016)
         let luatgtdb2008 = Vanban(
@@ -140,7 +140,7 @@ class DatabaseInitializer {
                 , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 16 tháng 6 năm 2017;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt."
                 , hieuluc: "1/1/2020"
                 , vanbanThaytheId: 2
-                , tenRutgon: "Nghị định 100/2019: xử phạt giao thông"
+                , tenRutgon: "Nghị định 100/2019"
         )
         vanbans.append(nd1002019)
         let qc412019 = Vanban(
@@ -154,7 +154,7 @@ class DatabaseInitializer {
                 , noidung: "Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 54/2019/TT-BGTVT ngày 31 tháng 12 năm 2019. Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT thay thế QCVN 41:2016/BGTVT."
                 , hieuluc: "7/1/2020"
                 , vanbanThaytheId: 1
-                , tenRutgon: "Quy chuẩn 41/2019 về báo hiệu đường bộ"
+                , tenRutgon: "Quy chuẩn 41/2019"
         )
         vanbans.append(qc412019)
         
@@ -169,7 +169,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định về chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nCăn cứ Nghị định số 100/2019/NĐ-CP ngày 30 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông,\nBộ trưởng Bộ Công an ban hành Thông tư quy định nhiệm vụ, quyền hạn, hình thức, nội dung và quy trình tuần tra, kiểm soát, xử lý vi phạm hành chính về giao thông đường bộ của Cảnh sát giao thông."
             , hieuluc: "8/5/2020"
             , vanbanThaytheId: 3
-            , tenRutgon: "Thông tư 65/2020: Quyền hạn, quy trình tuần tra kiểm soát"
+            , tenRutgon: "Thông tư 65/2020"
         )
         vanbans.append(tt652020)
         let tt632020 = Vanban(
@@ -183,7 +183,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Bộ luật Hình sự ngày 27 tháng 11 năm 2015 (Luật sửa đổi, bổ sung một số điều của Bộ luật Hình sự ngày 20 tháng 6 năm 2017);\nCăn cứ Bộ luật Tố tụng hình sự ngày 27 tháng 11 năm 2015;\nCăn cứ Luật Tổ chức cơ quan điều tra hình sự ngày 26 tháng 11 năm 2015;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018;\nCăn cứ Luật trưng mua, trưng dụng tài sản ngày 03 tháng 6 năm 2008;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định quy trình điều tra, giải quyết tai nạn giao thông đường bộ của lực lượng Cảnh sát giao thông."
             , hieuluc: "1/1/2021"
             , vanbanThaytheId: 0
-            , tenRutgon: "Thông tư 63: Quy trình giải quyết tai nạn"
+            , tenRutgon: "Thông tư 63/2020"
         )
         vanbans.append(tt632020)
     }

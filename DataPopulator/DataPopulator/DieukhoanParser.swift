@@ -62,7 +62,7 @@ class DieukhoanParser {
             var finalQuery = ""
             if key.count > 0 {
                 finalQuery = Queries.rawSqlQuery + " (dkCha in (select id from tblChitietvanban where forsearch like 'phụ lục%') or dkCha in (select id from tblchitietvanban where cha in (select id from tblChitietvanban where forsearch like 'phụ lục%')) or dkCha in (select id from tblchitietvanban where cha in (select id from tblchitietvanban where cha in (select id from tblChitietvanban where forsearch like 'phụ lục%')))) and (forsearch like '% \(key) %' or forsearch like '% \(key)%' or forsearch like '% \(key)_ %')"
-                let relatedChild = Queries.searchDieukhoanByQuery(query: finalQuery, vanbanid: ["\(settings.getQC41ID())"])
+                let relatedChild = Queries.searchDieukhoanByQuery(query: finalQuery, vanbanid: ["\(dieukhoan.getVanban().getId())"])
                 var sortedRelatedChild = [Dieukhoan]();
                 let keyPatern = "(\\b\(key)\\b)|(\\b\(key)\\p{L})"
                 
@@ -103,13 +103,13 @@ class DieukhoanParser {
                     specificVanbanId = [settings.getLXLVPHCID()]
                 }
                 if vbMatch.contains("nghị định 46") {
-                    specificVanbanId = [settings.getND46ID()]
+//                    specificVanbanId = [settings.getND46ID()]
                 }
                 if vbMatch.contains("thông tư 01") {
-                    specificVanbanId = [settings.getTT01ID()]
+//                    specificVanbanId = [settings.getTT01ID()]
                 }
                 if vbMatch.contains("quy chuẩn 41") {
-                    specificVanbanId = [settings.getQC41ID()]
+//                    specificVanbanId = [settings.getQC41ID()]
                 }
             }
             //remove matches found
