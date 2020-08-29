@@ -53,9 +53,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func actInitPlateAndVachkeReferences(_ sender: Any) {
-        Queries.executeStatements(query: "DELETE FROM 'Alphanumerics';DELETE FROM 'Arrows';DELETE FROM 'Creatures';DELETE FROM 'Figures';DELETE FROM 'positions';DELETE FROM 'Signs';DELETE FROM 'Structures';DELETE FROM 'Vehicles';DELETE FROM 'tblPlateReferences';DELETE FROM 'tblPlateShapes';DELETE FROM 'tblShapeGroups';DELETE FROM 'tblVachGroups';DELETE FROM 'tblVachReferences';DELETE FROM 'tblVachShapes';")
-        initPlateReferences()
-        initVachKeferences()
+        initPlateAndVachkeReferences()
     }
     
     @IBAction func actInitBosungKhacphuc(_ sender: Any) {
@@ -98,10 +96,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func actQuickInit(_ sender: Any) {
-        
+        quickInit()
     }
     
-    func initReferenceData(tableName: String) {
+    private func initReferenceData(tableName: String) {
         print("=====================================")
         print("Initializing \(tableName)......")
         //create new tables
@@ -111,7 +109,7 @@ class ViewController: UIViewController {
         print("=====================================")
     }
     
-    func initPlateReferences() {
+    private func initPlateReferences() {
         let fileName = "QC412019Bienbao"
         print("=====================================")
         print("Initializing \(fileName)......")
@@ -122,7 +120,7 @@ class ViewController: UIViewController {
         print("=====================================")
     }
     
-    func initVachKeferences() {
+    private func initVachKeferences() {
         let fileName = "QC412019vachke"
         print("=====================================")
         print("Initializing \(fileName)......")
@@ -134,7 +132,19 @@ class ViewController: UIViewController {
         print("=====================================")
     }
     
-    func transformData() {
+    private func initPlateAndVachkeReferences(){
+        Queries.executeStatements(query: "DELETE FROM 'Alphanumerics';DELETE FROM 'Arrows';DELETE FROM 'Creatures';DELETE FROM 'Figures';DELETE FROM 'positions';DELETE FROM 'Signs';DELETE FROM 'Structures';DELETE FROM 'Vehicles';DELETE FROM 'tblPlateReferences';DELETE FROM 'tblPlateShapes';DELETE FROM 'tblShapeGroups';DELETE FROM 'tblVachGroups';DELETE FROM 'tblVachReferences';DELETE FROM 'tblVachShapes';")
+        initPlateReferences()
+        initVachKeferences()
+    }
+    
+    private func quickInit() {
+        transformData()
+        initPlateAndVachkeReferences()
+        DieukhoanParser().initRelatedDieukhoan()
+    }
+    
+    private func transformData() {
         DatabaseInitializer().initDatabase()
         
     }

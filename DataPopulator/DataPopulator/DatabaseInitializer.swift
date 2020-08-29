@@ -8,33 +8,33 @@
 
 import Foundation
 class DatabaseInitializer {
-    private let userVersion = 10
+    private let userVersion = 11
     private let quochoi = Coquanbanhanh(
-            id: 1
-            , ten: "Quốc Hội")
+        id: 1
+        , ten: "Quốc Hội")
     private let chinhphu = Coquanbanhanh(
-            id: 2
-            , ten: "Chính Phủ")
+        id: 2
+        , ten: "Chính Phủ")
     private let bogiaothongvantai = Coquanbanhanh(
-            id: 3
-            , ten: "Bộ Giao Thông Vận Tải")
+        id: 3
+        , ten: "Bộ Giao Thông Vận Tải")
     private let bocongan = Coquanbanhanh(
-            id: 4
-            , ten: "Bộ Công An")
+        id: 4
+        , ten: "Bộ Công An")
     
     private let luat = Loaivanban(
-            id: 1
-            , ten: "Luật")
+        id: 1
+        , ten: "Luật")
     private let nghidinh = Loaivanban(
-            id: 2
-            , ten: "Nghị Định")
+        id: 2
+        , ten: "Nghị Định")
     private let thongtu = Loaivanban(
-            id: 3
-            , ten: "Thông Tư")
+        id: 3
+        , ten: "Thông Tư")
     private let quychuan = Loaivanban(
-            id: 4
-            , ten: "Quy Chuẩn")
-
+        id: 4
+        , ten: "Quy Chuẩn")
+    
     private var vanbans = [Vanban]()
     private var coquanbanhanh = [Coquanbanhanh]()
     private var loaivanban = [Loaivanban]()
@@ -60,101 +60,107 @@ class DatabaseInitializer {
     
     private func initVanban() {
         let qc412016 = Vanban(
-                id: 1
-                , ten: "QUY CHUẨN KỸ THUẬT QUỐC GIA VỀ BÁO HIỆU ĐƯỜNG BỘ"
-                , loai: quychuan
-                , so: "41"
-                , nam: "2016"
-                , ma: "QCVN 41:2016/BGTVT"
-                , coquanbanhanh: bogiaothongvantai
-                , noidung: "QCVN 41:2016/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 06/2016/TT-BGTVT ngày 08 tháng 4 năm 2016."
-                , hieuluc: "11/1/2016"
-                , vanbanThaytheId: 0
-                , tenRutgon: "Quy chuẩn 41/2016"
+            id: 1
+            , ten: "QUY CHUẨN KỸ THUẬT QUỐC GIA VỀ BÁO HIỆU ĐƯỜNG BỘ"
+            , loai: quychuan
+            , so: "41"
+            , nam: "2016"
+            , ma: "QCVN 41:2016/BGTVT"
+            , coquanbanhanh: bogiaothongvantai
+            , noidung: "QCVN 41:2016/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 06/2016/TT-BGTVT ngày 08 tháng 4 năm 2016."
+            , hieuluc: "11/1/2016"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Quy chuẩn 41/2016"
         )
         vanbans.append(qc412016)
+        
         let nd462016 = Vanban(
-                id: 2
-                , ten: "QUY ĐỊNH XỬ PHẠT VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ VÀ ĐƯỜNG SẮT"
-                , loai: nghidinh
-                , so: "46"
-                , nam: "2016"
-                , ma: "46/2016/NĐ-CP"
-                , coquanbanhanh: chinhphu
-                , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 14 tháng 6 năm 2005;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt."
-                , hieuluc: "8/1/2016"
-                , vanbanThaytheId: 0
-                , tenRutgon: "Nghị định 46/2016"
+            id: 2
+            , ten: "QUY ĐỊNH XỬ PHẠT VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ VÀ ĐƯỜNG SẮT"
+            , loai: nghidinh
+            , so: "46"
+            , nam: "2016"
+            , ma: "46/2016/NĐ-CP"
+            , coquanbanhanh: chinhphu
+            , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 14 tháng 6 năm 2005;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt."
+            , hieuluc: "8/1/2016"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Nghị định 46/2016"
         )
         vanbans.append(nd462016)
+        
         let tt012016 = Vanban(
-                id: 3
-                , ten: "QUY ĐỊNH NHIỆM VỤ, QUYỀN HẠN, HÌNH THỨC, NỘI DUNG TUẦN TRA, KIỂM SOÁT GIAO THÔNG ĐƯỜNG BỘ CỦA CẢNH SÁT GIAO THÔNG"
-                , loai: thongtu
-                , so: "01"
-                , nam: "2016"
-                , ma: "01/2016/TT-BCA"
-                , coquanbanhanh: bocongan
-                , noidung: "Căn cứ Luật Công an nhân dân năm 2014;\nCăn cứ Luật Giao thông đường bộ năm 2008;\nCăn cứ Luật Xử lý vi phạm hành chính năm 2012;\nCăn cứ Nghị định số 106/2014/NĐ-CP ngày 17 tháng 11 năm 2014 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định nhiệm vụ, quyền hạn, hình thức, nội dung tuần tra, kiểm soát giao thông đường bộ của Cảnh sát giao thông."
-                , hieuluc: "2/15/2016"
-                , vanbanThaytheId: 0
-                , tenRutgon: "Thông tư 01/2016"
+            id: 3
+            , ten: "QUY ĐỊNH NHIỆM VỤ, QUYỀN HẠN, HÌNH THỨC, NỘI DUNG TUẦN TRA, KIỂM SOÁT GIAO THÔNG ĐƯỜNG BỘ CỦA CẢNH SÁT GIAO THÔNG"
+            , loai: thongtu
+            , so: "01"
+            , nam: "2016"
+            , ma: "01/2016/TT-BCA"
+            , coquanbanhanh: bocongan
+            , noidung: "Căn cứ Luật Công an nhân dân năm 2014;\nCăn cứ Luật Giao thông đường bộ năm 2008;\nCăn cứ Luật Xử lý vi phạm hành chính năm 2012;\nCăn cứ Nghị định số 106/2014/NĐ-CP ngày 17 tháng 11 năm 2014 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định nhiệm vụ, quyền hạn, hình thức, nội dung tuần tra, kiểm soát giao thông đường bộ của Cảnh sát giao thông."
+            , hieuluc: "2/15/2016"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Thông tư 01/2016"
         )
         vanbans.append(tt012016)
+        
         let luatgtdb2008 = Vanban(
-                id: 4
-                , ten: "LUẬT GIAO THÔNG ĐƯỜNG BỘ"
-                , loai: luat
-                , so: "23"
-                , nam: "2008"
-                , ma: "23/2008/QH12"
-                , coquanbanhanh: quochoi
-                , noidung: "Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 1992 đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 51/2001/QH10;\n\nQuốc hội ban hành Luật giao thông đường bộ."
-                , hieuluc: "7/1/2009"
-                , vanbanThaytheId: 0
-                , tenRutgon: "Luật giao thông đường bộ 2008"
+            id: 4
+            , ten: "LUẬT GIAO THÔNG ĐƯỜNG BỘ"
+            , loai: luat
+            , so: "23"
+            , nam: "2008"
+            , ma: "23/2008/QH12"
+            , coquanbanhanh: quochoi
+            , noidung: "Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 1992 đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 51/2001/QH10;\n\nQuốc hội ban hành Luật giao thông đường bộ."
+            , hieuluc: "7/1/2009"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Luật giao thông đường bộ 2008"
         )
         vanbans.append(luatgtdb2008)
+        
         let luatxlvphc2012 = Vanban(
-                id: 5
-                , ten: "LUẬT XỬ LÝ VI PHẠM HÀNH CHÍNH"
-                , loai: luat
-                , so: "15"
-                , nam: "2012"
-                , ma: "15/2012/QH13"
-                , coquanbanhanh: quochoi
-                , noidung: "Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 1992 đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 51/2001/QH10;\n\nQuốc hội ban hành Luật xử lý vi phạm hành chính."
-                , hieuluc: "7/1/2013"
-                , vanbanThaytheId: 0
-                , tenRutgon: "Luật xử lý vi phạm hành chính 2012"
+            id: 5
+            , ten: "LUẬT XỬ LÝ VI PHẠM HÀNH CHÍNH"
+            , loai: luat
+            , so: "15"
+            , nam: "2012"
+            , ma: "15/2012/QH13"
+            , coquanbanhanh: quochoi
+            , noidung: "Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 1992 đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 51/2001/QH10;\n\nQuốc hội ban hành Luật xử lý vi phạm hành chính."
+            , hieuluc: "7/1/2013"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Luật xử lý vi phạm hành chính 2012"
         )
         vanbans.append(luatxlvphc2012)
+        
         let nd1002019 = Vanban(
-                id: 6
-                , ten: "NGHỊ ĐỊNH QUY ĐỊNH XỬ PHẠT VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ VÀ ĐƯỜNG SẮT"
-                , loai: nghidinh
-                , so: "100"
-                , nam: "2019"
-                , ma: "100/2019/NĐ-CP"
-                , coquanbanhanh: chinhphu
-                , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 16 tháng 6 năm 2017;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt."
-                , hieuluc: "1/1/2020"
-                , vanbanThaytheId: 2
-                , tenRutgon: "Nghị định 100/2019"
+            id: 6
+            , ten: "NGHỊ ĐỊNH QUY ĐỊNH XỬ PHẠT VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ VÀ ĐƯỜNG SẮT"
+            , loai: nghidinh
+            , so: "100"
+            , nam: "2019"
+            , ma: "100/2019/NĐ-CP"
+            , coquanbanhanh: chinhphu
+            , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 16 tháng 6 năm 2017;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt."
+            , hieuluc: "1/1/2020"
+            , vanbanThaytheId: 2
+            , tenRutgon: "Nghị định 100/2019"
         )
         vanbans.append(nd1002019)
+        
         let qc412019 = Vanban(
-                id: 7
-                , ten: "QUY CHUẨN KỸ THUẬT QUỐC GIA VỀ BÁO HIỆU ĐƯỜNG BỘ"
-                , loai: quychuan
-                , so: "41"
-                , nam: "2019"
-                , ma: "QCVN 41:2019/BGTVT"
-                , coquanbanhanh: bogiaothongvantai
-                , noidung: "Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 54/2019/TT-BGTVT ngày 31 tháng 12 năm 2019. Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT thay thế QCVN 41:2016/BGTVT."
-                , hieuluc: "7/1/2020"
-                , vanbanThaytheId: 1
-                , tenRutgon: "Quy chuẩn 41/2019"
+            id: 7
+            , ten: "QUY CHUẨN KỸ THUẬT QUỐC GIA VỀ BÁO HIỆU ĐƯỜNG BỘ"
+            , loai: quychuan
+            , so: "41"
+            , nam: "2019"
+            , ma: "QCVN 41:2019/BGTVT"
+            , coquanbanhanh: bogiaothongvantai
+            , noidung: "Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 54/2019/TT-BGTVT ngày 31 tháng 12 năm 2019. Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT thay thế QCVN 41:2016/BGTVT."
+            , hieuluc: "7/1/2020"
+            , vanbanThaytheId: 1
+            , tenRutgon: "Quy chuẩn 41/2019"
         )
         vanbans.append(qc412019)
         
@@ -172,6 +178,7 @@ class DatabaseInitializer {
             , tenRutgon: "Thông tư 65/2020"
         )
         vanbans.append(tt652020)
+        
         let tt632020 = Vanban(
             id: 9
             , ten: "QUY ĐỊNH QUY TRÌNH ĐIỀU TRA, GIẢI QUYẾT TAI NẠN GIAO THÔNG ĐƯỜNG BỘ CỦA LỰC LƯỢNG CẢNH SÁT GIAO THÔNG"
@@ -186,6 +193,147 @@ class DatabaseInitializer {
             , tenRutgon: "Thông tư 63/2020"
         )
         vanbans.append(tt632020)
+        
+        let tt312019 = Vanban(
+            id: 10
+            , ten: "QUY ĐỊNH VỀ TỐC ĐỘ VÀ KHOẢNG CÁCH AN TOÀN CỦA XE CƠ GIỚI, XE MÁY CHUYÊN DÙNG THAM GIA GIAO THÔNG ĐƯỜNG BỘ"
+            , loai: thongtu
+            , so: "31"
+            , nam: "2019"
+            , ma: "31/2019/TT-BGTVT"
+            , coquanbanhanh: bogiaothongvantai
+            , noidung: "Căn cứ Luật Giao thông đường bộ số 23/2008/QH12;\nCăn cứ Nghị định số 12/2017/NĐ-CP ngày 10 tháng 02 năm 2017 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Giao thông vận tải;\nTheo đề nghị của Vụ trưởng Vụ Kết cấu hạ tầng giao thông và Tổng cục trưởng Tổng cục Đường bộ Việt Nam;\nBộ trưởng Bộ Giao thông vận tải ban hành Thông tư quy định về tốc độ và khoảng cách an toàn của xe cơ giới, xe máy chuyên dùng tham gia giao thông trên đường bộ."
+            , hieuluc: "10/15/2019"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Thông tư 31/2019"
+        )
+        vanbans.append(tt312019)
+        
+        let tt672019 = Vanban(
+            id: 11
+            , ten: "QUY ĐỊNH VỀ THỰC HIỆN DÂN CHỦ TRONG CÔNG TÁC BẢO ĐẢM TRẬT TỰ, AN TOÀN GIAO THÔNG"
+            , loai: thongtu
+            , so: "67"
+            , nam: "2019"
+            , ma: "67/2019/TT-BCA"
+            , coquanbanhanh: bocongan
+            , noidung: "Căn cứ Luật Tiếp cận thông tin ngày 06 tháng 4 năm 2016;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018;\nCăn cứ Nghị quyết số 55/NQ-UBTVQH10 ngày 30 tháng 8 năm 1998 của Ủy ban Thường vụ Quốc hội về việc ban hành Quy chế thực hiện dân chủ trong hoạt động của cơ quan;\nCăn cứ Nghị định số 04/2015/NĐ-CP ngày 09 tháng 01 năm 2015 của Chính phủ về thực hiện dân chủ trong hoạt động của cơ quan hành chính nhà nước và đơn vị sự nghiệp công lập;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định về thực hiện dân chủ trong công tác bảo đảm trật tự, an toàn giao thông."
+            , hieuluc: "1/15/2020"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Thông tư 67/2019"
+        )
+        vanbans.append(tt672019)
+        
+        let nd102020 = Vanban(
+            id: 12
+            , ten: "QUY ĐỊNH VỀ KINH DOANH VÀ ĐIỀU KIỆN KINH DOANH VẬN TẢI BẰNG XE Ô TÔ"
+            , loai: nghidinh
+            , so: "10"
+            , nam: "2020"
+            , ma: "10/2020/NĐ-CP"
+            , coquanbanhanh: chinhphu
+            , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đầu tư ngày 26 tháng 11 năm 2014 và Luật sửa đổi, bổ sung Điều 6 và Phụ lục 4 về Danh mục ngành, nghề đầu tư kinh doanh có điều kiện của Luật Đầu tư ngày 26 tháng 11 năm 2016;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định về kinh doanh và điều kiện kinh doanh vận tải bằng xe ô tô."
+            , hieuluc: "4/1/2020"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Nghị định 10/2020"
+        )
+        vanbans.append(nd102020)
+        
+        let nd1652013 = Vanban(
+            id: 13
+            , ten: "Quy định việc quản lý, sử dụng và danh mục các phương tiện, thiết bị kỹ thuật nghiệp vụ được sử dụng để phát hiện vi phạm hành chính về trật tự, an toàn giao thông và bảo vệ môi trường"
+            , loai: nghidinh
+            , so: "165"
+            , nam: "2013"
+            , ma: "165/2013/NĐ-CP"
+            , coquanbanhanh: chinhphu
+            , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 25 tháng 12 năm 2001;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Quản lý, sử dụng tài sản nhà nước ngày 03 tháng 6 năm 2008;\nTheo đề nghị của Bộ trưởng Bộ Công an;\nChính phủ ban hành Nghị định quy định việc quản lý, sử dụng và danh mục các phương tiện, thiết bị kỹ thuật nghiệp vụ được sử dụng để phát hiện vi phạm hành chính về trật tự, an toàn giao thông và bảo vệ môi trường,"
+            , hieuluc: "12/28/2013"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Nghị định 165/2013"
+        )
+        vanbans.append(nd1652013)
+        
+        let tt402015 = Vanban(
+            id: 14
+            , ten: "Quy định về sử dụng phương tiện, thiết bị kỹ thuật nghiệp vụ trong Công an nhân dân để phát hiện vi phạm hành chính về trật tự, an toàn giao thông và bảo vệ môi trường"
+            , loai: thongtu
+            , so: "40"
+            , nam: "2015"
+            , ma: "40/2015/TT-BCA"
+            , coquanbanhanh: bocongan
+            , noidung: "Căn cứ Luật xử lý vi phạm hành chính năm 2012;\nCăn cứ Nghị định số 165/2013/NĐ-CP ngày 12 tháng 11 năm 2013 quy định việc quản lý, sử dụng và danh mục các phương tiện, thiết bị kỹ thuật nghiệp vụ được sử dụng để phát hiện vi phạm hành chính về trật tự, an toàn giao thông và bảo vệ môi trường;\nCăn cứ Nghị định số 106/2014/NĐ-CP ngày 17 tháng 11 năm 2014 quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Tổng cục trưởng Tổng cục Cảnh sát;\nBộ trưởng Bộ Công an ban hành Thông tư quy định về sử dụng phương tiện, thiết bị kỹ thuật nghiệp vụ trong Công an nhân dân để phát hiện vi phạm hành chính về trật tự, an toàn giao thông và bảo vệ môi trường."
+            , hieuluc: "10/15/2015"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Thông tư 40/2015"
+        )
+        vanbans.append(tt402015)
+    }
+    
+    private func initInitialData() {
+        print("\n================= Inserting Raw Data To Database ====================\n")
+        //insert QC412016 data, vanbanid is 1
+        Queries.executeStatements(query: Utils.readFromFile(name: "QC412016_queries"))
+        //insert ND462016 data, vanbanid is 2
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016_queries"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016linhvuc"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016phuongtien"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016mucphat"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016keywords"))
+        DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "ND462016hinhphatbosung", bienphapkhacphucFilename: "ND462016bienphapkhacphuc")
+        
+        let tt012016 = RawDataInitializer(fileName: "TT012016", vanban: getVanbanById(id: 3))
+        insertDataByQuery(queries: tt012016.transformRawDataToSqlQuery())
+        
+        let lgtdb2008 = RawDataInitializer(fileName: "LGTDB2008", vanban: getVanbanById(id: 4))
+        insertDataByQuery(queries: lgtdb2008.transformRawDataToSqlQuery())
+        
+        let lxlvphc2012 = RawDataInitializer(fileName: "LXLVPHC2012", vanban: getVanbanById(id: 5))
+        insertDataByQuery(queries: lxlvphc2012.transformRawDataToSqlQuery())
+        
+        let nd1002019 = RawDataInitializer(fileName: "ND1002019", vanban: getVanbanById(id: 6))
+        insertDataByQuery(queries: nd1002019.transformRawDataToSqlQuery())
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019linhvuc"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019phuongtien"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019mucphat"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019keywords"))
+        DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "ND1002019hinhphatbosung", bienphapkhacphucFilename: "ND1002019bienphapkhacphuc")
+        
+        //insert QC412019
+        let qc412019 = RawDataInitializer(fileName: "QC412019", vanban: getVanbanById(id: 7))
+        qc412019.transformRawDataToCsv()
+        qc412019.updateDieukhoanWithMinhhoa()
+        insertDataByQuery(queries: qc412019.transformRawDataToSqlQuery())
+        let qc412019PL = RawDataInitializer(fileName: "QC412019-PL", vanban: getVanbanById(id: 7))
+        qc412019PL.transformRawDataToCsv()
+        qc412019PL.updateDieukhoanWithMinhhoa()
+        insertDataByQuery(queries: qc412019PL.transformRawDataToSqlQuery())
+        
+        //insert TT652020
+        Queries.executeStatements(query: RawDataInitializer(fileName: "TT652020", vanban: getVanbanById(id: 8)).transformRawDataToSqlQuery())
+        
+        //insert TT632020
+        Queries.executeStatements(query: RawDataInitializer(fileName: "TT632020", vanban: getVanbanById(id: 9)).transformRawDataToSqlQuery())
+        
+        //insert TT312019
+        let tt312019 = RawDataInitializer(fileName: "TT312019", vanban: getVanbanById(id: 10))
+        tt312019.transformRawDataToCsv()
+        tt312019.updateDieukhoanWithMinhhoa()
+        insertDataByQuery(queries: tt312019.transformRawDataToSqlQuery())
+        
+        //insert TT672019
+        Queries.executeStatements(query: RawDataInitializer(fileName: "TT672019", vanban: getVanbanById(id: 11)).transformRawDataToSqlQuery())
+        
+        //insert ND102020
+        Queries.executeStatements(query: RawDataInitializer(fileName: "ND102020", vanban: getVanbanById(id: 12)).transformRawDataToSqlQuery())
+        
+        //insert ND1652013
+        Queries.executeStatements(query: RawDataInitializer(fileName: "ND1652013", vanban: getVanbanById(id: 13)).transformRawDataToSqlQuery())
+        
+        //insert TT402015
+        Queries.executeStatements(query: RawDataInitializer(fileName: "TT402015", vanban: getVanbanById(id: 14)).transformRawDataToSqlQuery())
+        
+        print("\n================= Finished Inserting Raw Data To Database ====================\n")
     }
     
     func getAllVanban() -> [Vanban] {
@@ -317,23 +465,23 @@ class DatabaseInitializer {
         //create phantich table
         print("-----Creating phantich")
         Queries.executeStatements(query: "CREATE TABLE \"phantich\" (\"id_key\" TEXT, \"author\" TEXT, \"title\" TEXT, \"source\" TEXT, \"source_inapp\" TEXT, \"revision\" INTEGER, \"shortdescription\" TEXT);")
-
+        
         //create phantich_details table
         print("-----Creating phantich_details")
         Queries.executeStatements(query: "CREATE TABLE \"phantich_details\" (\"id_key\" TEXT, \"contentOrder\" TEXT, \"content\" TEXT, \"minhhoa\" TEXT, \"minhhoaType\" TEXT, \"forsearch\" TEXT);")
-
+        
         //create positions table
         print("-----Creating positions")
         Queries.executeStatements(query: "CREATE TABLE 'positions' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE, 'displayName' TEXT COLLATE NOCASE);")
-
+        
         //create tblVachReferences table
         print("-----Creating tblVachReferences")
         Queries.executeStatements(query: "CREATE TABLE 'tblVachReferences' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'plateId' INTEGER, 'type' TEXT COLLATE NOCASE, 'name' TEXT COLLATE NOCASE,'refId' INTEGER);")
-
+        
         //create tblVachGroups table
         print("-----Creating tblVachGroups")
         Queries.executeStatements(query: "CREATE TABLE 'tblVachGroups' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE, 'displayName' TEXT COLLATE NOCASE);")
-
+        
         //create tblVachShapes table
         print("-----Creating tblVachShapes")
         Queries.executeStatements(query: "CREATE TABLE 'tblVachShapes' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE, 'type' INTEGER);")
@@ -342,72 +490,6 @@ class DatabaseInitializer {
         print("=====================================")
         //init raw data
         initInitialData()
-    }
-    
-    private func initInitialData() {
-        print("\n================= Inserting Raw Data To Database ====================\n")
-        //insert QC412016 data, vanbanid is 1
-        Queries.executeStatements(query: Utils.readFromFile(name: "QC412016_queries"))
-        //insert ND462016 data, vanbanid is 2
-        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016_queries"))
-        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016linhvuc"))
-        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016phuongtien"))
-        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016mucphat"))
-        Queries.executeStatements(query: Utils.readFromFile(name: "ND462016keywords"))
-        DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "ND462016hinhphatbosung", bienphapkhacphucFilename: "ND462016bienphapkhacphuc")
-        
-        let tt012016 = RawDataInitializer(fileName: "TT012016", vanban: getVanbanById(id: 3))
-        insertDataByQuery(queries: tt012016.transformRawDataToSqlQuery())
-        
-        let lgtdb2008 = RawDataInitializer(fileName: "LGTDB2008", vanban: getVanbanById(id: 4))
-        insertDataByQuery(queries: lgtdb2008.transformRawDataToSqlQuery())
-        
-        let lxlvphc2012 = RawDataInitializer(fileName: "LXLVPHC2012", vanban: getVanbanById(id: 5))
-        insertDataByQuery(queries: lxlvphc2012.transformRawDataToSqlQuery())
-        
-        let nd1002019 = RawDataInitializer(fileName: "ND1002019", vanban: getVanbanById(id: 6))
-        insertDataByQuery(queries: nd1002019.transformRawDataToSqlQuery())
-        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019linhvuc"))
-        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019phuongtien"))
-        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019mucphat"))
-        Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019keywords"))
-        DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "ND1002019hinhphatbosung", bienphapkhacphucFilename: "ND1002019bienphapkhacphuc")
-        
-        //insert QC412019
-        let qc412019 = RawDataInitializer(fileName: "QC412019", vanban: getVanbanById(id: 7))
-        qc412019.transformRawDataToCsv()
-        qc412019.updateDieukhoanWithMinhhoa()
-        insertDataByQuery(queries: qc412019.transformRawDataToSqlQuery())
-        let qc412019PL = RawDataInitializer(fileName: "QC412019-PL", vanban: getVanbanById(id: 7))
-        qc412019PL.transformRawDataToCsv()
-        qc412019PL.updateDieukhoanWithMinhhoa()
-        insertDataByQuery(queries: qc412019PL.transformRawDataToSqlQuery())
-        
-        //insert TT652020
-        Queries.executeStatements(query: RawDataInitializer(fileName: "TT652020", vanban: getVanbanById(id: 8)).transformRawDataToSqlQuery())
-        
-        //insert TT632020
-        Queries.executeStatements(query: RawDataInitializer(fileName: "TT632020", vanban: getVanbanById(id: 8)).transformRawDataToSqlQuery())
-        
-        print("\n================= Finished Inserting Raw Data To Database ====================\n")
-        
-//        RawDataInitializer(fileName: "QC412019", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PL", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLA", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLB", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLC", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLD", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLE", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLF", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLG", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLI", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLK", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLM", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLN", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLO", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "QC412019-PLP", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-//        RawDataInitializer(fileName: "test", vanban: getVanbanById(id: 7)).transformRawDataToCsv()
-        
     }
     
     private func insertDataByQuery(queries: String) {

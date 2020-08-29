@@ -38,9 +38,9 @@
                                                     <action selector="actInitBaseData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rym-BI-seP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="254" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-p4-UNP">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="254" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-p4-UNP">
                                                 <rect key="frame" x="0.0" y="37" width="320" height="30"/>
-                                                <state key="normal" title="Insert Data by queries"/>
+                                                <state key="normal" title="actInsertDataByQueries"/>
                                                 <connections>
                                                     <action selector="actInsertDataByQueries:" destination="BYZ-38-t0r" eventType="touchDown" id="iAg-Fr-xEc"/>
                                                 </connections>
@@ -52,14 +52,14 @@
                                                     <action selector="actInitRelatedDieukhoan:" destination="BYZ-38-t0r" eventType="touchDown" id="BqS-eA-8cs"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="257" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emF-me-ROs">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="257" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emF-me-ROs">
                                                 <rect key="frame" x="0.0" y="101" width="320" height="30"/>
-                                                <state key="normal" title="Init Hinhphatbosung Bienphapkhacphuc"/>
+                                                <state key="normal" title="actInitBosungKhacphuc"/>
                                                 <connections>
                                                     <action selector="actInitBosungKhacphuc:" destination="BYZ-38-t0r" eventType="touchDown" id="aQv-Ea-DAA"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="261" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6E-Fa-YXu">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="261" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6E-Fa-YXu">
                                                 <rect key="frame" x="0.0" y="133" width="320" height="30"/>
                                                 <state key="normal" title="Insert More Vanban Data"/>
                                                 <connections>
@@ -73,51 +73,51 @@
                                                     <action selector="actInitPlateAndVachkeReferences:" destination="BYZ-38-t0r" eventType="touchDown" id="KeK-Wv-NH9"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="256" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma6-8j-43P">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="256" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ma6-8j-43P">
                                                 <rect key="frame" x="0.0" y="197" width="320" height="30"/>
-                                                <state key="normal" title="-----"/>
+                                                <state key="normal" title="actInitLinhvuc"/>
                                                 <connections>
                                                     <action selector="actInitLinhvuc:" destination="BYZ-38-t0r" eventType="touchDown" id="4CI-GV-nXl"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDq-ZH-B1L">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="253" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDq-ZH-B1L">
                                                 <rect key="frame" x="0.0" y="229" width="320" height="30"/>
-                                                <state key="normal" title="-----"/>
+                                                <state key="normal" title="actInitPhuongtien"/>
                                                 <connections>
                                                     <action selector="actInitPhuongtien:" destination="BYZ-38-t0r" eventType="touchDown" id="E1t-f2-xIN"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XF-4p-BNj">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XF-4p-BNj">
                                                 <rect key="frame" x="0.0" y="261" width="320" height="30"/>
-                                                <state key="normal" title="-----"/>
+                                                <state key="normal" title="actInitMucphat"/>
                                                 <connections>
                                                     <action selector="actInitMucphat:" destination="BYZ-38-t0r" eventType="touchDown" id="mz2-eo-nuF"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="258" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fom-I9-Cro">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="258" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fom-I9-Cro">
                                                 <rect key="frame" x="0.0" y="293" width="320" height="30"/>
-                                                <state key="normal" title="-----"/>
+                                                <state key="normal" title="actInitKeywords"/>
                                                 <connections>
                                                     <action selector="actInitKeywords:" destination="BYZ-38-t0r" eventType="touchDown" id="2cg-Ue-1Nd"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jif-LI-Lx2">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="255" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jif-LI-Lx2">
                                                 <rect key="frame" x="0.0" y="325" width="320" height="30"/>
-                                                <state key="normal" title="-----"/>
+                                                <state key="normal" title="actInitPlateReferences"/>
                                                 <connections>
                                                     <action selector="actInitPlateReferences:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UwO-q2-zNL"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="259" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbM-mF-gOT">
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="259" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbM-mF-gOT">
                                                 <rect key="frame" x="0.0" y="357" width="320" height="30"/>
-                                                <state key="normal" title="-----"/>
+                                                <state key="normal" title="actInitVachReferences"/>
                                                 <connections>
                                                     <action selector="actInitVachReferences:" destination="BYZ-38-t0r" eventType="touchDown" id="GPe-SX-OI3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCV-Up-GfZ">
                                                 <rect key="frame" x="0.0" y="389" width="320" height="156"/>
-                                                <state key="normal" title="-----"/>
+                                                <state key="normal" title="Quick Init"/>
                                                 <connections>
                                                     <action selector="actQuickInit:" destination="BYZ-38-t0r" eventType="touchDown" id="0iK-fp-luL"/>
                                                 </connections>
