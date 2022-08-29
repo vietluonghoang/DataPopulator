@@ -11,12 +11,22 @@ import Foundation
 class Utils {
     class func readFromFile(name: String) -> String {
         var fileContent = ""
+        var fileName = ""
+        var path = ""
+        
+        if name.contains("/") {
+            path = "data/\(name.components(separatedBy: "/")[0])"
+            fileName = name.components(separatedBy: "/")[1]
+        }else{
+            fileName = name
+            path = "data"
+        }
         
         let docsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let dpPath = docsDir.appendingPathComponent("\(name).txt")
+        let dpPath = docsDir.appendingPathComponent("\(fileName).txt")
         print("====== sourceDir: \(dpPath.path)")
         let file = FileManager.default
-        let dpPathApp = Bundle.main.path(forResource: name, ofType: "txt", inDirectory: "data")
+        let dpPathApp = Bundle.main.path(forResource: fileName, ofType: "txt", inDirectory: path)
         print("===== targetPath: \(dpPathApp ?? "")")
         do {
             if(file.fileExists(atPath: dpPath.path)) {
@@ -29,7 +39,7 @@ class Utils {
         }
         do {
             fileContent = try String(contentsOf: dpPath)
-//            print(fileContent)   // "some text\n"
+            //            print(fileContent)   // "some text\n"
         } catch {
             print("error loading contents of:", dpPath, error)
         }

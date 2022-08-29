@@ -8,7 +8,7 @@
 
 import Foundation
 class DatabaseInitializer {
-    private let userVersion = 11
+    private let userVersion = 12
     private let quochoi = Coquanbanhanh(
         id: 1
         , ten: "Quốc Hội")
@@ -34,6 +34,9 @@ class DatabaseInitializer {
     private let quychuan = Loaivanban(
         id: 4
         , ten: "Quy Chuẩn")
+    private let vanbanhopnhat = Loaivanban(
+        id: 5
+        , ten: "Văn Bản Hợp Nhất")
     
     private var vanbans = [Vanban]()
     private var coquanbanhanh = [Coquanbanhanh]()
@@ -56,6 +59,7 @@ class DatabaseInitializer {
         loaivanban.append(nghidinh)
         loaivanban.append(thongtu)
         loaivanban.append(quychuan)
+        loaivanban.append(vanbanhopnhat)
     }
     
     private func initVanban() {
@@ -70,7 +74,7 @@ class DatabaseInitializer {
             , noidung: "QCVN 41:2016/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 06/2016/TT-BGTVT ngày 08 tháng 4 năm 2016."
             , hieuluc: "11/1/2016"
             , vanbanThaytheId: 0
-            , tenRutgon: "Quy chuẩn 41/2016"
+            , tenRutgon: "Quy chuẩn 41/2016 về báo hiệu đường bộ"
         )
         vanbans.append(qc412016)
         
@@ -85,7 +89,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 14 tháng 6 năm 2005;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt."
             , hieuluc: "8/1/2016"
             , vanbanThaytheId: 0
-            , tenRutgon: "Nghị định 46/2016"
+            , tenRutgon: "Nghị định 46/2016 về xử phạt"
         )
         vanbans.append(nd462016)
         
@@ -100,7 +104,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Công an nhân dân năm 2014;\nCăn cứ Luật Giao thông đường bộ năm 2008;\nCăn cứ Luật Xử lý vi phạm hành chính năm 2012;\nCăn cứ Nghị định số 106/2014/NĐ-CP ngày 17 tháng 11 năm 2014 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định nhiệm vụ, quyền hạn, hình thức, nội dung tuần tra, kiểm soát giao thông đường bộ của Cảnh sát giao thông."
             , hieuluc: "2/15/2016"
             , vanbanThaytheId: 0
-            , tenRutgon: "Thông tư 01/2016"
+            , tenRutgon: "Thông tư 01/2016 về tuần tra kiểm soát"
         )
         vanbans.append(tt012016)
         
@@ -145,7 +149,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 16 tháng 6 năm 2017;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt."
             , hieuluc: "1/1/2020"
             , vanbanThaytheId: 2
-            , tenRutgon: "Nghị định 100/2019"
+            , tenRutgon: "Nghị định 100/2019 về xử phạt"
         )
         vanbans.append(nd1002019)
         
@@ -160,7 +164,7 @@ class DatabaseInitializer {
             , noidung: "Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT do Tổng cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số 54/2019/TT-BGTVT ngày 31 tháng 12 năm 2019. Quy chuẩn kỹ thuật Quốc gia QCVN 41:2019/BGTVT thay thế QCVN 41:2016/BGTVT."
             , hieuluc: "7/1/2020"
             , vanbanThaytheId: 1
-            , tenRutgon: "Quy chuẩn 41/2019"
+            , tenRutgon: "Quy chuẩn 41/2019 về báo hiệu đường bộ"
         )
         vanbans.append(qc412019)
         
@@ -175,7 +179,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định về chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nCăn cứ Nghị định số 100/2019/NĐ-CP ngày 30 tháng 12 năm 2019 của Chính phủ quy định xử phạt vi phạm hành chính trong lĩnh vực giao thông đường bộ và đường sắt;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông,\nBộ trưởng Bộ Công an ban hành Thông tư quy định nhiệm vụ, quyền hạn, hình thức, nội dung và quy trình tuần tra, kiểm soát, xử lý vi phạm hành chính về giao thông đường bộ của Cảnh sát giao thông."
             , hieuluc: "8/5/2020"
             , vanbanThaytheId: 3
-            , tenRutgon: "Thông tư 65/2020"
+            , tenRutgon: "Thông tư 65/2020 về tuần tra kiểm soát"
         )
         vanbans.append(tt652020)
         
@@ -190,7 +194,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Bộ luật Hình sự ngày 27 tháng 11 năm 2015 (Luật sửa đổi, bổ sung một số điều của Bộ luật Hình sự ngày 20 tháng 6 năm 2017);\nCăn cứ Bộ luật Tố tụng hình sự ngày 27 tháng 11 năm 2015;\nCăn cứ Luật Tổ chức cơ quan điều tra hình sự ngày 26 tháng 11 năm 2015;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018;\nCăn cứ Luật trưng mua, trưng dụng tài sản ngày 03 tháng 6 năm 2008;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định quy trình điều tra, giải quyết tai nạn giao thông đường bộ của lực lượng Cảnh sát giao thông."
             , hieuluc: "1/1/2021"
             , vanbanThaytheId: 0
-            , tenRutgon: "Thông tư 63/2020"
+            , tenRutgon: "Thông tư 63/2020 về xử lý tai nạn giao thông"
         )
         vanbans.append(tt632020)
         
@@ -205,7 +209,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Giao thông đường bộ số 23/2008/QH12;\nCăn cứ Nghị định số 12/2017/NĐ-CP ngày 10 tháng 02 năm 2017 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Giao thông vận tải;\nTheo đề nghị của Vụ trưởng Vụ Kết cấu hạ tầng giao thông và Tổng cục trưởng Tổng cục Đường bộ Việt Nam;\nBộ trưởng Bộ Giao thông vận tải ban hành Thông tư quy định về tốc độ và khoảng cách an toàn của xe cơ giới, xe máy chuyên dùng tham gia giao thông trên đường bộ."
             , hieuluc: "10/15/2019"
             , vanbanThaytheId: 0
-            , tenRutgon: "Thông tư 31/2019"
+            , tenRutgon: "Thông tư 31/2019 về tốc độ và khoảng cách"
         )
         vanbans.append(tt312019)
         
@@ -220,7 +224,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Tiếp cận thông tin ngày 06 tháng 4 năm 2016;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018;\nCăn cứ Nghị quyết số 55/NQ-UBTVQH10 ngày 30 tháng 8 năm 1998 của Ủy ban Thường vụ Quốc hội về việc ban hành Quy chế thực hiện dân chủ trong hoạt động của cơ quan;\nCăn cứ Nghị định số 04/2015/NĐ-CP ngày 09 tháng 01 năm 2015 của Chính phủ về thực hiện dân chủ trong hoạt động của cơ quan hành chính nhà nước và đơn vị sự nghiệp công lập;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định về thực hiện dân chủ trong công tác bảo đảm trật tự, an toàn giao thông."
             , hieuluc: "1/15/2020"
             , vanbanThaytheId: 0
-            , tenRutgon: "Thông tư 67/2019"
+            , tenRutgon: "Thông tư 67/2019 về thực hiện dân chủ"
         )
         vanbans.append(tt672019)
         
@@ -235,7 +239,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đầu tư ngày 26 tháng 11 năm 2014 và Luật sửa đổi, bổ sung Điều 6 và Phụ lục 4 về Danh mục ngành, nghề đầu tư kinh doanh có điều kiện của Luật Đầu tư ngày 26 tháng 11 năm 2016;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định quy định về kinh doanh và điều kiện kinh doanh vận tải bằng xe ô tô."
             , hieuluc: "4/1/2020"
             , vanbanThaytheId: 0
-            , tenRutgon: "Nghị định 10/2020"
+            , tenRutgon: "Nghị định 10/2020 về kinh doanh vận tải"
         )
         vanbans.append(nd102020)
         
@@ -250,7 +254,7 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 25 tháng 12 năm 2001;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012;\nCăn cứ Luật Quản lý, sử dụng tài sản nhà nước ngày 03 tháng 6 năm 2008;\nTheo đề nghị của Bộ trưởng Bộ Công an;\nChính phủ ban hành Nghị định quy định việc quản lý, sử dụng và danh mục các phương tiện, thiết bị kỹ thuật nghiệp vụ được sử dụng để phát hiện vi phạm hành chính về trật tự, an toàn giao thông và bảo vệ môi trường,"
             , hieuluc: "12/28/2013"
             , vanbanThaytheId: 0
-            , tenRutgon: "Nghị định 165/2013"
+            , tenRutgon: "Nghị định 165/2013 về thiết bị kỹ thuật nghiệp vụ"
         )
         vanbans.append(nd1652013)
         
@@ -265,9 +269,54 @@ class DatabaseInitializer {
             , noidung: "Căn cứ Luật xử lý vi phạm hành chính năm 2012;\nCăn cứ Nghị định số 165/2013/NĐ-CP ngày 12 tháng 11 năm 2013 quy định việc quản lý, sử dụng và danh mục các phương tiện, thiết bị kỹ thuật nghiệp vụ được sử dụng để phát hiện vi phạm hành chính về trật tự, an toàn giao thông và bảo vệ môi trường;\nCăn cứ Nghị định số 106/2014/NĐ-CP ngày 17 tháng 11 năm 2014 quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Tổng cục trưởng Tổng cục Cảnh sát;\nBộ trưởng Bộ Công an ban hành Thông tư quy định về sử dụng phương tiện, thiết bị kỹ thuật nghiệp vụ trong Công an nhân dân để phát hiện vi phạm hành chính về trật tự, an toàn giao thông và bảo vệ môi trường."
             , hieuluc: "10/15/2015"
             , vanbanThaytheId: 0
-            , tenRutgon: "Thông tư 40/2015"
+            , tenRutgon: "Thông tư 40/2015 về thiết bị kỹ thuật nghiệp vụ"
         )
         vanbans.append(tt402015)
+        
+        let tt582020 = Vanban(
+            id: 15
+            , ten: "QUY ĐỊNH QUY TRÌNH CẤP, THU HỒI ĐĂNG KÝ, BIỂN SỐ PHƯƠNG TIỆN GIAO THÔNG CƠ GIỚI ĐƯỜNG BỘ"
+            , loai: thongtu
+            , so: "58"
+            , nam: "2020"
+            , ma: "58/2020/TT-BCA"
+            , coquanbanhanh: bocongan
+            , noidung: "Căn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Bộ luật Dân sự ngày 24 tháng 11 năm 2015;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định về quy trình cấp, thu hồi đăng ký, biển số phương tiện giao thông cơ giới đường bộ."
+            , hieuluc: "01/08/2020"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Thông tư 58/2015 về cấp đổi biển số"
+        )
+        vanbans.append(tt582020)
+        
+        let luatxlvphc2020 = Vanban(
+            id: 16
+            , ten: "LUẬT XỬ LÝ VI PHẠM HÀNH CHÍNH"
+            , loai: luat
+            , so: "67"
+            , nam: "2020"
+            , ma: "67/2020/QH14"
+            , coquanbanhanh: quochoi
+            , noidung: "Luật Xử lý vi phạm hành chính số 15/2012/QH13 ngày 20 tháng 6 năm 2012 của Quốc hội, có hiệu lực kể từ ngày 01 tháng 7 năm 2013, được sửa đổi, bổ sung bởi:\n1. Luật Hải quan số 54/2014/QH13 ngày 23 tháng 6 năm 2014 của Quốc hội, có hiệu lực kể từ ngày 01 tháng 01 năm 2015;\n2. Luật Thủy sản số 18/2017/QH14 ngày 21 tháng 11 năm 2017 của Quốc hội, có hiệu lực kể từ ngày 01 tháng 01 năm 2019;\n3. Luật số 67/2020/QH14 ngày 13 tháng 11 năm 2020 của Quốc hội sửa đổi, bổ sung một số điều của Luật Xử lý vi phạm hành chính, có hiệu lực kể từ ngày 01 tháng 01 năm 2022.\nCăn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 1992 đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 51/2001/QH10;\nQuốc hội ban hành Luật xử lý vi phạm hành chính"
+            , hieuluc: "1/1/2022"
+            , vanbanThaytheId: 0
+            , tenRutgon: "Luật xử lý vi phạm hành chính 2020"
+        )
+        vanbans.append(luatxlvphc2020)
+        
+        let nd1232021 = Vanban(
+            id: 17
+            , ten: "NGHỊ ĐỊNH QUY ĐỊNH XỬ PHẠT VI PHẠM HÀNH CHÍNH TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ VÀ ĐƯỜNG SẮT"
+            , loai: nghidinh
+            , so: "123"
+            , nam: "2021"
+            , ma: "123/2021/NĐ-CP"
+            , coquanbanhanh: chinhphu
+            , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015; Luật sửa đổi, bổ sung một số điều của Luật Tổ chức Chính phủ và Luật Tổ chức chính quyền địa phương ngày 22 tháng 11 năm 2019;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012 và Luật sửa đổi, bổ sung một số điều của Luật Xử lý vi phạm hành chính ngày 13 tháng 11 năm 2020;\nCăn cứ Bộ luật Hàng hải Việt Nam ngày 25 tháng 11 năm 2015;\nCăn cứ Luật Hàng không dân dụng Việt Nam ngày 29 tháng 6 năm 2006 và Luật sửa đổi, bổ sung một số điều của Luật Hàng không dân dụng Việt Nam ngày 21 tháng 11 năm 2014;\nCăn cứ Luật Giao thông đường bộ ngày 13 tháng 11 năm 2008;\nCăn cứ Luật Đường sắt ngày 16 tháng 6 năm 2017;\nTheo đề nghị của Bộ trưởng Bộ Giao thông vận tải;\nChính phủ ban hành Nghị định sửa đổi, bổ sung một số điều của các Nghị định quy định xử phạt vi phạm hành chính trong lĩnh vực hàng hải; giao thông đường bộ, đường sắt; hàng không dân dụng."
+            , hieuluc: "1/1/2022"
+            , vanbanThaytheId: 6
+            , tenRutgon: "Nghị định 100+123/2019 về xử phạt"
+        )
+        vanbans.append(nd1232021)
     }
     
     private func initInitialData() {
@@ -332,6 +381,21 @@ class DatabaseInitializer {
         
         //insert TT402015
         Queries.executeStatements(query: RawDataInitializer(fileName: "TT402015", vanban: getVanbanById(id: 14)).transformRawDataToSqlQuery())
+        
+        //insert Luat XLVPHC 2020
+        Queries.executeStatements(query: RawDataInitializer(fileName: "TT582020", vanban: getVanbanById(id: 15)).transformRawDataToSqlQuery())
+        
+        //insert Luat XLVPHC 2020
+        Queries.executeStatements(query: RawDataInitializer(fileName: "31_VBHN-VPQH-LuatXLVPHC-2012-2020", vanban: getVanbanById(id: 16)).transformRawDataToSqlQuery())
+        
+        //insert nd1232021
+        let nd1232021 = RawDataInitializer(fileName: "VBHN-03-2022-BGTVT", vanban: getVanbanById(id: 17))
+        insertDataByQuery(queries: nd1232021.transformRawDataToSqlQuery())
+        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTlinhvuc"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTphuongtien"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTmucphat"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTkeywords"))
+        DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "VBHN-03-2022-BGTVThinhphatbosung", bienphapkhacphucFilename: "VBHN-03-2022-BGTVTbienphapkhacphuc")
         
         print("\n================= Finished Inserting Raw Data To Database ====================\n")
     }
