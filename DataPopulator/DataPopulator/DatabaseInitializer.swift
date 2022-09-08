@@ -298,7 +298,7 @@ class DatabaseInitializer {
             , coquanbanhanh: quochoi
             , noidung: "Luật Xử lý vi phạm hành chính số 15/2012/QH13 ngày 20 tháng 6 năm 2012 của Quốc hội, có hiệu lực kể từ ngày 01 tháng 7 năm 2013, được sửa đổi, bổ sung bởi:\n1. Luật Hải quan số 54/2014/QH13 ngày 23 tháng 6 năm 2014 của Quốc hội, có hiệu lực kể từ ngày 01 tháng 01 năm 2015;\n2. Luật Thủy sản số 18/2017/QH14 ngày 21 tháng 11 năm 2017 của Quốc hội, có hiệu lực kể từ ngày 01 tháng 01 năm 2019;\n3. Luật số 67/2020/QH14 ngày 13 tháng 11 năm 2020 của Quốc hội sửa đổi, bổ sung một số điều của Luật Xử lý vi phạm hành chính, có hiệu lực kể từ ngày 01 tháng 01 năm 2022.\nCăn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam năm 1992 đã được sửa đổi, bổ sung một số điều theo Nghị quyết số 51/2001/QH10;\nQuốc hội ban hành Luật xử lý vi phạm hành chính"
             , hieuluc: "1/1/2022"
-            , vanbanThaytheId: 0
+            , vanbanThaytheId: 5
             , tenRutgon: "Luật xử lý vi phạm hành chính 2020"
         )
         vanbans.append(luatxlvphc2020)

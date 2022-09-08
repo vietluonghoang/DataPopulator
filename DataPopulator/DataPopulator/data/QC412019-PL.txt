@@ -1223,7 +1223,7 @@ Vạch 7.6: Vạch chỉ dẫn sắp đến chỗ có bố trí vạch đi bộ 
 Ý nghĩa sử dụng: Vạch 7.6 sử dụng để báo hiệu sắp đến chỗ có bố trí vạch đi bộ qua đường; đặc biệt đối với các chỗ bố trí vạch đi bộ qua đường ở giữa đoạn đường nối hai nút để cảnh báo người lái xe phải nhường đường cho người đi bộ qua đường.
 
 Quy cách vạch như sau:
-Vạch có dạng hình thoi, màu trắng. Kích thước vạch xem trên Hình G.56.
+Vạch có dạng hình thoi, màu trắng. Kích thước vạch xem trên Hình G.55.
 
 Minh họa:
     G2.7.     Vạch báo gần chỗ giao nhau với đường sắt

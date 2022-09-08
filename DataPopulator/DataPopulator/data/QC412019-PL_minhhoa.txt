@@ -480,7 +480,7 @@
 481|QC41-PLG_Vach_2.4.png
 482|
 483|QC41-PLG_Hinh_G.13a.png;QC41-PLG_Hinh_G.13b.png
-484|
+484|QC41-PLG_Hinh_G.15.png
 485|QC41-PLG_Hinh_G.14.png;QC41-PLG_Hinh_G.15.png;QC41-PLG_Hinh_G.16.png;QC41-PLG_Hinh_G.17.png
 486|QC41-PLG_Hinh_G.18_2019.png;QC41-PLG_Hinh_G.19.png
 487|QC41-PLG_Hinh_G.20.png;QC41-PLG_Hinh_G.21.png;QC41-PLG_Hinh_G.22.png;QC41-PLG_Hinh_G.23.png

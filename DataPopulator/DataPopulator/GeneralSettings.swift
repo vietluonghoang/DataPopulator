@@ -12,7 +12,7 @@ class GeneralSettings {
 
     //temporarily keep these since we need them for checking the releatedDieukhoan
     let lgtId = "4"
-    let lxlvphcId = "5"
+    let lxlvphcId = "16"
     
     //temporarily keep these since we need them for checking the releatedDieukhoan
     func getLGTID() -> String {
