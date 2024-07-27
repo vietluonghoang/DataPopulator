@@ -8,7 +8,7 @@
 
 import Foundation
 class DatabaseInitializer {
-    private let userVersion = 12
+    private let userVersion = 13
     private let quochoi = Coquanbanhanh(
         id: 1
         , ten: "Quốc Hội")
@@ -317,6 +317,21 @@ class DatabaseInitializer {
             , tenRutgon: "Nghị định 100+123/2019 về xử phạt"
         )
         vanbans.append(nd1232021)
+        
+        let luatttatgtdb2024 = Vanban(
+            id: 18
+            , ten: "Luật Trật tự, an toàn giao thông đường bộ"
+            , loai: luat
+            , so: "36"
+            , nam: "2024"
+            , ma: "36/2024/QH15"
+            , coquanbanhanh: quochoi
+            , noidung: "Căn cứ Hiến pháp nước Cộng hòa xã hội chủ nghĩa Việt Nam;\nQuốc hội ban hành Luật Trật tự, an toàn giao thông đường bộ."
+            , hieuluc: "1/1/2025"
+            , vanbanThaytheId: 4
+            , tenRutgon: "Luật Giao thông 2024"
+        )
+        vanbans.append(luatttatgtdb2024)
     }
     
     private func initInitialData() {
@@ -396,7 +411,8 @@ class DatabaseInitializer {
         Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTmucphat"))
         Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTkeywords"))
         DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "VBHN-03-2022-BGTVThinhphatbosung", bienphapkhacphucFilename: "VBHN-03-2022-BGTVTbienphapkhacphuc")
-        
+        let lttatgtdb2024 = RawDataInitializer(fileName: "luatttatgtdb2024", vanban: getVanbanById(id: 18))
+        insertDataByQuery(queries: lttatgtdb2024.transformRawDataToSqlQuery())
         print("\n================= Finished Inserting Raw Data To Database ====================\n")
     }
     
