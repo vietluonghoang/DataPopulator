@@ -24,7 +24,7 @@ xcuserdata/
 *.DS_Store
 *.txt
 *.sqlite
-./DataPopulator/data/
+#./DataPopulator/data/
 
 ## Obj-C/Swift specific
 *.hmap
