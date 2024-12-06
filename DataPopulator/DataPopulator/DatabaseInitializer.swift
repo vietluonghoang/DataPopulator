@@ -332,6 +332,51 @@ class DatabaseInitializer {
             , tenRutgon: "Luật Giao thông 2024"
         )
         vanbans.append(luatttatgtdb2024)
+        
+        let tt722024 = Vanban(
+            id: 19
+            , ten: "Quy định quy trình điều tra, giải quyết tai nạn giao thông đường bộ của Cảnh sát giao thông"
+            , loai: thongtu
+            , so: "72"
+            , nam: "2024"
+            , ma: "72/2024/TT-BCA"
+            , coquanbanhanh: bocongan
+            , noidung: "Căn cứ Bộ luật Tố tụng hình sự ngày 27 tháng 11 năm 2015; Luật sửa đổi, bổ sung một số điều của Bộ luật Tố tụng hình sự ngày 12 tháng 11 năm 2021;\nCăn cứ Bộ luật hình sự ngày 27 tháng 11 năm 2015; Luật sửa đổi, bổ sung một số điều của Bộ luật hình sự ngày 20 tháng 6 năm 2017;\nCăn cứ Luật Trật tự an toàn giao thông đường bộ ngày 27 tháng 6 năm 2024;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018; Luật sửa đổi, bổ sung một số điều của Luật Công an nhân dân ngày 22 tháng 6 năm 2023;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012; Luật sửa đổi, bổ sung một số điều của Luật Xử lý vi phạm hành chính ngày 13 tháng 11 năm 2020;\nCăn cứ Luật Tổ chức cơ quan điều tra hình sự ngày 26 tháng 11 năm 2015;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định quy trình điều tra, giải quyết tai nạn giao thông đường bộ của Cảnh sát giao thông."
+            , hieuluc: "01/01/2025"
+            , vanbanThaytheId: 9
+            , tenRutgon: "Thông tư 72/2024 về xử lý tai nạn giao thông"
+        )
+        vanbans.append(tt722024)
+        
+        let tt732024 = Vanban(
+            id: 20
+            , ten: "Quy định công tác tuần tra, kiểm soát, xử lý vi phạm pháp luật về trật tự, an toàn giao thông đường bộ của Cảnh sát giao thông"
+            , loai: thongtu
+            , so: "73"
+            , nam: "2024"
+            , ma: "73/2024/TT-BCA"
+            , coquanbanhanh: bocongan
+            , noidung: "Căn cứ Luật Trật tự, an toàn giao thông đường bộ ngày 27 tháng 6 năm 2024;\nCăn cứ Luật Công an nhân dân ngày 20 tháng 11 năm 2018 và Luật sửa đổi, bổ sung một số điều của Luật Công an nhân dân ngày 22 tháng 6 năm 2023;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012 và Luật sửa đổi, bổ sung một số điều của Luật Xử lý vi phạm hành chính ngày 13 tháng 11 năm 2020;\nCăn cứ Nghị định số 118/2021/NĐ-CP ngày 23 tháng 12 năm 2021 của Chính phủ quy định chi tiết một số điều và biện pháp thi hành Luật Xử lý vi phạm hành chính;\nCăn cứ Nghị định số 135/2021/NĐ-CP ngày 31 tháng 12 năm 2021 của Chính phủ quy định về danh mục, việc quản lý, sử dụng phương tiện, thiết bị kỹ thuật nghiệp vụ và quy trình thu thập, sử dụng dữ liệu thu được từ phương tiện, thiết bị kỹ thuật do cá nhân, tổ chức cung cấp để phát hiện vi phạm hành chính;\nCăn cứ Nghị định số 01/2018/NĐ-CP ngày 06 tháng 8 năm 2018 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Công an;\nTheo đề nghị của Cục trưởng Cục Cảnh sát giao thông;\nBộ trưởng Bộ Công an ban hành Thông tư quy định công tác tuần tra, kiểm soát, xử lý vi phạm pháp luật về trật tự, an toàn giao thông đường bộ của Cảnh sát giao thông."
+            , hieuluc: "01/01/2025"
+            , vanbanThaytheId: 8
+            , tenRutgon: "Thông tư 73/2024 về tuần tra kiểm soát"
+        )
+        vanbans.append(tt722024)
+        
+        let tt382024 = Vanban(
+            id: 21
+            , ten: "Quy định về tốc độ và khoảng cách an toàn của xe cơ giới, xe máy chuyên dùng tham gia giao thông trên đường bộ"
+            , loai: thongtu
+            , so: "38"
+            , nam: "2024"
+            , ma: "38/2024/TT-BGTVT"
+            , coquanbanhanh: bogiaothongvantai
+            , noidung: "Căn cứ Luật Trật tự, an toàn giao thông đường bộ ngày 27 tháng 6 năm 2024;\nCăn cứ Luật Đường bộ ngày 27 tháng 6 năm 2024;\nCăn cứ Nghị định số 56/2022/NĐ-CP ngày 24 tháng 8 năm 2022 của Chính phủ quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Bộ Giao thông vận tải;\nTheo đề nghị của Vụ trưởng Vụ Kết cấu hạ tầng giao thông và Cục trưởng Cục đường bộ Việt Nam;\nBộ trưởng Bộ Giao thông vận tải ban hành Thông tư quy định về tốc độ và khoảng cách an toàn của xe cơ giới, xe máy chuyên dùng tham gia giao thông trên đường bộ."
+            , hieuluc: "01/01/2025"
+            , vanbanThaytheId: 10
+            , tenRutgon: "Thông tư 38/2024 về tốc độ và khoảng cách"
+        )
+        vanbans.append(tt382024)
     }
     
     private func initInitialData() {
@@ -411,8 +456,25 @@ class DatabaseInitializer {
         Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTmucphat"))
         Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTkeywords"))
         DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "VBHN-03-2022-BGTVThinhphatbosung", bienphapkhacphucFilename: "VBHN-03-2022-BGTVTbienphapkhacphuc")
+        
+        //insert LGTDB2024
         let lttatgtdb2024 = RawDataInitializer(fileName: "luatttatgtdb2024", vanban: getVanbanById(id: 18))
         insertDataByQuery(queries: lttatgtdb2024.transformRawDataToSqlQuery())
+        
+        //insert TT722024
+        let tt722024 = RawDataInitializer(fileName: "TT722024", vanban: getVanbanById(id: 19))
+        insertDataByQuery(queries: tt722024.transformRawDataToSqlQuery())
+        
+        //insert TT732024
+        let tt732024 = RawDataInitializer(fileName: "TT732024", vanban: getVanbanById(id: 20))
+        insertDataByQuery(queries: tt732024.transformRawDataToSqlQuery())
+        
+        //insert TT382024
+        let tt382024 = RawDataInitializer(fileName: "TT382024", vanban: getVanbanById(id: 21))
+        tt382024.transformRawDataToCsv()
+        tt382024.updateDieukhoanWithMinhhoa()
+        insertDataByQuery(queries: tt382024.transformRawDataToSqlQuery())
+        
         print("\n================= Finished Inserting Raw Data To Database ====================\n")
     }
     
