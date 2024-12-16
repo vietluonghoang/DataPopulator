@@ -142,6 +142,9 @@ class ViewController: UIViewController {
         transformData()
         initPlateAndVachkeReferences()
         DieukhoanParser().initRelatedDieukhoan()
+        print("=====================================")
+        print("-----------   All Done   ------------")
+        print("=====================================")
     }
     
     private func transformData() {

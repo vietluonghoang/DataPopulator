@@ -8,7 +8,7 @@
 
 import Foundation
 class DatabaseInitializer {
-    private let userVersion = 13
+    private let userVersion = 14
     private let quochoi = Coquanbanhanh(
         id: 1
         , ten: "Quốc Hội")
@@ -361,7 +361,7 @@ class DatabaseInitializer {
             , vanbanThaytheId: 8
             , tenRutgon: "Thông tư 73/2024 về tuần tra kiểm soát"
         )
-        vanbans.append(tt722024)
+        vanbans.append(tt732024)
         
         let tt382024 = Vanban(
             id: 21
