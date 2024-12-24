@@ -8,7 +8,7 @@
 
 import Foundation
 class DatabaseInitializer {
-    private let userVersion = 14
+    private let userVersion = 15
     private let quochoi = Coquanbanhanh(
         id: 1
         , ten: "Quốc Hội")
