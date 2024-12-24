@@ -72,4 +72,11 @@ class Utils {
             print("\n==============\n")
         }
     }
+    
+    class func substring(string:String, from:Int, to:Int) -> String{
+        let lowerBound = string.index(string.startIndex, offsetBy: from)
+        let upperBound = string.index(string.startIndex, offsetBy: to)
+        let substring = string[lowerBound..<upperBound]
+        return String(substring)
+    }
 }

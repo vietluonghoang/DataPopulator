@@ -243,11 +243,11 @@ Khi đến gần đường giao nhau, người điều khiển phương tiện t
 Điều 23. Qua phà, qua cầu phao
 1. Khi đến bến phà, cầu phao, các xe phải xếp hàng theo quy định, không làm cản trở giao thông.
 2. Các xe qua phà, qua cầu phao theo thứ tự ưu tiên từ trên xuống dưới như sau:
+Trong trường hợp các xe cùng thứ tự ưu tiên đến bến phà, cầu phao thì xe nào đến trước được qua trước.
 a) Xe ưu tiên; 
 b) Xe chở thư báo;
 c) Xe chở thực phẩm tươi sống;
 d) Xe chở khách công cộng.
-Trong trường hợp các xe cùng thứ tự ưu tiên đến bến phà, cầu phao thì xe nào đến trước được qua trước.
 3. Khi qua phà, phải chấp hành quy định sau đây:
 a) Khi xe xuống phà, đang ở trên phà và khi lên bến, mọi người không được ở trên xe, trừ người lái xe, người điều khiển xe máy chuyên dùng, trẻ em, phụ nữ mang thai, người già yếu, người khuyết tật, người bệnh;
 b) Khi xuống phà, xe cơ giới, xe máy chuyên dùng xuống trước, xe thô sơ, người đi bộ xuống sau; khi lên bến, người đi bộ lên trước, các phương tiện giao thông đường bộ lên sau theo hướng dẫn của người điều khiển giao thông. 
@@ -635,10 +635,8 @@ d) Chứng nhận kiểm định an toàn kỹ thuật và bảo vệ môi trư�
 5. Người tập lái xe ô tô, người dự sát hạch lái xe ô tô khi tham gia giao thông đường bộ phải thực hành trên xe tập lái, xe sát hạch trên tuyến đường tập lái, tuyến đường sát hạch, có giáo viên dạy lái hoặc sát hạch viên bảo trợ tay lái. Giáo viên dạy lái, sát hạch viên phải mang theo các loại giấy tờ quy định tại khoản 1 Điều này.
 Điều 57. Giấy phép lái xe
 1. Giấy phép lái xe bao gồm các hạng sau đây:
-a) Hạng A1 cấp cho người lái xe mô tô hai bánh có dung tích xi-lanh 
-đến 125 cm3 hoặc có công suất động cơ điện đến 11 kW;
-b) Hạng A cấp cho người lái xe mô tô hai bánh có dung tích xi-lanh 
-trên 125 cm3 hoặc có công suất động cơ điện trên 11 kW và các loại xe quy định cho giấy phép lái xe hạng A1;
+a) Hạng A1 cấp cho người lái xe mô tô hai bánh có dung tích xi-lanh đến 125 cm3 hoặc có công suất động cơ điện đến 11 kW;
+b) Hạng A cấp cho người lái xe mô tô hai bánh có dung tích xi-lanh trên 125 cm3 hoặc có công suất động cơ điện trên 11 kW và các loại xe quy định cho giấy phép lái xe hạng A1;
 c) Hạng B1 cấp cho người lái xe mô tô ba bánh và các loại xe quy định cho giấy phép lái xe hạng A1;
 d) Hạng B cấp cho người lái xe ô tô chở người đến 08 chỗ (không kể chỗ của người lái xe); xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế đến 3.500 kg; các loại xe ô tô quy định cho giấy phép lái xe hạng B kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg; 
 đ) Hạng C1 cấp cho người lái xe ô tô tải và ô tô chuyên dùng có khối lượng toàn bộ theo thiết kế trên 3.500 kg đến 7.500 kg; các loại xe ô tô tải quy định cho giấy phép lái xe hạng C1 kéo rơ moóc có khối lượng toàn bộ theo thiết kế đến 750 kg; các loại xe quy định cho giấy phép lái xe hạng B;
@@ -676,8 +674,7 @@ d) Người Việt Nam hoặc người nước ngoài có thẻ thường trú h
 9. Bộ trưởng Bộ Giao thông vận tải quy định mẫu giấy phép lái xe và giấy phép lái xe quốc tế, trình tự, thủ tục cấp và việc sử dụng giấy phép lái xe, giấy phép lái xe quốc tế; đối với mẫu giấy phép lái xe, trình tự, thủ tục cấp và việc sử dụng giấy phép lái xe của lực lượng quân đội, công an làm nhiệm vụ quốc phòng, an ninh do Bộ trưởng Bộ Quốc phòng, Bộ trưởng Bộ Công an quy định.
 Điều 58. Điểm của giấy phép lái xe 
 1. Điểm của giấy phép lái xe được dùng để quản lý việc chấp hành pháp luật về trật tự, an toàn giao thông đường bộ của người lái xe trên hệ thống cơ sở dữ liệu về trật tự, an toàn giao thông đường bộ, bao gồm 12 điểm. Số điểm trừ mỗi lần vi phạm tùy thuộc tính chất, mức độ của hành vi vi phạm pháp luật về trật tự, an toàn giao thông đường bộ. Dữ liệu về điểm trừ giấy phép lái xe của người vi phạm sẽ được cập nhật vào hệ thống cơ sở dữ liệu ngay sau khi quyết định xử phạt có hiệu lực thi hành và thông báo cho người bị trừ điểm giấy phép lái xe biết.
-2. Giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời 
-hạn 12 tháng từ ngày bị trừ điểm gần nhất thì được phục hồi đủ 12 điểm.
+2. Giấy phép lái xe chưa bị trừ hết điểm và không bị trừ điểm trong thời hạn 12 tháng từ ngày bị trừ điểm gần nhất thì được phục hồi đủ 12 điểm.
 3. Trường hợp giấy phép lái xe bị trừ hết điểm thì người có giấy phép lái xe không được điều khiển phương tiện tham gia giao thông đường bộ theo giấy phép lái xe đó. Sau thời hạn ít nhất là 06 tháng kể từ ngày bị trừ hết điểm, người có giấy phép lái xe được tham gia kiểm tra nội dung kiến thức pháp luật về trật tự, an toàn giao thông đường bộ theo quy định tại khoản 7 Điều 61 của Luật này do lực lượng Cảnh sát giao thông tổ chức, có kết quả đạt yêu cầu thì được phục hồi đủ 12 điểm.
 4. Giấy phép lái xe sau khi đổi, cấp lại, nâng hạng được giữ nguyên số điểm của giấy phép lái xe trước khi đổi, cấp lại, nâng hạng.
 5. Người có thẩm quyền xử phạt vi phạm hành chính có thẩm quyền trừ điểm giấy phép lái xe.
@@ -701,9 +698,7 @@ b) Nâng hạng giấy phép lái xe từ hạng C1 lên hạng C hoặc lên h�
 c) Nâng hạng giấy phép lái xe từ hạng C lên hạng D1 hoặc lên hạng D2 hoặc lên hạng D;
 d) Nâng hạng giấy phép lái xe từ hạng D1 lên hạng D2 hoặc lên hạng D;
 đ) Nâng hạng giấy phép lái xe từ hạng D2 lên hạng D;
-e) Nâng hạng giấy phép lái xe từ hạng B lên hạng BE, từ hạng C1 lên 
-hạng C1E, từ hạng C lên hạng CE, từ hạng D1 lên hạng D1E, từ hạng D2 lên 
-hạng D2E, từ hạng D lên hạng DE.
+e) Nâng hạng giấy phép lái xe từ hạng B lên hạng BE, từ hạng C1 lên hạng C1E, từ hạng C lên hạng CE, từ hạng D1 lên hạng D1E, từ hạng D2 lên hạng D2E, từ hạng D lên hạng DE.
 4. Người có nhu cầu được đào tạo nâng hạng giấy phép lái xe khi giấy phép lái xe còn hiệu lực, phải có đủ thời gian lái xe an toàn quy định cho từng hạng giấy phép lái xe; đối với việc nâng hạng giấy phép lái xe lên hạng D1, D2, D thì người có nhu cầu được đào tạo còn phải có trình độ từ trung học cơ sở trở lên.
 5. Giấy phép lái xe các hạng C, D1, D2, D, BE, C1E, CE, D1E, D2E, DE phải được đào tạo bằng hình thức đào tạo nâng hạng theo các điều kiện quy định tại khoản 3 và khoản 4 Điều này.
 6. Cơ sở đào tạo lái xe ô tô phải đáp ứng các điều kiện do Chính phủ quy định; có giáo trình, giáo án; thực hiện đào tạo theo đúng hình thức, nội dung và chương trình quy định cho từng hạng giấy phép lái xe.

@@ -383,7 +383,12 @@ class DieukhoanParser {
                 }
             }
         }
-        finalQuery = Queries.rawSqlQuery + " \(String(finalQuery[..<(finalQuery.index(finalQuery.endIndex, offsetBy: -4))]))"
+        print("Final Query: \n - \(finalQuery)")
+        if finalQuery.count > 3 {
+            finalQuery = Queries.rawSqlQuery + " \(String(finalQuery[..<(finalQuery.index(finalQuery.endIndex, offsetBy: -4))]))"
+        }else {
+            finalQuery = Queries.rawSqlQuery
+        }
         
         relatedDieukhoan.append(contentsOf: Queries.searchDieukhoanByQuery(query: finalQuery, vanbanid: specificVanbanId))
         return relatedDieukhoan

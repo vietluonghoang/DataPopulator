@@ -114,7 +114,10 @@ class Queries: NSObject {
     
     class func searchDieukhoanByQuery(query:String, vanbanid: [String]) -> [Dieukhoan] {
         DataConnection.database!.open()
-        let specificVanban = generateWhereClauseForVanbanid(vanbanid: vanbanid, vanbanIdColumnName: "vbId")
+        var specificVanban = generateWhereClauseForVanbanid(vanbanid: vanbanid, vanbanIdColumnName: "vbId")
+        if (String(query.trimmingCharacters(in: .whitespacesAndNewlines).suffix(5)).compare("where") == .orderedSame){
+            specificVanban = Utils.substring(string: specificVanban, from: 4, to: specificVanban.count)
+        }
         let appendKeyword = [String]()
         let sql = query.lowercased() + specificVanban
         
