@@ -39,7 +39,7 @@ class Utils {
         }
         do {
             fileContent = try String(contentsOf: dpPath)
-            //            print(fileContent)   // "some text\n"
+            print("####### FILE CONTENT: \(fileName)\n \(fileContent)\n####### END OF FILE CONTENT: \(fileName)")
         } catch {
             print("error loading contents of:", dpPath, error)
         }
@@ -78,5 +78,8 @@ class Utils {
         let upperBound = string.index(string.startIndex, offsetBy: to)
         let substring = string[lowerBound..<upperBound]
         return String(substring)
+    }
+    class func escapeQuote(string: String) -> String{
+        return string.replacingOccurrences(of: "'", with: "’")
     }
 }

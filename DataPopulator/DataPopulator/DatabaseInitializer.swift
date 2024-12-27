@@ -8,7 +8,7 @@
 
 import Foundation
 class DatabaseInitializer {
-    private let userVersion = 15
+    private let userVersion = 16
     private let quochoi = Coquanbanhanh(
         id: 1
         , ten: "Quốc Hội")
@@ -377,13 +377,30 @@ class DatabaseInitializer {
             , tenRutgon: "Thông tư 38/2024 về tốc độ và khoảng cách"
         )
         vanbans.append(tt382024)
+        
+        let qc412024 = Vanban(
+            id: 22
+            , ten: "QUY CHUẨN KỸ THUẬT QUỐC GIA VỀ BÁO HIỆU ĐƯỜNG BỘ"
+            , loai: quychuan
+            , so: "41"
+            , nam: "2024"
+            , ma: "QCVN 41:2024/BGTVT"
+            , coquanbanhanh: bogiaothongvantai
+            , noidung: "QCVN 41:2024/BGTVT thay thế QCVN 41:2019/BGTVT.\nQuy chuẩn kỹ thuật Quốc gia về báo hiệu đường bộ QCVN 41:2024/BGTVT do Cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số /2024/TT-BGTVT ngày 15 tháng 11 năm 2024."
+            , hieuluc: "1/1/2025"
+            , vanbanThaytheId: 7
+            , tenRutgon: "Quy chuẩn 41/2019 về báo hiệu đường bộ"
+        )
+        vanbans.append(qc412024)
     }
     
     private func initInitialData() {
         print("\n================= Inserting Raw Data To Database ====================\n")
         //insert QC412016 data, vanbanid is 1
+        print("\n==== Inserting Raw Data To Database: QC412016_queries")
         Queries.executeStatements(query: Utils.readFromFile(name: "QC412016_queries"))
         //insert ND462016 data, vanbanid is 2
+        print("\n==== Inserting Raw Data To Database: ND462016_queries")
         Queries.executeStatements(query: Utils.readFromFile(name: "ND462016_queries"))
         Queries.executeStatements(query: Utils.readFromFile(name: "ND462016linhvuc"))
         Queries.executeStatements(query: Utils.readFromFile(name: "ND462016phuongtien"))
@@ -391,15 +408,19 @@ class DatabaseInitializer {
         Queries.executeStatements(query: Utils.readFromFile(name: "ND462016keywords"))
         DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "ND462016hinhphatbosung", bienphapkhacphucFilename: "ND462016bienphapkhacphuc")
         
+        print("\n==== Inserting Raw Data To Database: TT012016")
         let tt012016 = RawDataInitializer(fileName: "TT012016", vanban: getVanbanById(id: 3))
         insertDataByQuery(queries: tt012016.transformRawDataToSqlQuery())
         
+        print("\n==== Inserting Raw Data To Database: LGTDB2008")
         let lgtdb2008 = RawDataInitializer(fileName: "LGTDB2008", vanban: getVanbanById(id: 4))
         insertDataByQuery(queries: lgtdb2008.transformRawDataToSqlQuery())
         
+        print("\n==== Inserting Raw Data To Database: LXLVPHC2012")
         let lxlvphc2012 = RawDataInitializer(fileName: "LXLVPHC2012", vanban: getVanbanById(id: 5))
         insertDataByQuery(queries: lxlvphc2012.transformRawDataToSqlQuery())
         
+        print("\n==== Inserting Raw Data To Database: ND1002019")
         let nd1002019 = RawDataInitializer(fileName: "ND1002019", vanban: getVanbanById(id: 6))
         insertDataByQuery(queries: nd1002019.transformRawDataToSqlQuery())
         Queries.executeStatements(query: Utils.readFromFile(name: "ND1002019linhvuc"))
@@ -409,6 +430,7 @@ class DatabaseInitializer {
         DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "ND1002019hinhphatbosung", bienphapkhacphucFilename: "ND1002019bienphapkhacphuc")
         
         //insert QC412019
+        print("\n==== Inserting Raw Data To Database: QC412019")
         let qc412019 = RawDataInitializer(fileName: "QC412019", vanban: getVanbanById(id: 7))
         qc412019.transformRawDataToCsv()
         qc412019.updateDieukhoanWithMinhhoa()
@@ -419,36 +441,46 @@ class DatabaseInitializer {
         insertDataByQuery(queries: qc412019PL.transformRawDataToSqlQuery())
         
         //insert TT652020
+        print("\n==== Inserting Raw Data To Database: TT652020")
         Queries.executeStatements(query: RawDataInitializer(fileName: "TT652020", vanban: getVanbanById(id: 8)).transformRawDataToSqlQuery())
         
         //insert TT632020
+        print("\n==== Inserting Raw Data To Database: TT632020")
         Queries.executeStatements(query: RawDataInitializer(fileName: "TT632020", vanban: getVanbanById(id: 9)).transformRawDataToSqlQuery())
         
         //insert TT312019
+        print("\n==== Inserting Raw Data To Database: TT312019")
         let tt312019 = RawDataInitializer(fileName: "TT312019", vanban: getVanbanById(id: 10))
         tt312019.transformRawDataToCsv()
         tt312019.updateDieukhoanWithMinhhoa()
         insertDataByQuery(queries: tt312019.transformRawDataToSqlQuery())
         
         //insert TT672019
+        print("\n==== Inserting Raw Data To Database: TT672019")
         Queries.executeStatements(query: RawDataInitializer(fileName: "TT672019", vanban: getVanbanById(id: 11)).transformRawDataToSqlQuery())
         
         //insert ND102020
+        print("\n==== Inserting Raw Data To Database: ND102020")
         Queries.executeStatements(query: RawDataInitializer(fileName: "ND102020", vanban: getVanbanById(id: 12)).transformRawDataToSqlQuery())
         
         //insert ND1652013
+        print("\n==== Inserting Raw Data To Database: ND1652013")
         Queries.executeStatements(query: RawDataInitializer(fileName: "ND1652013", vanban: getVanbanById(id: 13)).transformRawDataToSqlQuery())
         
         //insert TT402015
+        print("\n==== Inserting Raw Data To Database: TT402015")
         Queries.executeStatements(query: RawDataInitializer(fileName: "TT402015", vanban: getVanbanById(id: 14)).transformRawDataToSqlQuery())
         
         //insert Luat XLVPHC 2020
+        print("\n==== Inserting Raw Data To Database: TT582020")
         Queries.executeStatements(query: RawDataInitializer(fileName: "TT582020", vanban: getVanbanById(id: 15)).transformRawDataToSqlQuery())
         
         //insert Luat XLVPHC 2020
+        print("\n==== Inserting Raw Data To Database: LuatXLVPHC-2020")
         Queries.executeStatements(query: RawDataInitializer(fileName: "31_VBHN-VPQH-LuatXLVPHC-2012-2020", vanban: getVanbanById(id: 16)).transformRawDataToSqlQuery())
         
         //insert nd1232021
+        print("\n==== Inserting Raw Data To Database: ND1232022")
         let nd1232021 = RawDataInitializer(fileName: "VBHN-03-2022-BGTVT", vanban: getVanbanById(id: 17))
         insertDataByQuery(queries: nd1232021.transformRawDataToSqlQuery())
         Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTlinhvuc"))
@@ -458,22 +490,37 @@ class DatabaseInitializer {
         DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "VBHN-03-2022-BGTVThinhphatbosung", bienphapkhacphucFilename: "VBHN-03-2022-BGTVTbienphapkhacphuc")
         
         //insert LGTDB2024
+        print("\n==== Inserting Raw Data To Database: luatttatgtdb2024")
         let lttatgtdb2024 = RawDataInitializer(fileName: "luatttatgtdb2024", vanban: getVanbanById(id: 18))
         insertDataByQuery(queries: lttatgtdb2024.transformRawDataToSqlQuery())
         
         //insert TT722024
+        print("\n==== Inserting Raw Data To Database: TT722024")
         let tt722024 = RawDataInitializer(fileName: "TT722024", vanban: getVanbanById(id: 19))
         insertDataByQuery(queries: tt722024.transformRawDataToSqlQuery())
         
         //insert TT732024
+        print("\n==== Inserting Raw Data To Database: TT732024")
         let tt732024 = RawDataInitializer(fileName: "TT732024", vanban: getVanbanById(id: 20))
         insertDataByQuery(queries: tt732024.transformRawDataToSqlQuery())
         
         //insert TT382024
+        print("\n==== Inserting Raw Data To Database: TT382024")
         let tt382024 = RawDataInitializer(fileName: "TT382024", vanban: getVanbanById(id: 21))
         tt382024.transformRawDataToCsv()
         tt382024.updateDieukhoanWithMinhhoa()
         insertDataByQuery(queries: tt382024.transformRawDataToSqlQuery())
+        
+        //insert QC412024
+        print("\n==== Inserting Raw Data To Database: QC412024")
+        let qc412024 = RawDataInitializer(fileName: "QC412024", vanban: getVanbanById(id: 22))
+        qc412024.transformRawDataToCsv()
+        qc412024.updateDieukhoanWithMinhhoa()
+        insertDataByQuery(queries: qc412024.transformRawDataToSqlQuery())
+        let qc412024PL = RawDataInitializer(fileName: "QC412024-PL", vanban: getVanbanById(id: 22))
+        qc412024PL.transformRawDataToCsv()
+        qc412024PL.updateDieukhoanWithMinhhoa()
+        insertDataByQuery(queries: qc412024PL.transformRawDataToSqlQuery())
         
         print("\n================= Finished Inserting Raw Data To Database ====================\n")
     }

@@ -13,6 +13,7 @@ class GeneralSettings {
     //temporarily keep these since we need them for checking the releatedDieukhoan
     let lgtId = "4"
     let lxlvphcId = "16"
+    let lttatgtdbID = "18"
     
     //temporarily keep these since we need them for checking the releatedDieukhoan
     func getLGTID() -> String {
@@ -20,6 +21,9 @@ class GeneralSettings {
     }
     func getLXLVPHCID() -> String {
         return lxlvphcId
+    }
+    func getLTTATGTDBID() -> String {
+        return lttatgtdbID
     }
     
     func getRecordCapByRam(ram: UInt64) -> Int16 {

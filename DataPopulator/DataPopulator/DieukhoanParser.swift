@@ -81,13 +81,13 @@ class DieukhoanParser {
     }
     
     private func getRelatedDieukhoan(noidung:String) -> [Dieukhoan] {
-        //                var nd = "Xe quy định tại các điểm a, b, c và d khoản 1 Điều này khi đi làm nhiệm vụ phải có tín hiệu còi, cờ, đèn theo quy định; không bị hạn chế tốc độ; được phép đi vào đường ngược chiều, các đường khác có thể đi được, kể cả khi có tín hiệu đèn đỏ và chỉ phải tuân theo chỉ dẫn của người điều khiển giao thông.".lowercased()
-        
+//        var nd = "a thực hiện hành vi quy định tại khoản 4 điều này buộc phải tháo dỡ các vật che khuất biển báo hiệu đường bộ, đèn tín hiệu giao thông phải tháo dỡ các vật che khuất biển báo hiệu đường bộ, đèn tín hiệu giao thông".lowercased()
+//        print("\n==========\n Dieu khoan Content: \n - \(noidung)\n")
         var nd = noidung.lowercased()
         var keywords = [String]()
         var relatedDieukhoan = [Dieukhoan]()
-        var pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*((\\s*(các\\s)*(phụ lục)(\\s+((\\d\\.*)+|(\\p{L}{1,4})|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*\\s*(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)))"
-        let vanbanPattern = "(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)))"
+        var pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*((\\s*(các\\s)*(phụ lục)(\\s+((\\d\\.*)+|(\\p{L}{1,4})|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*\\s*(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)|(trật tự, an toàn giao thông đường bộ)))"
+        let vanbanPattern = "(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)|(trật tự, an toàn giao thông đường bộ)))"
         
         let fullMatches = search.regexSearch(pattern: pattern, searchIn: nd)
         
@@ -101,6 +101,9 @@ class DieukhoanParser {
                 }
                 if vbMatch.contains("luật xử lý vi phạm hành chính") {
                     specificVanbanId = [settings.getLXLVPHCID()]
+                }
+                if vbMatch.contains("luật trật tự, an toàn giao thông đường bộ") {
+                    specificVanbanId = [settings.getLTTATGTDBID()]
                 }
                 if vbMatch.contains("nghị định 46") {
 //                    specificVanbanId = [settings.getND46ID()]
@@ -139,6 +142,7 @@ class DieukhoanParser {
             }
             //add all full-matched dieukhoan
             for key in keywords {
+//                print("\n==========Keyword: \(keywords)\n")
                 let dk = parseRelatedDieukhoan(keyword: key)
                 if dk.count > 0{
                     for dkh in dk {
@@ -209,7 +213,9 @@ class DieukhoanParser {
             }
         }
         
+        
         for key in keywords {
+            print("\n==========Keyword: \(keywords)\n")
             let dk = parseRelatedDieukhoan(keyword: key)
             if dk.count > 0{
                 for dkh in dk {
@@ -217,7 +223,7 @@ class DieukhoanParser {
                 }
             }
         }
-        
+        print("\n==========")
         return relatedDieukhoan
     }
     
@@ -383,13 +389,12 @@ class DieukhoanParser {
                 }
             }
         }
-        print("Final Query: \n - \(finalQuery)")
         if finalQuery.count > 3 {
             finalQuery = Queries.rawSqlQuery + " \(String(finalQuery[..<(finalQuery.index(finalQuery.endIndex, offsetBy: -4))]))"
         }else {
             finalQuery = Queries.rawSqlQuery
         }
-        
+//        print("==========\n Content: \n - \(key)\n\nCooked Final Query: \n - \(finalQuery)\n============")
         relatedDieukhoan.append(contentsOf: Queries.searchDieukhoanByQuery(query: finalQuery, vanbanid: specificVanbanId))
         return relatedDieukhoan
     }

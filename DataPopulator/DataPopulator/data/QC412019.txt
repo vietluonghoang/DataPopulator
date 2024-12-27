@@ -138,7 +138,7 @@ Người điều khiển giao thông là cảnh sát giao thông mặc sắc ph�
 10.2.4. Đèn tín hiệu có hình chữ thập màu đỏ báo hiệu xe phải dừng lại. Trong trường hợp xe đã ở trong nút giao thì phải nhanh chóng đi ra khỏi nút giao.
 10.3. Ý nghĩa của đèn tín hiệu:
 10.3.1. Tín hiệu xanh: cho phép đi. 
-10.3.2.Tín hiệu vàng báo hiệu thay đổi tín hiệu của đèn xanh sang đỏ. Tín hiệu vàng bật sáng, phải dừng lại trước vạch dừng, trường hợp đã đi quá vạch dừng hoặc đã quá gần vạch dừng nếu dừng lại thấy nguy hiểm thì được đi tiếp.
+10.3.2. Tín hiệu vàng báo hiệu thay đổi tín hiệu của đèn xanh sang đỏ. Tín hiệu vàng bật sáng, phải dừng lại trước vạch dừng, trường hợp đã đi quá vạch dừng hoặc đã quá gần vạch dừng nếu dừng lại thấy nguy hiểm thì được đi tiếp.
 Trong trường hợp tín hiệu vàng nhấp nháy là được đi nhưng phải giảm tốc độ, chú ý quan sát, nhường đường cho người đi bộ qua đường hoặc các phương tiện khác theo quy định của Luật Giao thông đường bộ.
 10.3.3. Tín hiệu đỏ: báo hiệu phải dừng lại trước vạch dừng. Nếu không có vạch dừng thì phải dừng trước đèn tín hiệu theo chiều đi.
 10.3.4. Trường hợp không có vạch dừng, thì vị trí đặt đèn tín hiệu gần nhất theo chiều đi coi như là vạch dừng.
@@ -181,8 +181,8 @@ Xe cứu thương có đèn quay hoặc đèn chớp phát sáng màu đỏ gắ
 11.8. Tín hiệu của xe hộ đê, xe đi làm nhiệm vụ trong tình trạng khẩn cấp theo quy định của pháp luật.
 11.8.1. Xe làm nhiệm vụ cứu hộ đê có cờ hiệu “HỘ ĐÊ” đặt ở đầu xe phía bên trái người lái. 
 11.8.2. Xe đi làm nhiệm vụ khắc phục sự cố thiên tai, dịch bệnh hoặc xe đi làm nhiệm vụ trong tình trạng khẩn cấp theo quy định của pháp luật thực hiện như sau:
-a) Xe đi làm nhiệm vụ khắc phục sự cố thiên tai, dịch bệnh, có biển hiệu riêng.
-b) Xe đi làm nhiệm vụ trong tình trạng khẩn cấp theo quy định của pháp luật có cờ hiệu “TÌNH TRẠNG KHẨN CẤP” đặt ở đầu xe phía bên trái người lái.
+- Xe đi làm nhiệm vụ khắc phục sự cố thiên tai, dịch bệnh, có biển hiệu riêng.
+- Xe đi làm nhiệm vụ trong tình trạng khẩn cấp theo quy định của pháp luật có cờ hiệu “TÌNH TRẠNG KHẨN CẤP” đặt ở đầu xe phía bên trái người lái.
 11.9. Sử dụng tín hiệu của xe ưu tiên:
 11.9.1. Xe được quyền ưu tiên chỉ được sử dụng tín hiệu ưu tiên khi đi làm nhiệm vụ và thiết bị phát tín hiệu ưu tiên trên xe phải được cơ quan có thẩm quyền cấp giấy phép sử dụng.
 11.9.2. Các phương tiện giao thông cơ giới đường bộ không thuộc loại xe được quyền ưu tiên thì không được lắp đặt, sử dụng còi, cờ, đèn phát tín hiệu ưu tiên. Xe được quyền ưu tiên phải lắp đặt, sử dụng tín hiệu còi, cờ, đèn ưu tiên theo quy định tại các khoản 11.3, 11.4, 11.5, 11.6, 11.7 và khoản 11.8 của Điều này.
@@ -671,42 +671,42 @@ Cung cấp thông tin đầy đủ, chính xác cho người điều khiển ph�
 49.1.10. Các biển chỉ dẫn trên đường cao tốc có mã là IE.
 49.2. Yêu cầu đối với biển chỉ dẫn trên đường cao tốc
 Biển chỉ dẫn trên đường cao tốc phải đáp ứng được các yêu cầu sau:
- 49.2.1. Nội dung ghi trên biển chỉ dẫn phải ngắn gọn, đơn giản, dễ hiểu; ưu tiên sử dụng các ký hiệu, số hiệu và hình vẽ minh họa;
-49.2.2  Kích cỡ chữ viết, chữ số và ký hiệu phải đảm bảo để người điều khiển phương tiện nhìn rõ và nắm bắt được nội dung từ khoảng cách ít nhất là 150 m trong điều kiện thời tiết bình thường;
-49.2.3  Phải được dán màng phản quang, đảm bảo yêu cầu theo tiêu chuẩn quốc gia về “Màng phản quang dùng cho báo hiệu đường bộ”.
+49.2.1. Nội dung ghi trên biển chỉ dẫn phải ngắn gọn, đơn giản, dễ hiểu; ưu tiên sử dụng các ký hiệu, số hiệu và hình vẽ minh họa;
+49.2.2. Kích cỡ chữ viết, chữ số và ký hiệu phải đảm bảo để người điều khiển phương tiện nhìn rõ và nắm bắt được nội dung từ khoảng cách ít nhất là 150 m trong điều kiện thời tiết bình thường;
+49.2.3. Phải được dán màng phản quang, đảm bảo yêu cầu theo tiêu chuẩn quốc gia về “Màng phản quang dùng cho báo hiệu đường bộ”.
 49.3. Kích thước biển chỉ dẫn trên đường cao tốc
 Kích thước biển chỉ dẫn trên đường cao tốc được xác định trên cơ sở diện tích cần thiết để bố trí nội dung thông tin chỉ dẫn. Kích thước biển chỉ dẫn loại A (áp dụng cho đường có tốc độ thiết kế 100 km/h và 120 km/h) được quy định chi tiết tại Phụ lục P của Quy chuẩn này. Kích thước biển chỉ dẫn loại B (áp dụng cho đường có tốc độ thiết kế 60 km/h và 80 km/h) được điều chỉnh trên cơ sở chiều cao chữ quy định trong Bảng 4 của Quy chuẩn này cho phù hợp. Trường hợp đặc biệt có thể điều chỉnh cục bộ cho cân đối, phù hợp và đáp ứng thông tin rõ ràng.
 Điều 50. Nội dung biển chỉ dẫn trên đường cao tốc
 50.1. Nội dung biển chỉ dẫn trên đường cao tốc
 50.1.1. Nội dung biển chỉ dẫn đường cao tốc được tổ hợp từ một hoặc nhiều thông tin sau: địa danh, ký hiệu đường bộ, mũi tên chỉ hướng, mũi tên chỉ làn xe, chữ viết, chữ số, hình vẽ và các ký hiệu khác. 
 50.1.2. Trình bày nội dung biển chỉ dẫn trên đường cao tốc được thực hiện theo quy tắc sau đây:
-a) Địa danh, tên đoạn tuyến đường cao tốc, ký hiệu đường bộ được viết bằng chữ in hoa; 
-b) Trong biển chỉ dẫn, không ghi quá ba tên điểm đến trên cùng một biển chỉ dẫn thông báo trước hoặc trên biển chỉ dẫn chỉ lối ra;
-c) Không ghi tên tuyến đường và tên thành phố nằm trên tuyến đường đó trên cùng một biển chỉ dẫn;
-d) Trong biển chỉ dẫn, không viết quá ba hàng chữ tiếng Việt;
-đ) Biển chỉ dẫn trên đường cao tốc gồm hai thứ tiếng: tiếng Việt và tiếng Anh. Chiều cao tối thiểu chữ tiếng Việt và chữ tiếng Anh được quy định trong Bảng 4. Trong một số trường hợp đặc biệt, có thể điều chỉnh kích thước biển, cỡ chữ cho phù hợp quy mô phân mặt cắt ngang đường và tiết kiệm chi phí đầu tư nhưng không nhỏ hơn kích cỡ tối thiểu trong Bảng 4.
+- Địa danh, tên đoạn tuyến đường cao tốc, ký hiệu đường bộ được viết bằng chữ in hoa; 
+- Trong biển chỉ dẫn, không ghi quá ba tên điểm đến trên cùng một biển chỉ dẫn thông báo trước hoặc trên biển chỉ dẫn chỉ lối ra;
+- Không ghi tên tuyến đường và tên thành phố nằm trên tuyến đường đó trên cùng một biển chỉ dẫn;
+- Trong biển chỉ dẫn, không viết quá ba hàng chữ tiếng Việt;
+- Biển chỉ dẫn trên đường cao tốc gồm hai thứ tiếng: tiếng Việt và tiếng Anh. Chiều cao tối thiểu chữ tiếng Việt và chữ tiếng Anh được quy định trong Bảng 4. Trong một số trường hợp đặc biệt, có thể điều chỉnh kích thước biển, cỡ chữ cho phù hợp quy mô phân mặt cắt ngang đường và tiết kiệm chi phí đầu tư nhưng không nhỏ hơn kích cỡ tối thiểu trong Bảng 4.
 
 50.2. Bố trí chữ viết và kích thước chữ viết trên biển chỉ dẫn trên đường cao tốc
 50.2.1. Nguyên tắc bố trí chữ viết trên biển chỉ dẫn trên đường cao tốc quy định như sau:
-a) Khoảng cách giữa dòng chữ tiếng Việt và dòng chữ tiếng Anh bằng chiều cao chữ tiếng Anh;
-b) Khoảng cách giữa dòng chữ tiếng Anh đến dòng chữ tiếng Việt tiếp theo bằng chiều cao chữ tiếng Anh;
-c) Khoảng trống ở phía trên, phía dưới biển chỉ dẫn có kích thước bằng chiều cao chữ tiếng Việt lớn nhất trong biển;
-d) Khoảng trống ở phía bên trái và bên phải biển chỉ dẫn (của dòng dài nhất) có kích thước bằng chiều cao của chữ tiếng Việt lớn nhất trong biển;
-đ) Thông thường, dòng chữ của biển chỉ dẫn được bố trí căn chính giữa theo chiều ngang của biển chỉ dẫn. Khi bố trí biểu tượng, sơ đồ nút giao, dòng chữ trên biển chỉ dẫn được bố trí sao cho phù hợp, tuân thủ theo quy định tại các Phụ lục của Quy chuẩn này.
+- Khoảng cách giữa dòng chữ tiếng Việt và dòng chữ tiếng Anh bằng chiều cao chữ tiếng Anh;
+- Khoảng cách giữa dòng chữ tiếng Anh đến dòng chữ tiếng Việt tiếp theo bằng chiều cao chữ tiếng Anh;
+- Khoảng trống ở phía trên, phía dưới biển chỉ dẫn có kích thước bằng chiều cao chữ tiếng Việt lớn nhất trong biển;
+- Khoảng trống ở phía bên trái và bên phải biển chỉ dẫn (của dòng dài nhất) có kích thước bằng chiều cao của chữ tiếng Việt lớn nhất trong biển;
+- Thông thường, dòng chữ của biển chỉ dẫn được bố trí căn chính giữa theo chiều ngang của biển chỉ dẫn. Khi bố trí biểu tượng, sơ đồ nút giao, dòng chữ trên biển chỉ dẫn được bố trí sao cho phù hợp, tuân thủ theo quy định tại các Phụ lục của Quy chuẩn này.
 50.2.2. Kích thước chữ viết, chữ số và khoảng cách giữa các chữ được quy định chi tiết trong Phụ lục K của Quy chuẩn này. 
 50.3. Màu sắc của biển chỉ dẫn trên đường cao tốc
 50.3.1. Màu nền, màu chữ và đường viền của biển chỉ dẫn trên đường cao tốc được quy định như sau: 
-a) Đối với biển có tính chất chỉ dẫn giao thông, chữ viết, chữ số và hình vẽ trên biển chỉ dẫn được thể hiện bằng màu trắng trên nền màu xanh lá cây và đường viền mép biển là màu trắng;
-b) Đối với biển có tính chất chỉ dẫn dịch vụ công cộng, chữ viết, chữ số và hình vẽ trên biển chỉ dẫn được thể hiện bằng màu trắng trên nền màu xanh lam và đường viền mép biển là màu trắng; 
-c) Đối với biển có tính chất chỉ dẫn cảnh báo, chữ viết, chữ số và hình vẽ trên biển chỉ dẫn được thể hiện bằng màu đen trên nền màu vàng huỳnh quang và đường viền mép biển là màu đen;
-d) Đối với biển có tính chất chỉ dẫn giải trí, chữ viết, chữ số và hình vẽ trên biển chỉ dẫn được thể hiện bằng màu trắng trên nền màu nâu và đường viền mép biển là màu trắng;
-đ) Trừ những quy định khác, chữ viết, chữ số và hình vẽ trên biển chỉ dẫn được thể hiện bằng màu trắng trên nền màu xanh lá cây và đường viền mép biển là màu trắng. 
+- Đối với biển có tính chất chỉ dẫn giao thông, chữ viết, chữ số và hình vẽ trên biển chỉ dẫn được thể hiện bằng màu trắng trên nền màu xanh lá cây và đường viền mép biển là màu trắng;
+- Đối với biển có tính chất chỉ dẫn dịch vụ công cộng, chữ viết, chữ số và hình vẽ trên biển chỉ dẫn được thể hiện bằng màu trắng trên nền màu xanh lam và đường viền mép biển là màu trắng; 
+- Đối với biển có tính chất chỉ dẫn cảnh báo, chữ viết, chữ số và hình vẽ trên biển chỉ dẫn được thể hiện bằng màu đen trên nền màu vàng huỳnh quang và đường viền mép biển là màu đen;
+- Đối với biển có tính chất chỉ dẫn giải trí, chữ viết, chữ số và hình vẽ trên biển chỉ dẫn được thể hiện bằng màu trắng trên nền màu nâu và đường viền mép biển là màu trắng;
+- Trừ những quy định khác, chữ viết, chữ số và hình vẽ trên biển chỉ dẫn được thể hiện bằng màu trắng trên nền màu xanh lá cây và đường viền mép biển là màu trắng. 
 50.3.2. Chi tiết cụ thể về màu nền, màu chữ và đường viền được quy định cụ thể cho từng biển chỉ dẫn tại Phụ lục P của Quy chuẩn này. Kiểu chữ viết, màu chữ viết và màu nền của biển chỉ dẫn trên đường cao tốc được quy định trong Bảng 5.
 
 50.4. Đường viền của biển chỉ dẫn trên đường cao tốc
 50.4.1. Chiều rộng đường viền xung quanh biển chỉ dẫn được quy định như sau:
-a) Lấy bằng 5,0 cm đối với biển chỉ dẫn có kích thước ≥ 300,0 x 100,0 cm; 
-b) Lấy bằng 3,0 cm đối với biển chỉ dẫn có kích thước < 300,0 x 100,0 cm. 
+- Lấy bằng 5,0 cm đối với biển chỉ dẫn có kích thước ≥ 300,0 x 100,0 cm; 
+- Lấy bằng 3,0 cm đối với biển chỉ dẫn có kích thước < 300,0 x 100,0 cm. 
 50.4.2. Bán kính cong của đường viền xung quanh biển chỉ dẫn được lấy bằng 2% cạnh dài nhất của biển chỉ dẫn. 
 50.5. Ký hiệu mũi tên trên biển chỉ dẫn trên đường cao tốc
 50.5.1. Đối với các biển chỉ dẫn chỉ lối ra, mũi tên xiên hướng lên phía trên được dùng để chỉ lối ra; hướng mũi tên phù hợp với hướng của lối ra.
@@ -715,8 +715,8 @@ b) Lấy bằng 3,0 cm đối với biển chỉ dẫn có kích thước < 300,
 50.6. Mã hiệu đường bộ trong biển chỉ dẫn trên đường cao tốc
 50.6.1. Mã hiệu đường bộ được đặt trong một khuôn hình chữ nhật có kích thước cố định, gồm hai phần: tên đường bộ viết tắt và số hiệu đường bộ. Tên đường bộ viết tắt (Đường cao tốc - CT, Quốc lộ - QL, Đường tỉnh - ĐT, Đường huyện - ĐH). Số hiệu đường bộ được quy định cụ thể tại Nghị định số 11/2010/NĐ-CP ngày 24/02/2010 của Chính phủ Quy định về quản lý và bảo vệ kết cấu hạ tầng giao thông đường bộ. Tên đường bộ viết tắt và số hiệu đường bộ được phân cách bằng một dấu chấm. Sử dụng kiểu chữ gt2 (kiểu chữ thường) để ghi ký hiệu đường bộ, trong đó tùy theo độ dài của ký hiệu đường bộ, cho phép điều chỉnh chiều rộng của ký tự và khoảng cách giữa các ký tự cho sao phù hợp với khuôn hình chữ nhật định sẵn. Căn cứ quy hoạch phát triển mạng lưới đường bộ cao tốc Việt Nam đến năm 2020 và định hướng đến năm 2030 đã được phê duyệt, mã hiệu đường cao tốc theo quy hoạch được quy định tại Phụ lục N của Quy chuẩn này. Kích thước mã hiệu đường cao tốc được quy định cụ thể tại Phụ lục O của Quy chuẩn này.
 50.6.2. Quy định màu nền, chữ viết và chữ số trong mã hiệu đường bộ như sau:
-a) Mã hiệu đường cao tốc được thể hiện trên nền màu vàng huỳnh quang, chữ màu đen và viền màu đen trong Hình 4a;
-b) Mã hiệu quốc lộ, đường tỉnh và đường huyện được thể hiện trên nền màu trắng, chữ màu đen và viền màu đen (các Hình 4b, 4c, 4d).
+- Mã hiệu đường cao tốc được thể hiện trên nền màu vàng huỳnh quang, chữ màu đen và viền màu đen trong Hình 4a;
+- Mã hiệu quốc lộ, đường tỉnh và đường huyện được thể hiện trên nền màu trắng, chữ màu đen và viền màu đen (các Hình 4b, 4c, 4d).
 
 50.7. Biểu tượng khu công nghiệp, dịch vụ công cộng và giải trí
 Các biểu tượng khu công nghiệp, dịch vụ công cộng và giải trí được sử dụng để trình bày nội dung của một số biển chỉ dẫn nhằm mục đích đưa thông tin ngắn gọn, dễ hiểu đến người tham gia giao thông.
@@ -730,8 +730,8 @@ Hình 5. Biểu tượng khu công nghiệp, dịch vụ công cộng và giải
 50.9. Lắp đặt biển chỉ dẫn 
 Biển chỉ dẫn trên đường cao tốc được lắp trên cột cần vươn, giá long môn, trên cột hoặc vật kiến trúc nhưng đảm bảo an toàn và mỹ quan. 
 50.9.1. Lắp đặt biển chỉ dẫn trên giá long môn, cột cần vươn:
-a) Bố trí biển chỉ dẫn trên giá long môn, cột cần vươn để người điều khiển phương tiện có thể dễ dàng nhận thấy biển chỉ dẫn từ xa. Giá long môn, cột cần vươn phải có kết cấu bền vững, có khả năng chịu lực và chịu được cấp gió bão theo vùng do Bộ Tài nguyên - Môi trường công bố.
-b) Chiều cao tối thiểu từ đáy biển chỉ dẫn đến điểm cao nhất của mặt đường không nhỏ hơn 5,2 m. Chân giá long môn, cột cần vươn cách mép ngoài lề đường tối thiểu là 0,5 m (Hình 6).
+- Bố trí biển chỉ dẫn trên giá long môn, cột cần vươn để người điều khiển phương tiện có thể dễ dàng nhận thấy biển chỉ dẫn từ xa. Giá long môn, cột cần vươn phải có kết cấu bền vững, có khả năng chịu lực và chịu được cấp gió bão theo vùng do Bộ Tài nguyên - Môi trường công bố.
+- Chiều cao tối thiểu từ đáy biển chỉ dẫn đến điểm cao nhất của mặt đường không nhỏ hơn 5,2 m. Chân giá long môn, cột cần vươn cách mép ngoài lề đường tối thiểu là 0,5 m (Hình 6).
 
 50.9.2. Lắp đặt biển chỉ dẫn bên lề đường cao tốc:
 Vị trí lắp đặt biển chỉ dẫn bên lề đường cao tốc tuân thủ theo quy định tại Điều 20 của Quy chuẩn này.
@@ -888,14 +888,14 @@ Cọc tiêu có tiết diện là hình vuông, kích thước cạnh tối thi�
 59.7. Cọc tiêu phải cắm thẳng hàng trên đường thẳng và lượn cong dần trong đường cong, với khoảng cách giữa các cọc như sau:
 59.7.1. Khoảng cách (S) giữa hai cọc tiêu trên đường thẳng thông thường là S = 10 m với các đường ô tô thông thường và 30 m với đường cao tốc;
 59.7.2. Khoảng cách giữa hai cọc tiêu trên đường cong nằm:
-a) Nếu đường cong có bán kính R = 10 m đến 30 m thì khoảng cách giữa hai cọc tiêu S = 3 m;
-b) Nếu đường cong có bán kính R: 30 m < R ≤ 100 m thì khoảng cách giữa hai cọc tiêu S = 5 m;
-c) Nếu đường cong có bán kính R > 100 m thì S = 10 m;
-d) Khoảng cách giữa hai cọc tiêu ở tiếp đầu (hoặc nối đầu) và tiếp cuối (hoặc nối cuối) có thể bố trí xa hơn 3 m so với khoảng cách của hai cọc tiêu trong phạm vi đường cong.
+- Nếu đường cong có bán kính R = 10 m đến 30 m thì khoảng cách giữa hai cọc tiêu S = 3 m;
+- Nếu đường cong có bán kính R: 30 m < R ≤ 100 m thì khoảng cách giữa hai cọc tiêu S = 5 m;
+- Nếu đường cong có bán kính R > 100 m thì S = 10 m;
+- Khoảng cách giữa hai cọc tiêu ở tiếp đầu (hoặc nối đầu) và tiếp cuối (hoặc nối cuối) có thể bố trí xa hơn 3 m so với khoảng cách của hai cọc tiêu trong phạm vi đường cong.
 59.7.3. Khoảng cách giữa hai cọc tiêu trên đoạn đường dốc:
-a) Nếu đường có độ dốc ≥ 3%, khoảng cách giữa hai cọc tiêu là 5 m;
-b) Nếu đường có độ dốc < 3%, khoảng cách giữa hai cọc tiêu là 10 m (không áp dụng đối với đầu cầu và đầu cống);
-c) Khoảng cách giữa hai cọc tiêu trên đoạn đường dốc nơi có đường cong nằm thì lấy theo quy định tại điểm 59.7.2 khoản 59.7 Điều này. Khi hết phạm vi đường cong nằm, khoảng cách của các cọc tiêu lấy theo tiết a và tiết b điểm này.
+- Nếu đường có độ dốc ≥ 3%, khoảng cách giữa hai cọc tiêu là 5 m;
+- Nếu đường có độ dốc < 3%, khoảng cách giữa hai cọc tiêu là 10 m (không áp dụng đối với đầu cầu và đầu cống);
+- Khoảng cách giữa hai cọc tiêu trên đoạn đường dốc nơi có đường cong nằm thì lấy theo quy định tại điểm 59.7.2 khoản 59.7 Điều này. Khi hết phạm vi đường cong nằm, khoảng cách của các cọc tiêu lấy theo tiết a và tiết b điểm này.
 59.7.4. Mỗi hàng cọc tiêu cắm ít nhất là 6 cọc.
 Điều 60. Hàng cây thay thế cọc tiêu
 Trên những đoạn đường nếu hàng cây có đủ điều kiện như sau thì được phép sử dụng thay thế cọc tiêu:
@@ -911,20 +911,20 @@ Trên những đoạn đường nếu hàng cây có đủ điều kiện như s
 61.1.5. Tiêu phản quang bao gồm: tiêu phản quang bố trí bên đường hoặc trên dải phân cách, tiêu phản quang dạng mũi tên và đinh phản quang (còn gọi là cóc phản quang) bố trí trên mặt đường.
 61.2. Tiêu phản quang bố trí bên đường hoặc trên dải phân cách
 61.2.1. Phạm vi áp dụng tiêu phản quang bố trí bên đường hoặc trên dải phân cách:
-a) Trên các đường cao tốc:
+- Trên các đường cao tốc:
 + Bố trí dọc hai bên đường. Khi đó, nếu lan can phòng hộ cách mép phần đường xe chạy dưới 2,4 m, gắn tiêu phản quang lên lan can phòng hộ. Các trường hợp khác có thể bố trí tiêu phản quang dạng cột đặt bên đường;
 + Bố trí ít nhất một bên trên các nhánh nối của các nút giao khác mức liên thông.
-b) Trên các đường khác: nên sử dụng tiêu phản quang tại vị trí các đoạn đường bị thu hẹp phần đường xe chạy mà không có lan can phòng hộ, các đoạn đường đèo dốc quanh co hạn chế tầm nhìn, trong phạm vi đường lánh nạn, nơi đường bộ giao nhau với đường sắt. Nơi đường thường xuyên có sương mù cần bố trí tiêu phản quang trên các vật thể cứng liền kề phần xe chạy như các đầu đảo giao thông, bó vỉa v.v... khi khó nhận biết các vật thể này về ban đêm. 
+- Trên các đường khác: nên sử dụng tiêu phản quang tại vị trí các đoạn đường bị thu hẹp phần đường xe chạy mà không có lan can phòng hộ, các đoạn đường đèo dốc quanh co hạn chế tầm nhìn, trong phạm vi đường lánh nạn, nơi đường bộ giao nhau với đường sắt. Nơi đường thường xuyên có sương mù cần bố trí tiêu phản quang trên các vật thể cứng liền kề phần xe chạy như các đầu đảo giao thông, bó vỉa v.v... khi khó nhận biết các vật thể này về ban đêm. 
 61.2.2. Không cần sử dụng tiêu phản quang bố trí bên đường và trên dải phân cách trong các trường hợp sau:
- a) Trên mặt đường đã được gắn đinh phản quang liên tục; 
- b) Đã sử dụng tiêu phản quang dạng mũi tên trong các đường cong;
- c) Tại những nơi có đèn đường chiếu sáng liên tục về ban đêm; 
- d) Làn đường mở rộng dần theo chiều xe chạy.
+- Trên mặt đường đã được gắn đinh phản quang liên tục; 
+- Đã sử dụng tiêu phản quang dạng mũi tên trong các đường cong;
+- Tại những nơi có đèn đường chiếu sáng liên tục về ban đêm; 
+- Làn đường mở rộng dần theo chiều xe chạy.
 61.2.3. Vị trí và khoảng cách tiêu phản quang bố trí bên đường và trên dải phân cách như sau:
- a) Tiêu phản quang đặt cách mép phần xe chạy phía ngoài cùng từ 0,6 m - 2,4 m và cách đều mép mặt đường, lượn cong đều theo mép phần đường xe chạy;
-b) Trên đường thẳng, khoảng cách giữa tiêu phản quang không nhỏ hơn 10 m và không quá 100 m;
-c) Trong phạm vi đường cong nằm, khoảng cách nhỏ nhất giữa các tiêu phản quang là 6 m và tối đa là 100 m phụ thuộc vào bán kính đường cong;
-d) Phần đường thẳng tiếp giáp với điểm bắt đầu hoặc kết thúc của đường cong bố trí 3 tiêu. Tiêu đầu tiên cách điểm bắt đầu hoặc kết thúc của đường cong là 1S; tiêu thứ hai cách tiêu thứ nhất là 3S, và tiêu thứ 3 cách tiêu thứ 2 là 6S nhưng cũng không cách xa quá 100 m (S là khoảng cách giữa các tiêu bố trí trong đường cong).
+- Tiêu phản quang đặt cách mép phần xe chạy phía ngoài cùng từ 0,6 m - 2,4 m và cách đều mép mặt đường, lượn cong đều theo mép phần đường xe chạy;
+- Trên đường thẳng, khoảng cách giữa tiêu phản quang không nhỏ hơn 10 m và không quá 100 m;
+- Trong phạm vi đường cong nằm, khoảng cách nhỏ nhất giữa các tiêu phản quang là 6 m và tối đa là 100 m phụ thuộc vào bán kính đường cong;
+- Phần đường thẳng tiếp giáp với điểm bắt đầu hoặc kết thúc của đường cong bố trí 3 tiêu. Tiêu đầu tiên cách điểm bắt đầu hoặc kết thúc của đường cong là 1S; tiêu thứ hai cách tiêu thứ nhất là 3S, và tiêu thứ 3 cách tiêu thứ 2 là 6S nhưng cũng không cách xa quá 100 m (S là khoảng cách giữa các tiêu bố trí trong đường cong).
 61.3. Tiêu phản quang dạng mũi tên 
 61.3.1. Tiêu phản quang dạng mũi tên bao gồm một biển vẽ dạng mũi tên chỉ hướng màu đen trên nền vàng gắn trên đỉnh các cột (xem Hình 34a). Tiêu phản quang dạng mũi tên chỉ hướng ngược chiều (bên trái) màu trắng trên nền đỏ thường sử dụng cho đường 2 chiều không có dải phân cách giữa (Hình 34b)
 
@@ -932,17 +932,17 @@ d) Phần đường thẳng tiếp giáp với điểm bắt đầu hoặc kết
 
 * Trong trường hợp cần thiết ở các đoạn đường đèo dốc, sương mù có thể tăng kích thước lên 1 cấp nâng cao ATGT.
 61.3.3. Tiêu phản quang dạng mũi tên được sử dụng trong phạm vi đường cong nằm trong các trường hợp sau:
- a) Trên các đường cao tốc tại các đường cong có bán kính bằng bán kính tối thiểu nhỏ nhất theo cấp đường;
-b) Trên các nhánh rẽ trái gián tiếp của các nút giao khác mức liên thông;
-c) Trên các đoạn đường cong hạn chế tầm nhìn hoặc các đường cong được đánh giá là điểm đen, điểm tiềm ẩn về tai nạn giao thông; các đường cong được gắn biển số 201 “Chỗ ngoặt nguy hiểm” có lưng hướng ra phía vực sâu mà không có tường bảo vệ hoặc lan can phòng hộ; các đường cong dạng con rắn.
+- Trên các đường cao tốc tại các đường cong có bán kính bằng bán kính tối thiểu nhỏ nhất theo cấp đường;
+- Trên các nhánh rẽ trái gián tiếp của các nút giao khác mức liên thông;
+- Trên các đoạn đường cong hạn chế tầm nhìn hoặc các đường cong được đánh giá là điểm đen, điểm tiềm ẩn về tai nạn giao thông; các đường cong được gắn biển số 201 “Chỗ ngoặt nguy hiểm” có lưng hướng ra phía vực sâu mà không có tường bảo vệ hoặc lan can phòng hộ; các đường cong dạng con rắn.
 61.3.4. Tiêu phản quang dạng mũi tên được bố trí ở phía lưng của đường cong nằm, bắt đầu từ điểm bắt đầu cho đến điểm kết thúc đoạn cong. Khoảng cách giữa các tiêu phản quang dạng mũi tên không nhỏ hơn 12 m và không lớn hơn 60 m.
 61.4. Đinh phản quang
 61.4.1. Đinh phản quang theo phương dọc đường được bố trí như sau:
-a) Trên các đường cao tốc:
+- Trên các đường cao tốc:
 + Bố trí trên các vạch sơn kênh hóa dòng xe tại đầu các mũi đảo tách dòng và nhập dòng. Trong trường hợp này, cần sử dụng đinh phản quang trong phạm vi từ mũi đảo thực (đảo cứng) cho đến mũi hết mũi đảo bằng vạch sơn với cự ly giữa các đinh phản quang tối đa là 6 m.
 + Có thể bố trí đinh phản quang trên các vạch sơn phân chia giữa phần xe chạy chính và làn dừng xe khẩn cấp.
-b) Với đường nhiều hơn 2 làn xe mỗi hướng không có dải phân cách cố định, có thể bố trí một hàng đinh phản quang tại tim đường nằm giữa vạch sơn phân chia hai chiều xe chạy hoặc phân làn đường, mép đường.
-c) Đối với đường có 2 làn xe, cần xem xét bố trí đinh phản quang tại tim đường kết hợp với vạch sơn phân chia chiều đường xe chạy, đặc biệt đối với tuyến đường tại khu vực miền núi, đường đèo dốc quanh co, nhiều sương mù, tầm nhìn hạn chế. Trong trường hợp cần thiết, có thế gắn đinh phản quang tại dọc theo mép đường xe chạy.
+- Với đường nhiều hơn 2 làn xe mỗi hướng không có dải phân cách cố định, có thể bố trí một hàng đinh phản quang tại tim đường nằm giữa vạch sơn phân chia hai chiều xe chạy hoặc phân làn đường, mép đường.
+- Đối với đường có 2 làn xe, cần xem xét bố trí đinh phản quang tại tim đường kết hợp với vạch sơn phân chia chiều đường xe chạy, đặc biệt đối với tuyến đường tại khu vực miền núi, đường đèo dốc quanh co, nhiều sương mù, tầm nhìn hạn chế. Trong trường hợp cần thiết, có thế gắn đinh phản quang tại dọc theo mép đường xe chạy.
 61.4.2. Có thể sử dụng đinh phản quang màu vàng gắn theo phương ngang đường tại vị trí mặt đường bị thấp xuống hoặc vồng lên đột ngột theo phương ngang đường và trên vạch dừng xe nơi phần đường người đi bộ cắt qua không có tín hiệu đèn điều khiển.
 61.4.3. Đinh phản quang không được nhô cao khỏi mặt đường quá 2,5 cm.
 Điều 62. Tường bảo vệ
@@ -1024,8 +1024,8 @@ Có ba loại cấm đi lại trên đường như sau:
 77.1. Cấm riêng từng loại phương tiện;
 77.2. Cấm riêng từng chiều đi;
 77.3. Cấm toàn bộ sự đi lại, trong đó nguyên nhân dẫn đến phải cấm cũng được chia ra:
-77.3.1 Cấm đi lại vì những lý do đường, cầu bị tắc;
-77.3.2 Cấm đi lại vì những lý do đặc biệt khác.
+77.3.1. Cấm đi lại vì những lý do đường, cầu bị tắc;
+77.3.2. Cấm đi lại vì những lý do đặc biệt khác.
 Điều 78. Cấm riêng từng loại phương tiện 
 78.1. Nếu cần cấm đi lại của riêng từng loại phương tiện hoặc một số loại phương tiện nhất định, đặt các biển báo cấm quy định từ B.3 đến B.20 Phụ lục B của Quy chuẩn này (từ biển số P.103 đến biển số P.120, trừ biển số P.112 dùng để cấm người đi bộ).
 78.2. Vị trí đặt biển báo cấm theo quy định ở Điều 30.
@@ -1037,10 +1037,10 @@ Có ba loại cấm đi lại trên đường như sau:
 80.1.1. Trên những đoạn đường bị sự cố, các loại phương tiện và người đi bộ không thể đi lại được đặt rào chắn và đặt biển số P.101 "Đường cấm" như quy định ở Mục B.1 Phụ lục B của Quy chuẩn này.
 80.1.2. Vị trí rào chắn đặt ở vị trí có đường tránh, đường phân luồng cho các loại phương tiện đi lại. Kèm theo rào chắn và biển số P.101, khi cần thiết đặt biển chỉ hướng đi cho các loại phương tiện (biển số I.416, I.417 (a,b,c) quy định ở Mục E.16, và E.17 Phụ lục E của Quy chuẩn này.
 80.1.3. Nếu trên hướng đường từ vị trí phân luồng đến vị trí bị tắc vẫn cho phương tiện đi lại thì không đặt rào chắn mà đặt biển như sau:
-a) Trên đường chính, trước vị trí phân luồng 100 m, đặt biển chỉ dẫn hướng đi phù hợp cho các loại phương tiện (biển số I.416, I.417 (a,b,c));
-b) Sau biển chỉ hướng đi 30 m, đặt biển chỉ dẫn "Đường cụt" (biển số I.405c) như quy định ở Mục E.5 Phụ lục E của Quy chuẩn này;
-c) Trên hướng đường bị tắc, sau vị trí phân luồng cứ khoảng 300 m đến 500 m lại đặt biển chỉ dẫn "Đường cụt" (biển số I.405c) nhắc lại;
-d) Đến giáp vị trí đường tắc, không cho phương tiện đi tiếp được nữa thì đặt rào chắn và biển số P.101 "Đường cấm" như quy định ở Mục B.1 Phụ lục B của Quy chuẩn này.
+- Trên đường chính, trước vị trí phân luồng 100 m, đặt biển chỉ dẫn hướng đi phù hợp cho các loại phương tiện (biển số I.416, I.417 (a,b,c));
+- Sau biển chỉ hướng đi 30 m, đặt biển chỉ dẫn "Đường cụt" (biển số I.405c) như quy định ở Mục E.5 Phụ lục E của Quy chuẩn này;
+- Trên hướng đường bị tắc, sau vị trí phân luồng cứ khoảng 300 m đến 500 m lại đặt biển chỉ dẫn "Đường cụt" (biển số I.405c) nhắc lại;
+- Đến giáp vị trí đường tắc, không cho phương tiện đi tiếp được nữa thì đặt rào chắn và biển số P.101 "Đường cấm" như quy định ở Mục B.1 Phụ lục B của Quy chuẩn này.
 80.1.4. Nếu đường bị tắc không có hướng phân luồng, phương tiện phải chờ đợi một thời gian rồi mới tiếp tục được đi thì đặt hàng rào chắn và đặt biển số P.101 "Đường cấm" như quy định ở Mục B.1 Phụ lục B của Quy chuẩn này.
 80.1.5. Vị trí đặt rào chắn cấm đường phải lựa chọn vị trí phương tiện có thể quay đầu được hoặc gần vị trí có dân cư để thuận tiện cho phương tiện chờ đợi đồng thời đặt bảng thông báo về tình hình giao thông và ngày, giờ phương tiện có thể tiếp tục đi lại.
 80.2. Cấm đi lại vì những lý do khác:
@@ -1077,10 +1077,10 @@ GƯƠNG CẦU LỒI, DẢI PHÂN CÁCH VÀ LAN CAN PHÒNG HỘ
 85.2. Khi dải phân cách đặt ở khoảng giữa đường và sử dụng để phân chia giữa hai chiều xe chạy thì gọi là dải phân cách giữa; khi dải phân cách sử dụng để phân chia phần đường chính và phần đường bên hoặc phân chia giữa phần đường xe cơ giới và xe thô sơ hoặc của nhiều loại phương tiện khác nhau trên cùng một chiều giao thông thì gọi là dải phân cách bên.
 85.3. Dải phân cách có hai loại là dải phân cách cố định và dải phân cách di động.
 85.3.1. Dải phân cách cố định là dải phân cách có vị trí cố định trên phần đường xe chạy. Dải phân cách cố định gồm các loại cơ bản sau:
-a) Dải phân cách dạng bó vỉa bên trong đổ đất trồng cây (đối với dải phân cách rộng), có thể sử dụng kết hợp lan can phòng hộ nửa cứng hoặc mềm;
-b) Dải phân cách có dạng một dải đất xen kẹp giữa các phần xe chạy, có dạng lõm xuống hoặc tận dụng điều kiện địa hình tự nhiên, có thể sử dụng kết hợp lan can phòng hộ nửa cứng hoặc mềm;
-c) Dải phân cách sử dụng lan can phòng hộ cứng xây cố định trên mặt đường có chiều cao trong khoảng 0,3 m - 0,8 m, tối đa là 1,27 m nếu có nhu cầu chắn sáng, độ rộng tùy theo mặt đường rộng hẹp để thiết kế và được gắn tiêu phản quang hoặc được sơn phản quang theo các quy định về bố trí tiêu phản quang và vạch kẻ đường (vạch đứng) quy định trong Quy chuẩn này.
-	85.3.2. Dải phân cách di động là các dải phân cách có thể di chuyển theo bề rộng trên mặt đường được tạo bởi các cột (cục) bê tông, nhựa composite bên trong có thể đổ cát hoặc nước cao từ 0,3 m - 0,8 m xếp liền nhau hoặc có các ống thép ∅40 - ∅50 xuyên qua tạo thành hệ thống lan can trên mặt đường.
+- Dải phân cách dạng bó vỉa bên trong đổ đất trồng cây (đối với dải phân cách rộng), có thể sử dụng kết hợp lan can phòng hộ nửa cứng hoặc mềm;
+- Dải phân cách có dạng một dải đất xen kẹp giữa các phần xe chạy, có dạng lõm xuống hoặc tận dụng điều kiện địa hình tự nhiên, có thể sử dụng kết hợp lan can phòng hộ nửa cứng hoặc mềm;
+- Dải phân cách sử dụng lan can phòng hộ cứng xây cố định trên mặt đường có chiều cao trong khoảng 0,3 m - 0,8 m, tối đa là 1,27 m nếu có nhu cầu chắn sáng, độ rộng tùy theo mặt đường rộng hẹp để thiết kế và được gắn tiêu phản quang hoặc được sơn phản quang theo các quy định về bố trí tiêu phản quang và vạch kẻ đường (vạch đứng) quy định trong Quy chuẩn này.
+85.3.2. Dải phân cách di động là các dải phân cách có thể di chuyển theo bề rộng trên mặt đường được tạo bởi các cột (cục) bê tông, nhựa composite bên trong có thể đổ cát hoặc nước cao từ 0,3 m - 0,8 m xếp liền nhau hoặc có các ống thép ∅40 - ∅50 xuyên qua tạo thành hệ thống lan can trên mặt đường.
 85.4. Điều kiện đặt dải phân cách cố định và di động:
 85.4.1. Dải phân cách cố định nên sử dụng khi đường có từ 4 làn xe trở lên để phân làn đường đi theo hai hướng riêng biệt.
 85.4.2. Dải phân cách di động nên dùng ở những nơi mặt đường chỉ đủ 2 hay 3 làn xe, cần chia tạm thời hai chiều hoặc hai làn xe riêng biệt.

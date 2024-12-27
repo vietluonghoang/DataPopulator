@@ -914,7 +914,7 @@ a) Để bổ sung cho biển số W.239 "Đường cáp điện ở phía trên
 b) Trong trường hợp cần thiết, có thể đặt thêm biển số S.509b "Cấm đỗ xe" bên dưới biển số P.130, P.131 (a,b,c) để làm rõ thông tin.
 c) Các trường hợp khác có thể vận dụng cho phù hợp.
  
-F.12. Biển số S.510a “Chú ý đường trơn có băng tuyết” và Biển số S.510b “Chú ý đường sắt”
+F.12 Biển số S.510a “Chú ý đường trơn có băng tuyết” và Biển số S.510b “Chú ý đường sắt”
 Để cảnh báo đường trơn, có tuyết trong những ngày trời có tuyết, đặt biển phụ số S.510a “Chú ý đường trơn có băng tuyết”. Biển hình chữ nhật nền đỏ, chữ và viền màu trắng.
 
 Hình F.12 - Biển chỉ dẫn “Chú ý đường trơn có băng tuyết”
@@ -1166,8 +1166,8 @@ Vạch 6.2 là vạch liền nét màu vàng được sơn trên bó vỉa sát 
 Khi vạch 6.2 được bố trí trên bó vỉa, bề rộng phần sơn vàng được lấy bằng bề rộng viên đá vỉa hoặc tối thiểu 15 cm; ngoài ra bề rộng phần sơn vàng được kéo dài trên toàn bộ mặt vát hoặc mặt đứng của viên đá vỉa phía tiếp giáp với mặt đường. Trường hợp bố trí trên mặt đường, bề rộng vạch là 15 cm.
 
 Minh họa:
-    G.2.     Vạch ngang đường
-    G2.1.     Vạch dừng xe
+G2.     Vạch ngang đường
+G2.1.     Vạch dừng xe
     Vạch 7.1: Vạch dừng xe
 Ý nghĩa sử dụng: dùng để xác định vị trí dừng xe để chờ tín hiệu cho phép đi tiếp. Vạch dùng để xác định vị trí người điều khiển phương tiện phải dừng lại khi có tín hiệu đèn đỏ hoặc khi có biển số R.122. Vạch cũng dùng để xác định vị trí người điều khiển phải dừng lại trong các điều kiện nhất định ở một số vị trí như: trên nhánh dẫn tới nút giao cùng mức với đường sắt, trên làn chờ rẽ trái trong phạm vi nút giao, trước vị trí vạch người đi bộ qua đường.
 
@@ -1178,7 +1178,7 @@ Vạch dừng xe có thể sử dụng kết hợp với vạch chữ “STOP”
 
 Minh họa:
 
-G2.2.     Vạch nhường đường
+G2.2. Vạch nhường đường
     Vạch 7.2: Vạch nhường đường
 Ý nghĩa sử dụng: để báo hiệu cho xe phải đi chậm hoặc dừng lại khi cần thiết để nhường đường cho các phương tiện hoặc người trên các hướng giao thông khác được di chuyển trước. Vạch 7.2 được sử dụng kết hợp với biển W.208 - “Giao với đường ưu tiên”.
 
@@ -1391,7 +1391,7 @@ K2.2.    Chữ thường, kiểu chữ nén (gt1)
 
 Phụ lục M
 CHI TIẾT CÁC THôNG SỐ THIẾT KẾ BIỂN BÁO
-M.1.    Nhóm biển báo cấm
+M.1    Nhóm biển báo cấm
 1.    Biển P.101    Đường cấm
 2.    Biển P.102    Cấm đi ngược chiều
 3.    Biển P.103a    Cấm xe ô tô
@@ -1456,7 +1456,7 @@ M.1.    Nhóm biển báo cấm
 62.    Biển P.138    Cấm đi thẳng, rẽ trái
 63.    Biển P.139    Cấm đi thẳng, rẽ phải
 64.    Biển P.140    Cấm xe công nông và các loại xe tương tụ
-M.2.    Nhóm biển báo nguy hiểm và cảnh báo
+M.2    Nhóm biển báo nguy hiểm và cảnh báo
 1.    Biển W.201a    Chỗ ngoặt nguy hiểm vòng bên trái
 2.    Biển W.201b    Chỗ ngoặt nguy hiểm vòng bên phải
 3.    Biển W.201c    Chỗ ngoặt nguy hiểm có nguy cơ lật xe bên phải khi đường cong vòng sang trái
@@ -1541,7 +1541,7 @@ M.2.    Nhóm biển báo nguy hiểm và cảnh báo
 82.    Biển W.246b    Chú ý chướng ngại vật - Vòng tránh sang bên trái
 83.    Biển W.246c    Chú ý chướng ngại vật - Vòng tránh sang bên phải
 84.    Biển W.247    Chú ý xe đỗ
-M.3.    Nhóm biển hiệu lệnh
+M.3    Nhóm biển hiệu lệnh
 1.    Biển R.122    Dừng lại
 2.    Biển R.301a    Các xe chỉ được đi thẳng
 3.    Biển R.301b    Các xe chỉ được rẽ phải
@@ -1610,7 +1610,7 @@ M.3.    Nhóm biển hiệu lệnh
 66.    Biển R.E,10d    Hết hạn chế tốc độ tối đa trong khu vực
 67.    Biển R.E,11a    Đường hầm
 68.    Biển R.E,11b    Hết đường hầm
-M.4.    Nhóm biển chỉ dẫn
+M.4    Nhóm biển chỉ dẫn
 1.    Biển I.401    Bắt đầu đường ưu tiên
 2.    Biển I.402    Hết đoạn đường ưu tiên
 3.    Biển I.405a    Đường cụt
@@ -1704,7 +1704,7 @@ M.4.    Nhóm biển chỉ dẫn
 91.    Biển I.448    Làn đường cứu nạn hay làn thoát xe khẩn cấp
 92.    Biển I.448    Làn đường cứu nạn hay làn thoát xe khẩn cấp
 93.    Biển I.449    Biển tên đường
-M.5.    Nhóm biển phụ
+M.5    Nhóm biển phụ
 1.    Biển S.501    Phạm vi tác dụng của biển
 2.    Biển S.502    Khoảng cách đến đối tượng báo hiệu
 3.    Biển S.503a    Hướng tác dụng của biển
@@ -1756,12 +1756,12 @@ Ghi chú: a là khoảng cách căn giữa.
 PHỤ LỤC P
 CHI TIẾT CÁC THÔNG SỐ THIẾT KẾ BIỂN CHỈ DẪN TRÊN ĐƯỜNG CAO TỐC
 
-P.1.    Biển chỉ dẫn sơ đồ và khoảng cách đến nút giao với nhánh nối vào đường cao tốc
+P.1    Biển chỉ dẫn sơ đồ và khoảng cách đến nút giao với nhánh nối vào đường cao tốc
 a)    Biển số IE.450a:
 Ghi chú: k2 = H2; L là chiều rộng biển; W là chiều cao biển.
 b)     Biển số IE.450b:
 Ghi chú: k1 = H1; L là chiều rộng biển; W là chiều cao biển.
-P.2.     Biển chỉ dẫn lối vào đường cao tốc
+P.2     Biển chỉ dẫn lối vào đường cao tốc
 a)     Biển số IE.451a:
 
 Ghi chú: a,b,c là khoảng cách căn giữa; k2 = H2; k2’ = H2’; k1’=H1’;
@@ -1777,7 +1777,7 @@ P.3     Biển chỉ dẫn bắt đầu đường cao tốc
 L là chiều rộng biển; W là chiều cao biển.
 2. Biển chỉ dẫn bắt đầu đường cao tốc phân làn đường có tốc độ khác nhau
                         
-P.4.     Biển chỉ dẫn kết thúc đường cao tốc
+P.4     Biển chỉ dẫn kết thúc đường cao tốc
 a)     Biển số IE.453a:
 
 Ghi chú: a,b,c là khoảng cách căn giữa; k1’=H1’; k2 = H2; k2’ = H2’;
@@ -1790,12 +1790,12 @@ L là chiều rộng biển; W là chiều cao biển.
 
 c) Biển số Ie.453c "Hết đường cao tốc"
 
-P.5.     Biển chỉ dẫn khoảng cách đến lối ra phía trước
+P.5     Biển chỉ dẫn khoảng cách đến lối ra phía trước
 1. Biển số IE.454:
 Ghi chú: a là khoảng cách căn giữa; k1 = H1;
 L là chiều rộng biển; W là chiều cao biển.
                         
-P.6.     Biển chỉ dẫn khoảng cách đến lối ra tiếp
+P.6     Biển chỉ dẫn khoảng cách đến lối ra tiếp
 a)     Biển số IE.455a:
 
 Ghi chú: a là khoảng cách căn giữa; k1= H1;
@@ -1807,7 +1807,7 @@ Ghi chú: a là khoảng cách căn giữa; k1= H1;
 L là chiều rộng biển; W là chiều cao biển.
 
 c)     Biểu tượng lối ra
-P.7.     Biển chỉ dẫn trạm dừng nghỉ
+P.7     Biển chỉ dẫn trạm dừng nghỉ
 a)     Biển số IE.456a:
 
 Ghi chú: a,b,c,d,e là khoảng cách căn giữa, k2=H2;
@@ -1825,8 +1825,8 @@ L là chiều rộng biển; W là chiều cao biển.
 
 d)     Biểu tượng trạm dừng nghỉ:
 
-P.8.     Biển chỉ dẫn nơi đỗ xe trong trạm dừng nghỉ
-P.9.     Biểu tượng dịch vụ công cộng
+P.8     Biển chỉ dẫn nơi đỗ xe trong trạm dừng nghỉ
+P.9     Biểu tượng dịch vụ công cộng
 1.    Điện thoại:
             
 2.    Trạm sửa chữa:
@@ -1849,7 +1849,7 @@ a)     Biển số IE.458:
 Ghi chú: a,b là khoảng cách căn giữa; k1 = H1;
 L là chiều rộng biển; W là chiều cao biển.
 
-P.11.     Biển chỉ dẫn khu tham quan du lịch
+P.11     Biển chỉ dẫn khu tham quan du lịch
 a)     Biển số IE.459a:
 
 Ghi chú: a,b là khoảng cách căn giữa; k2=H2;
@@ -1862,7 +1862,7 @@ L là chiều rộng biển; W là chiều cao biển.
 
 d)     Biểu tượng khu du lịch:
 
-P.12.     Biển chỉ dẫn khu du lịch công cộng và giải trí
+P.12     Biển chỉ dẫn khu du lịch công cộng và giải trí
 a)     Biển số IE.461a:
 
 Ghi chú: a là khoảng cách căn giữa; u = 0.5 x H1; k2 = H2;
@@ -1898,17 +1898,17 @@ P.13     Biểu tượng khu công nghiệp, dịch vụ công cộng và giải
 9.    Bãi tắm biển, khu bơi lội:
 10.     Rừng sinh thái:
             
-P.14.     Biển chỉ dẫn tần số trên sóng Radio
+P.14     Biển chỉ dẫn tần số trên sóng Radio
 1.     Biển số IE.462:
 Ghi chú: k1 = H1; k2’ = H2’; L là chiều rộng biển; W là chiều cao biển.
-P.15.     Biển chỉ dẫn trạm kiểm tra tải trọng xe
+P.15     Biển chỉ dẫn trạm kiểm tra tải trọng xe
 1.     Biển số IE.463a
 Ghi chú: k2 = H2; k2’ = H2’; L là chiều rộng biển; W là chiều cao biển.
 2.     Biển số IE.463b
 Ghi chú: k1=H1; k1’=H1’; L là chiều rộng biển; W là chiều cao biển.
 3.     Biển số IE.463c
 Ghi chú: k1 = H1; k1’ = H1’; L là chiều rộng biển; W là chiều cao biển.
-P.16.     Biển chỉ dẫn địa điểm và phương hướng
+P.16     Biển chỉ dẫn địa điểm và phương hướng
 1.     Biển số IE.464a:
 
 Ghi chú: a, b là khoảng cách căn giữa; k1 = H1.
@@ -1916,16 +1916,16 @@ L là chiều rộng biển; W là chiều cao biển.
             
 2.     Biển số IE.464b:
 Ghi chú: k1 = H1; L là chiều rộng biển; W là chiều cao biển.
-P.17.     Biển chỉ dẫn địa điểm và khoảng cách
+P.17     Biển chỉ dẫn địa điểm và khoảng cách
 1.     Biển số IE.465a:
 Ghi chú: k1 = H1; L là chiều rộng biển; W là chiều cao biển.
 2.     Biển số IE.465b
 Ghi chú: k1 = H1; L là chiều rộng biển; W là chiều cao biển.
-P.18.     Biển chỉ dẫn sơ đồ lối ra
+P.18     Biển chỉ dẫn sơ đồ lối ra
 1. Biển số IE.466
 Ghi chú: k1 = H1, u = ½ H1, L là chiều rộng biển; W là chiều cao biển.
                         
-P.19.     Biển chỉ dẫn nhập làn
+P.19     Biển chỉ dẫn nhập làn
 a)     Biển số IE.467a: chỉ dẫn vị trí nhập làn
 Ghi chú: a là khoảng cách căn giữa; k1 = H1, k1’ = H1’;
 L là chiều rộng biển; W là chiều cao biển.
@@ -1939,16 +1939,16 @@ c)     Kích thước biểu tượng vị trí nhập làn xe trên biển IE.4
 P.20     Biển chỉ dẫn chướng ngại vật phía trước
 1. Biển số IE.468a,b,c:
                     
-P.21.     Biển chỉ dẫn hướng rẽ
+P.21     Biển chỉ dẫn hướng rẽ
 1. Biển số IE.469
-P.22.     Biển chỉ dẫn số điện thoại khẩn cấp
+P.22     Biển chỉ dẫn số điện thoại khẩn cấp
 1. Biển số IE.470
-P.23.     Biển chỉ dẫn giữ khoảng cách an toàn
+P.23     Biển chỉ dẫn giữ khoảng cách an toàn
 1. Biển số IE.471
 
 Ghi chú: k1 = H1; k1’=H1’; L là chiều rộng biển; W là chiều cao biển.
                         
-P.24.     Biển chỉ dẫn trạm thu phí
+P.24     Biển chỉ dẫn trạm thu phí
 a)     Biển số IE.472a:
 
 Ghi chú: a là khoảng cách căn giữa; k1 = H1; k1’ = H1’;
@@ -1959,12 +1959,12 @@ Ghi chú: k1 = H1; k1’=H1’; L là chiều rộng biển; W là chiều cao b
 c)     Biển số IE.472c: Thu phí không dừng.
 d)     Biển số IE.472d: Rút thẻ.
 e)     Biển số IE.472e: Thu phí.
-P.25.     Biển chỉ dẫn giảm tốc độ
+P.25     Biển chỉ dẫn giảm tốc độ
 1. Biển số IE.473:
 
 Ghi chú: k1 = H1; k1’=H1’; L là chiều rộng biển; W là chiều cao biển.
                         
-P.26.     Biển chỉ dẫn lối ra
+P.26     Biển chỉ dẫn lối ra
 1. Biển số IE.474:
 
 Ghi chú: a là khoảng cách căn giữa, k1 = H1; k1’=H1’;

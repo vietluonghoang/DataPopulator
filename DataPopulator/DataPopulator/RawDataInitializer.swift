@@ -84,7 +84,7 @@ class RawDataInitializer {
         for line in rawDataLines {
             let strLine = line.trimmingCharacters(in: .whitespacesAndNewlines) //line is Substring while trimingCharacters returns String
             
-            let prefix = search.regexSearch(pattern: "^((phần\\s[0-9]{1,3}(\\p{L}*))|(phần\\sthứ\\s\\w+)|(phụ lục\\s[A-Za-z]{1,3})|(chương\\s([A-Za-z]|[0-9]){1,5}(\\p{L}*))|(mục\\s\\d{1,3}(\\p{L}*))|(điều \\d{1,3}(\\p{L}*))|([A-Za-z]\\.\\d{1,3}(\\p{L}*)\\b)|([A-Za-z]\\d{1,3}(\\p{L}*)\\.\\d{1,3}(\\p{L}*)\\.\\b)|([A-Za-z]\\.\\d{1,3}[A-Za-z]\\b)|((\\d{1,3}(\\p{L}*)\\.)+)|(\\w{1,2}(\\)|\\.)\\s))", searchIn: strLine)
+            let prefix = search.regexSearch(pattern: "^((phần\\s+[0-9]{1,3}(\\p{L}*))|(phần\\s+thứ\\s+\\w+)|(phụ lục\\s+[A-Za-z]{1,3})|(chương\\s+([A-Za-z]|[0-9]){1,5}(\\p{L}*))|(mục\\s+\\d{1,3}(\\p{L}*))|(điều\\s+\\d{1,3}(\\p{L}*)\\.*\\s+)|([A-Za-z]\\.\\d{1,3}(\\p{L}*)\\b\\s+)|([A-Za-z]\\.\\d{1,3}\\.\\d{1,3}\\.*\\s+)|([A-Za-z]\\d{1,3}(\\p{L}*)\\.\\d{1,3}(\\p{L}*)\\.\\b\\s+)|([A-Za-z]\\.\\d{1,3}[A-Za-z]\\b\\s+)|((\\d{1,3}(\\p{L}*)\\.)+\\s+)|(\\w{1,2}(\\)|\\.)\\s+))", searchIn: strLine)
             if prefix.count > 0 && prefix[0].count > 0 {
                 id += 1
                 var splittedStr = strLine.dropFirst(prefix[0].count).trimmingCharacters(in: .whitespacesAndNewlines)
@@ -106,7 +106,7 @@ class RawDataInitializer {
                                 isOrdered = true
                             }
                                 //check if the current dieukhoan is a khoản
-                            else if order == "khoản" && search.regexSearch(pattern: "^((\\d{1,3}\\.)|(\\d{1,3}\\.\\d{1,3}\\.)|(([A-Za-z]\\d{1,3}\\.\\d{1,3}\\.\\b)))$", searchIn: prefix[0]).count > 0 && search.regexSearch(pattern: "^((\\d{1,3}\\.)|(\\d{1,3}\\.\\d{1,3}\\.)|(([A-Za-z]\\d{1,3}\\.\\d{1,3}\\.\\b)))$", searchIn: prefix[0])[0].count > 0{
+                            else if order == "khoản" && search.regexSearch(pattern: "^((\\d{1,3}\\.)|(\\d{1,3}\\.\\d{1,3}\\.)|([A-Za-z]\\.\\d{1,3}\\.\\d{1,3}\\.\\s+)|(([A-Za-z]\\d{1,3}\\.\\d{1,3}\\.\\b)))$", searchIn: prefix[0]).count > 0 && search.regexSearch(pattern: "^((\\d{1,3}\\.)|(\\d{1,3}\\.\\d{1,3}\\.)|([A-Za-z]\\.\\d{1,3}\\.\\d{1,3}\\.\\s+)|(([A-Za-z]\\d{1,3}\\.\\d{1,3}\\.\\b)))$", searchIn: prefix[0])[0].count > 0{
                                 orderDieukhoan["khoản"] = currentDieukhoan
                                 isOrdered = true
                             }
@@ -180,14 +180,19 @@ class RawDataInitializer {
         let rawDataLines = rawData.split(separator: "\n")
         for line in rawDataLines {
             let data = line.split(separator: "|")
-            print("===------ Line: \(line)")
+            print("===------ Line: \n\(line)")
             let id = Int64("\(data[0])")!
             print("---- id: \(id)")
-            let dk = allDieukhoans[id]!
-            if data.count > 1 {
+            
+            if data.count > 1 && allDieukhoans[id] != nil{
+                let dk = allDieukhoans[id]!
                 for minhhoa in data[1].split(separator: ";") {
                     dk.addMinhhoa(minhhoa: String(minhhoa))
                 }
+            }else if allDieukhoans[id] == nil{
+                print("---- ERROR: Dieukhoan not found: \(id) - VanbanID: \(String(describing: allDieukhoans[id]?.getVanban().getId()))")
+            }else{
+                print("---- No minhhoa for \(id)")
             }
         }
     }

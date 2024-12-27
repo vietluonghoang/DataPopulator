@@ -86,7 +86,13 @@ class Queries: NSObject {
         DataConnection.database!.open()
         //        let sql = "DELETE FROM Person WHERE id = ?"
         var result = DataConnection.database!.executeStatements(query)
-        print("--- \(result)\n\t\t\(query)")
+        if !result{
+            result = DataConnection.database!.executeStatements(Utils.escapeQuote(string: query))
+        }
+        if !result{
+            print("--- SQL ERROR\n\t\t\(query)")
+        }
+        
         DataConnection.database!.close()
     }
     
