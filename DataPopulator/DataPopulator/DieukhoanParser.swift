@@ -87,7 +87,7 @@ class DieukhoanParser {
         var nd = noidung.lowercased()
         var keywords = [String]()
         var relatedDieukhoan = [Dieukhoan]()
-        var pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*((\\s*(các\\s)*(phụ lục)(\\s+((\\d\\.*)+|(\\p{L}{1,4})|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*\\s*(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)|(trật tự, an toàn giao thông đường bộ)))"
+        var pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\p{L}*\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*((\\s*(các\\s)*(phụ lục)(\\s+((\\d\\.*)+|(\\p{L}{1,4})|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*\\s*(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)|(trật tự, an toàn giao thông đường bộ)))"
         let vanbanPattern = "(((của)|(tại)|(theo))*\\s*((luật)|(nghị định)|(quy chuẩn)|(thông tư))\\s*((này)|(giao thông đường bộ)|(xử lý vi phạm hành chính)|(trật tự, an toàn giao thông đường bộ)))"
         
         let fullMatches = search.regexSearch(pattern: pattern, searchIn: nd)
@@ -132,7 +132,7 @@ class DieukhoanParser {
             
             //            pattern = "((điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+)*(khoản\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+)*((điều\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+)+"
             
-            pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)"
+            pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\p{L}*\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)"
             
             let longMatches = search.regexSearch(pattern: pattern, searchIn: fmatch)
             
@@ -170,7 +170,7 @@ class DieukhoanParser {
         
         //        pattern = "((điểm\\s+(((\\p{L}{1})|(\\d\\.*)+)(,|;)*\\s+(và)*\\s*)+)*(khoản\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+)+((điều\\s+(((này)|(\\d\\.*)+)(,|;)*\\s*(và)*\\s*)+)+)+"
         
-        pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)"
+        pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\p{L}*\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)"
         
         let longMatches = search.regexSearch(pattern: pattern, searchIn: nd)
         
@@ -205,8 +205,20 @@ class DieukhoanParser {
                 smatch = smatch + " " + search.getDieunay(currentDieukhoan: dieukhoan!, vanbanId: specificVanbanId).getSo().trimmingCharacters(in: .whitespacesAndNewlines)
             }
             
+            //remove ; and . to avoid breaking the keyword after appending "điều"
+            if smatch.contains("khoản này;") {
+                smatch = smatch.replacingOccurrences(of: "khoản này;", with: "khoản này").trimmingCharacters(in: .whitespacesAndNewlines)
+            }
+            if smatch.contains("khoản này.") {
+                smatch = smatch.replacingOccurrences(of: "khoản này.", with: "khoản này").trimmingCharacters(in: .whitespacesAndNewlines)
+            }
+            
             if smatch.contains("khoản này") {
-                smatch = smatch.replacingOccurrences(of: "khoản này", with: search.getKhoannay(currentDieukhoan: dieukhoan!, vanbanId: specificVanbanId).getSo()).trimmingCharacters(in: .whitespacesAndNewlines)
+                var khoanText = "khoản \(search.getKhoannay(currentDieukhoan: dieukhoan!, vanbanId: specificVanbanId).getSo())".trimmingCharacters(in: .whitespacesAndNewlines)
+                if khoanText.suffix(1) == "."{
+                    khoanText = Utils.substring(string: khoanText, from: 0, to: khoanText.count - 1)
+                }
+                smatch = smatch.replacingOccurrences(of: "khoản này", with: khoanText).trimmingCharacters(in: .whitespacesAndNewlines)
             }
             
             if(smatch.count > 0 && !search.isStringExisted(str: smatch.trimmingCharacters(in: .whitespacesAndNewlines), strArr: keywords)){
@@ -263,12 +275,12 @@ class DieukhoanParser {
             finalQuery = "(\(String(tempQuery[..<(tempQuery.index(tempQuery.endIndex, offsetBy: -4))]))) and vanbanid = \(specificVanbanId[0])"
         }else{
             
-            var pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*và))*)+)+)"
+            var pattern = "(((\\s*(các\\s)*điểm(\\s+((\\p{L}{1})|(\\d\\.*)+)\\b((\\s*,)|(\\s*và))*)+)*(\\s*(các\\s)*khoản(\\s+((\\p{L}{1})|(\\d\\.*)+|(này))\\b((\\s*,)|(\\s*;)|(\\s*và))*)+)+)*(\\s*và)*(\\s*(các\\s)*điều(\\s+((\\d\\p{L}*\\.*)+|(này))\\b((\\s*,)|(\\s*và))*)+)+)"
             
             let dieukhoanForm = search.regexSearch(pattern: pattern, searchIn: key)
             
             for dkForm in dieukhoanForm {
-                pattern = "(\\s*(các\\s)*điều(\\s+((\\d\\.*)+|(này))\\b((\\s*,)|(\\s*và))*)+)+"
+                pattern = "(\\s*(các\\s)*điều(\\s+((\\d\\p{L}*\\.*)+|(này))\\b((\\s*,)|(\\s*và))*)+)+"
                 let dieuMatches = search.regexSearch(pattern: pattern, searchIn: dkForm)
                 for var dm in dieuMatches{
                     dm = dm.replacingOccurrences(of: "các", with: "")
@@ -277,7 +289,7 @@ class DieukhoanParser {
                     var dieu = [String]()
                     var dieuQuery = ""
                     var tempQuery = ""
-                    if search.regexSearch(pattern: "(\\d+,\\s*\\d+)+", searchIn: dm).count > 0 {
+                    if search.regexSearch(pattern: "(\\d+\\p{L}*,\\s*\\d+\\p{L}*)+", searchIn: dm).count > 0 {
                         dm = dm.replacingOccurrences(of: "điều", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
                         for var eachDm in dm.components(separatedBy: ","){
                             eachDm = "điều " + eachDm.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -393,6 +405,7 @@ class DieukhoanParser {
         if finalQuery.count > 3 {
             finalQuery = Queries.rawSqlQuery + " \(String(finalQuery[..<(finalQuery.index(finalQuery.endIndex, offsetBy: -4))]))"
         }else {
+            print("%#%#%#%#%# Error: No match found \n\(keyword)")
             finalQuery = Queries.rawSqlQuery
         }
 //        print("==========\n Content: \n - \(key)\n\nCooked Final Query: \n - \(finalQuery)\n============")

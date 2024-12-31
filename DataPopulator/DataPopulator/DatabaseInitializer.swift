@@ -392,6 +392,20 @@ class DatabaseInitializer {
             , tenRutgon: "Quy chuẩn 41/2019 về báo hiệu đường bộ"
         )
         vanbans.append(qc412024)
+        let nd1682024 = Vanban(
+            id: 23
+            , ten: "QUY ĐỊNH XỬ PHẠT VI PHẠM HÀNH CHÍNH VỀ TRẬT TỰ, AN TOÀN GIAO THÔNG TRONG LĨNH VỰC GIAO THÔNG ĐƯỜNG BỘ; TRỪ ĐIỂM, PHỤC HỒI ĐIỂM GIẤY PHÉP LÁI XE"
+            , loai: nghidinh
+            , so: "168"
+            , nam: "2024"
+            , ma: "168/2024/NĐ-CP"
+            , coquanbanhanh: chinhphu
+            , noidung: "Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015; Luật sửa đổi, bổ sung một số điều của Luật Tổ chức Chính phủ và Luật Tổ chức chính quyền địa phương ngày 22 tháng 11 năm 2019;\nCăn cứ Luật Xử lý vi phạm hành chính ngày 20 tháng 6 năm 2012; Luật sửa đổi, bổ sung một số điều của Luật Xử lý vi phạm hành chính ngày 15 tháng 11 năm 2020;\nCăn cứ Luật Trật tự, an toàn giao thông đường bộ ngày 27 tháng 6 năm 2024;\nTheo đề nghị của Bộ trưởng Bộ Công an;\nChính phủ ban hành Nghị định quy định xử phạt vi phạm hành chính về trật tự, an toàn giao thông trong lĩnh vực giao thông đường bộ; trừ điểm, phục hồi điểm giấy phép lái xe."
+            , hieuluc: "1/1/2025"
+            , vanbanThaytheId: 17
+            , tenRutgon: "Nghị định 168/2024 về xử phạt"
+        )
+        vanbans.append(nd1682024)
     }
     
     private func initInitialData() {
@@ -521,6 +535,16 @@ class DatabaseInitializer {
         qc412024PL.transformRawDataToCsv()
         qc412024PL.updateDieukhoanWithMinhhoa()
         insertDataByQuery(queries: qc412024PL.transformRawDataToSqlQuery())
+        
+        //insert ND1682024
+        print("\n==== Inserting Raw Data To Database: ND1682024")
+        let ND1682024 = RawDataInitializer(fileName: "ND1682024", vanban: getVanbanById(id: 23))
+        insertDataByQuery(queries: ND1682024.transformRawDataToSqlQuery())
+//        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTlinhvuc"))
+//        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTphuongtien"))
+//        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTmucphat"))
+//        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTkeywords"))
+//        DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "VBHN-03-2022-BGTVThinhphatbosung", bienphapkhacphucFilename: "VBHN-03-2022-BGTVTbienphapkhacphuc")
         
         print("\n================= Finished Inserting Raw Data To Database ====================\n")
     }

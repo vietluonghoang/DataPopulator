@@ -122,7 +122,7 @@ class Queries: NSObject {
         DataConnection.database!.open()
         var specificVanban = generateWhereClauseForVanbanid(vanbanid: vanbanid, vanbanIdColumnName: "vbId")
         if (String(query.trimmingCharacters(in: .whitespacesAndNewlines).suffix(5)).compare("where") == .orderedSame){
-            specificVanban = Utils.substring(string: specificVanban, from: 4, to: specificVanban.count)
+            specificVanban = Utils.substring(string: specificVanban, from: 4, to: specificVanban.count).trimmingCharacters(in: .whitespacesAndNewlines)
         }
         let appendKeyword = [String]()
         let sql = query.lowercased() + specificVanban
