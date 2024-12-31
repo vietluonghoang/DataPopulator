@@ -50,6 +50,7 @@ class DieukhoanParser {
         specificVanbanId.append( String(describing:dieukhoan.getVanban().getId()))
         let noidung = "\(String(describing: dieukhoan.getTieude())) \n \(String(describing: dieukhoan.getNoidung()))"
         
+        print("\n==========Get Related Dieukhoan: [\(dieukhoan.getVanban().getId())] - \(dieukhoan.getId())")
         for child in getRelatedDieukhoan(noidung: noidung) {
             relatedChildren.append(child)
         }

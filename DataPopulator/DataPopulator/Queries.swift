@@ -180,7 +180,7 @@ class Queries: NSObject {
         
         let sql = "insert into \(targetTable) ('dieukhoanId', 'dieukhoanQuydinhId', 'noidung') values (\(dieukhoanId),\(dieukhoanQuydinhId),'\(noidung)')"
         let reslut = DataConnection.database!.executeUpdate(sql, withArgumentsIn: appendKeyword)
-        print("Inserted: \(dieukhoanId) - \(dieukhoanQuydinhId)?... \(reslut)")
+        print("Bienphapkhacphuc/Hinhphatbosung Inserted: \(dieukhoanId) - \(dieukhoanQuydinhId)?... \(reslut)")
         if !reslut {
             print("update failed: \(DataConnection.database!.lastErrorMessage())")
         }
@@ -265,7 +265,7 @@ class Queries: NSObject {
         let appendKeyword = [String]()
         let sql = "insert into tblRelatedDieukhoan ('dieukhoanId', 'relatedDieukhoanId') values (\(dieukhoanId),\(relatedDieukhoanId))"
         let reslut = DataConnection.database!.executeUpdate(sql, withArgumentsIn: appendKeyword)
-        print("Inserted: \(dieukhoanId) - \(relatedDieukhoanId)?... \(reslut)")
+        print("Related Dieukhoan Inserted: \(dieukhoanId) - \(relatedDieukhoanId)?... \(reslut)")
         if !reslut {
             print("update failed: \(DataConnection.database!.lastErrorMessage())")
         }

@@ -110,7 +110,7 @@ class ViewController: UIViewController {
     }
     
     private func initPlateReferences() {
-        let fileName = "QC412019Bienbao"
+        let fileName = "QC412024Bienbao"
         print("=====================================")
         print("Initializing \(fileName)......")
         //create new tables and insert data
@@ -121,7 +121,7 @@ class ViewController: UIViewController {
     }
     
     private func initVachKeferences() {
-        let fileName = "QC412019vachke"
+        let fileName = "QC412024vachke"
         print("=====================================")
         print("Initializing \(fileName)......")
         //create new tables and insert data
