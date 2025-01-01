@@ -389,7 +389,7 @@ class DatabaseInitializer {
             , noidung: "QCVN 41:2024/BGTVT thay thế QCVN 41:2019/BGTVT.\nQuy chuẩn kỹ thuật Quốc gia về báo hiệu đường bộ QCVN 41:2024/BGTVT do Cục Đường bộ Việt Nam biên soạn, Bộ Khoa học và Công nghệ thẩm định, Bộ trưởng Bộ Giao thông vận tải ban hành theo Thông tư số /2024/TT-BGTVT ngày 15 tháng 11 năm 2024."
             , hieuluc: "1/1/2025"
             , vanbanThaytheId: 7
-            , tenRutgon: "Quy chuẩn 41/2019 về báo hiệu đường bộ"
+            , tenRutgon: "Quy chuẩn 41/2024 về báo hiệu đường bộ"
         )
         vanbans.append(qc412024)
         let nd1682024 = Vanban(

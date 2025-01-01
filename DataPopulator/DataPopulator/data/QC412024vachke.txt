@@ -1,11 +1,3 @@
-drop table if exists 'tblVachGroups';
-CREATE TABLE IF NOT EXISTS 'tblVachGroups' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE, 'displayName' TEXT COLLATE NOCASE);
-drop table if exists 'tblVachShapes';
-CREATE TABLE IF NOT EXISTS 'tblVachShapes' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE, 'type' INTEGER);
-drop table if exists 'positions';
-CREATE TABLE IF NOT EXISTS 'positions' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'ten' TEXT COLLATE NOCASE, 'displayName' TEXT COLLATE NOCASE);
-drop table if exists 'tblVachReferences';
-CREATE TABLE IF NOT EXISTS 'tblVachReferences' ('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL COLLATE NOCASE, 'plateId' INTEGER, 'type' TEXT COLLATE NOCASE, 'name' TEXT COLLATE NOCASE,'refId' INTEGER);
 INSERT INTO 'tblVachGroups' ( 'ten','displayName' ) VALUES ('single line', 'Vạch đơn');
 INSERT INTO 'tblVachGroups' ( 'ten','displayName' ) VALUES ('shape', 'Vạch theo hình');
 INSERT INTO 'tblVachGroups' ( 'ten','displayName' ) VALUES ('multiple line', 'Vạch song song');

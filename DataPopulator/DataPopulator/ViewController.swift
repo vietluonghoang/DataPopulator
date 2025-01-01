@@ -110,7 +110,18 @@ class ViewController: UIViewController {
     }
     
     private func initPlateReferences() {
-        let fileName = "QC412024Bienbao"
+        //init plate info for QC412019
+        var fileName = "QC412019Bienbao"
+        print("=====================================")
+        print("Initializing \(fileName)......")
+        //create new tables and insert data
+        Queries.executeStatements(query: Utils.readFromFile(name: fileName))
+
+        print("Succesfully initializing \(fileName)")
+        print("=====================================")
+        
+        //init plate info for QC412024
+        fileName = "QC412024Bienbao"
         print("=====================================")
         print("Initializing \(fileName)......")
         //create new tables and insert data
@@ -121,7 +132,19 @@ class ViewController: UIViewController {
     }
     
     private func initVachKeferences() {
-        let fileName = "QC412024vachke"
+        //init line info for QC412019
+        var fileName = "QC412019vachke"
+        print("=====================================")
+        print("Initializing \(fileName)......")
+        //create new tables and insert data
+        
+        Queries.executeStatements(query: Utils.readFromFile(name: fileName))
+
+        print("Succesfully initializing \(fileName)")
+        print("=====================================")
+        
+        //init line info for QC412024
+        fileName = "QC412024vachke"
         print("=====================================")
         print("Initializing \(fileName)......")
         //create new tables and insert data
