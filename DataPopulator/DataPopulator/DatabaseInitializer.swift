@@ -540,11 +540,11 @@ class DatabaseInitializer {
         print("\n==== Inserting Raw Data To Database: ND1682024")
         let ND1682024 = RawDataInitializer(fileName: "ND1682024", vanban: getVanbanById(id: 23))
         insertDataByQuery(queries: ND1682024.transformRawDataToSqlQuery())
-//        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTlinhvuc"))
-//        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTphuongtien"))
-//        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTmucphat"))
-//        Queries.executeStatements(query: Utils.readFromFile(name: "VBHN-03-2022-BGTVTkeywords"))
-//        DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "VBHN-03-2022-BGTVThinhphatbosung", bienphapkhacphucFilename: "VBHN-03-2022-BGTVTbienphapkhacphuc")
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1682024linhvuc"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1682024phuongtien"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1682024mucphat"))
+        Queries.executeStatements(query: Utils.readFromFile(name: "ND1682024keywords"))
+        DieukhoanParser().initHinhphatbosungBienphapkhacphuc(hinhphatbosungFilename: "ND1682024hinhphatbosung", bienphapkhacphucFilename: "ND1682024bienphapkhacphuc")
         
         print("\n================= Finished Inserting Raw Data To Database ====================\n")
     }
